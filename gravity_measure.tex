@@ -12,6 +12,7 @@
 \usepackage[mathscr]{euscript}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{fancyhdr}
+\usepackage{tikz-cd}
 \newcommand{\dv}[1]{\mathrm{d} #1 \text{ }}
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
@@ -27,125 +28,220 @@
 \begin{document}
 
 %title and author details
-\title{Gravity from Quantum Measurement}
+\title{Gravity Without Temperature: Measurement Backreaction, Unruh-Landauer Duality, and Emergent Horizon Thermodynamics}
 \author[ ]{Kevin Player\footnote{\textit{kjplaye@gmail.com}} \,\orcidlink{0009-0000-7180-7985}}
 
 \maketitle
 
 % \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
-\abstract{We propose an operational framework in which gravity emerges from the physical backreaction associated with quantum measurement. Starting from a commutative structure linking state reduction, observation, and acceleration, we combine Landauer’s principle with relativistic energy–momentum transfer to argue that each act of measurement necessarily imparts a discrete impulse to the observer. By the equivalence principle, this measurement-induced acceleration is locally indistinguishable from a gravitational field. At the level of a single bit, this correspondence naturally identifies the Schwarzschild radius as the scale at which information transfer produces gravitational-strength effects. Extending to many measurements within a finite region, the total energy associated with information acquisition is bounded by gravitational collapse, leading directly to the Bekenstein entropy bound and its area scaling. In this way, Newtonian gravity and black hole thermodynamics arise from a common underlying principle: that information is physically mediated and that its transfer carries unavoidable energy–momentum consequences. This perspective contrasts with entropic gravity approaches by grounding the origin of gravitational effects in local, observer-dependent measurement processes rather than global entropy gradients.}
+\abstract{We show how gravity emerges from the physical backreaction of quantum measurement and the microstate dynamics of information acquisition. Combining the Unruh and Landauer relations eliminates temperature as a fundamental quantity, yielding a frame-independent relation between information acquisition, energy transfer, and acceleration — providing a concrete dictionary between the local Rindler and global Minkowski descriptions. Applied to a single detection event, this relation reproduces the Schwarzschild radius and the Bekenstein-Hawking entropy bound without additional assumptions. Building on the bilocal microstate construction of Player (2025), in which entangled source-driven excitations realize individual terms of the Unruh thermal ensemble, we show that coarse-graining over these microstates recovers the thermal spectrum, demonstrating that thermality is emergent rather than intrinsic. Each microstate is modeled gravitationally as an Aichelburg-Sexl pp-wave, whose longitudinal shift and transverse focusing encode energy-momentum directly into horizon geometry, yielding a calculable per-photon contribution to horizon entropy. The spatial correlations between wedge observers then realize ER=EPR at the level of individual microstates, with the Rindler horizon acting as the substrate for physically mediated information encoding. This framework complements entropic and holographic approaches while providing a concrete operational account of how gravity arises from the collective effect of measurement-induced energy-momentum transfer.}
 
 
-\section{Measurement-Induced Gravity}
+\section{Introduction}
 
-We propose that gravitational effects arise from the physical backreaction associated with quantum measurement. The argument is organized around the operational chain
+The interplay between quantum measurement, information, and gravity has long inspired theoretical exploration. Penrose and Diósi proposed that quantum state reduction may be influenced by gravitational effects, suggesting an objective collapse mechanism tied to mass-energy distributions \cite{penrose1996gravity,diosi1987universal}. More recently, Verlinde argued that gravitational dynamics can emerge from entropic considerations, linking acceleration to information gradients on holographic screens \cite{entropic}. Ted Jacobson showed that Einstein's equations can be derived from thermodynamic principles applied to local Rindler horizons, highlighting a deep connection between horizon entropy and spacetime dynamics \cite{jacobson1995thermodynamics}. Landauer's principle further emphasizes the physical cost of information processing, providing a bridge between information theory and energy-momentum transfer \cite{landauer1961irreversibility}. Building on these ideas, we explore how the backreaction of quantum measurement and the microstate dynamics of information acquisition can give rise to gravitational phenomena, providing a concrete, operational perspective that complements these previous approaches.
+
+In this paper, we begin with quantum state reduction, we associate a measurement with the acquisition of information and its physical encoding in an observer. Because all observation is mediated by interactions, this acquisition necessarily involves the transfer of energy and momentum carried by matter or radiation, producing a discrete impulse on the detector.  
+
+We then examine how this measurement-induced impulse generates an acceleration, which, by the equivalence principle, is locally indistinguishable from gravity. When considered across a finite region, the cumulative energy associated with such measurements is naturally bounded by gravitational collapse, providing characteristic scales corresponding to the Schwarzschild radius and the Bekenstein entropy bound. In this way, gravitational effects and horizon thermodynamics can emerge from the concrete, physical consequences of information acquisition.
+
+The central observation is that combining Unruh and Landauer eliminates temperature as a fundamental quantity, yielding a frame-independent relation between information acquisition, energy, and acceleration. This provides a concrete dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with gravity emerging from the cumulative effect of measurement-induced impulses."
+
+Consider the following commutative diagram, which schematically represents the chain of physical processes linking quantum state reduction to gravitational effects:
+\[
+\begin{tikzcd}[row sep=3em, column sep=4em]
+\text{Gravity} \arrow[r, "\shortstack{objective\\collapse}"] \arrow[d, "\shortstack{equivalence\\principle}"'] & \text{Quantum state reduction} \\
+\text{Acceleration} \arrow[r, "\shortstack{energy--momentum\\transfer}"]           & \text{Observation} \arrow[u, "\shortstack{subjective\\collapse}"']
+\end{tikzcd}
+\]
+Rather than treating objective collapse as a fundamental postulate, we provide a microphysical perspective on quantum state reduction that can illuminate its connection to gravity. In our framework, the transition from superposition to a definite outcome is realized through the physical encoding of information in the observer, mediated by energy and momentum exchange. While Penrose’s proposal treats collapse as a physically real, observer-independent event \cite{penrose1996gravity}, our approach emphasizes how such a transition is registered subjectively via measurement backreaction, producing accelerations that, by the equivalence principle, manifest as gravitational effects.
+
+While Verlinde's entropic gravity operates at the thermodynamic level, the present framework provides the microstate realization that entropic approaches leave implicit — each entropy increment corresponds to a physically mediated measurement event with a calculable energy-momentum transfer."
+
+
+In Section \ref{sec:heuristics} we start with quantum measurement, the laws of Netwon and derive familiar black hole thermodynamics equations and relationships using heuristic arguements. In Section \ref{sec:driving} we review a specfic microstate construction using a bilocal driving source in the Unruh/Rindler field theoretic picture. Section \ref{sec:emergent_time} quantizes proper time in a novel way using quantized action from old Sommerfield-Bohr quantum thoery. Then in section \ref{sec:emergent_space} we show how to quantize a bit of space with pp-waves that quantize curvature in the bilocal source setup. This links our microstate to a specfic horizon effect that explicitly realizes ER=EPR.
+
+\section{Motivating Heuristics}
+\label{sec:heuristics}
+
+In this section, we break down the physical consequences of measurement-induced information acquisition. First, in \emph{Energy Gain from Information}, we quantify the minimal energy associated with acquiring information via Landauer's principle and its relation to the measurement process. Next, in \emph{Momentum Transfer and Acceleration}, we show how this energy transfer produces a discrete impulse on the detector, generating an acceleration. In \emph{Gravitational Interpretation}, we connect this acceleration to an effective gravitational field via the equivalence principle and identify characteristic scales such as the Schwarzschild radius. Finally, in \emph{Energy Bounds and Information}, we relate the energy increments to horizon entropy, using the Unruh temperature to link local measurement effects to the Bekenstein--Hawking entropy bound, illustrating how gravity and thermodynamics emerge from information acquisition.
+
+\subsection{Energy Gain from Information}
+
+A measurement corresponds to the acquisition of information, which can be quantified by the change in Shannon entropy $\Delta S$ relative to the observer's knowledge. According to Landauer's principle, any physical encoding of this information requires a minimal energy cost. Converting the dimensionless Shannon entropy into physical units via Boltzmann's constant, we write
 \begin{equation}
-R \;\longrightarrow\; O \;\longrightarrow\; A \;\longleftrightarrow\; G,
+\Delta E \gtrsim k_B T \, \Delta S,
 \end{equation}
-where $R$ denotes quantum state reduction, $O$ observation (information extraction), $A$ acceleration of the observer, and $G$ gravity via the equivalence principle.
-
-\subsection{Information and Energy}
-
-A measurement extracts at least one bit of information,
+where $T$ is the temperature associated with the detector; locally, for an accelerated observer, this is the Unruh temperature
 \begin{equation}
-\Delta I = 1,
-\end{equation}
-which by Landauer's principle requires a minimal energy cost
-\begin{equation}
-\Delta E \;\ge\; k_B T \ln 2.
-\end{equation}
-We interpret this energy as carried by a physical quantum (a ``thrust particle'') with effective mass
-\begin{equation}
-\Delta E = m_1 c^2.
+\label{unruh_temp}
+T = \frac{\hbar a}{2 \pi k_B c}.
 \end{equation}
 
-\subsection{Impulse and Acceleration}
+We interpret this energy as being carried by a physical quantum, or \emph{thrust particle}, of effective mass $m_t$:
+\begin{equation}
+\Delta E = m_t c^2.
+\end{equation}
+
+In this formulation, the Landauer bound is heuristically applied to information gain rather than erasure. This provides a physically grounded link between the act of measurement, the energy-momentum transfer to the detector, and the subsequent dynamical effects, which underlie the measurement-induced acceleration and, ultimately, gravitational phenomena.
+
+
+\subsection{Momentum Transfer and Acceleration}
 
 The transfer of energy $\Delta E$ implies a momentum transfer
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
 \end{equation}
-For a detector of mass $m_2$, this produces an acceleration over a time interval $\Delta t$:
+Assume that the interaction occurs over a spatial scale $2r$, we take
 \begin{equation}
-a = \frac{\Delta p}{m_2 \Delta t} = \frac{\Delta E}{c\, m_2 \Delta t}.
+\Delta t \sim \frac{2r}{c},
+\end{equation}
+For a detector of mass $m_d$, this produces an acceleration over a time interval $\Delta t$:
+\begin{equation}
+\label{aeq}
+a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{c\, m_d \Delta t} =\frac{\Delta E}{2m_d r} = \frac{m_t c^2}{2m_d r}.
 \end{equation}
 
-Assuming the interaction occurs over a spatial scale $r$, we take
-\begin{equation}
-\Delta t \sim \frac{r}{c},
-\end{equation}
-so that
-\begin{equation}
-a = \frac{\Delta E}{m_2 r}.
-\end{equation}
-Substituting $\Delta E = m_1 c^2$ gives
-\begin{equation}
-a = \frac{m_1 c^2}{m_2 r}.
-\end{equation}
+The relation $a = \Delta p/(m_d \Delta t)$ implicitly invokes the impulse form of Newton’s second law. While this step is structurally similar to the appearance of $F = ma$ in Verlinde's entropic gravity construction \cite{entropic}, the interpretation here is different. In the present framework, the acceleration arises from explicit energy--momentum transfer associated with measurement backreaction, rather than from an entropy gradient and the holographic principle. In this sense, the argument provides a microphysical realization of the dynamical step that appears in entropic gravity.
 
-\subsection{Emergence of Gravitational Scaling}
+\subsection{Gravitational Interpretation}
 
 Comparing with Newtonian gravity,
 \begin{equation}
-a = \frac{G m_1}{r^2},
+a = \frac{G m_t}{r^2},
 \end{equation}
-we obtain the relation
+xand using (\ref{aeq}), we obtain
 \begin{equation}
-G \sim \frac{c^2 r}{m_2}.
+\frac{m_t c^2}{2 m_d r} = \frac{G m_t}{r^2}.
 \end{equation}
-Rewriting,
+Solving for $r$ gives
 \begin{equation}
-r \sim \frac{G m_2}{c^2},
+r \sim \frac{2 G m_d}{c^2},
 \end{equation}
-which identifies the interaction scale with the Schwarzschild radius of the detector mass $m_2$.
+which identifies the characteristic interaction scale with the Schwarzschild radius of the detector mass $m_d$.
 
-\subsection{Many Bits and Energy Bounds}
+Evaluating the acceleration at this radius yields the surface gravity
+\begin{equation}
+\label{kappa}
+\kappa = a = \frac{G m_d}{r^2} = \frac{c^4}{4 G m_d},
+\end{equation}
+in agreement with the standard Schwarzschild result.
 
-For $N$ independent measurements,
-\begin{equation}
-E_{\text{tot}} = N \Delta E.
-\end{equation}
-To avoid gravitational collapse within a region of size $R$, the total energy must satisfy
-\begin{equation}
-E_{\text{tot}} \;\lesssim\; \frac{c^4 R}{2G}.
-\end{equation}
-This gives an upper bound on the number of bits:
-\begin{equation}
-N \;\lesssim\; \frac{c^4 R}{2G \Delta E}.
-\end{equation}
+\subsection{Energy Bounds and Information}
 
-\subsection{Entropy Bound}
+Our measurement increases the observer's entropy by $\Delta S$.  
+Landauer's principle associates a minimal energy cost to this information acquisition, which we write heuristically as
+\begin{equation}
+\Delta E \gtrsim k_B T \, \Delta S,
+\end{equation}
+This energy gain occurs locally within the Rindler wedge and appears thermal when considered in isolation.
 
-The corresponding entropy is
-\begin{equation}
-S = N k_B \ln 2 \;\lesssim\; \frac{c^4 R}{2G T}.
-\end{equation}
-Using the Unruh relation between acceleration and temperature,
-\begin{equation}
-T \sim \frac{\hbar a}{2\pi k_B c},
-\end{equation}
-and evaluating at the horizon scale $a \sim c^2 / R$, we obtain
-\begin{equation}
-T \sim \frac{\hbar c}{2\pi k_B R}.
-\end{equation}
-Substituting gives
-\begin{equation}
-S \sim \frac{c^3 R^2}{\hbar G},
-\end{equation}
-which reproduces the Bekenstein--Hawking scaling
-\begin{equation}
-S \sim \frac{A}{\ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3}.
-\end{equation}
+Using the Unruh relation \ref{unruh_temp}, we eliminate $T$ and use the surface gravity \ref{kappa} to obtain
 
-\subsection{Summary}
-
-We thus obtain the chain
 \begin{equation}
-\text{measurement} \;\to\; \Delta E \;\to\; \Delta p \;\to\; a \;\leftrightarrow\; g \;\to\; r_s \;\to\; S \sim A,
+\Delta S \lesssim \frac{2\pi c}{\hbar a} \, \Delta E = \frac{8 \pi G m_d}{\hbar c^3} \, \Delta E.
 \end{equation}
-linking quantum state reduction to gravitational dynamics and horizon entropy.
+Substituting $\Delta E = c^2 \, \Delta m_d$, we have
+\begin{equation}
+\Delta S \sim \frac{8 \pi G m_d}{\hbar c} \, \Delta m_d.
+\end{equation}
+Expressed in terms of the change in horizon area $\Delta A = 16 \pi G^2 m_d \, \Delta m_d / c^4$, this gives
+\begin{equation}
+\Delta S \sim \frac{\Delta A}{4 \ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
+\end{equation}
+which reproduces the Bekenstein--Hawking area law. Each measurement contributes a discrete amount of entropy corresponding to the energy-momentum transfer it induces.
 
+In this way, the local measurement-induced energy transfer, interpreted through the Unruh effect and surface gravity, gives rise to the global horizon entropy. The local thermal description cancels in favor of a geometric entropy bound, allowing us to move from Rindler wedge physics to horizon thermodynamics.
+
+\section{Rindler/Unruh Microstates from a Bilocal Source}
+\label{sec:driving}
+
+Building on the local Rindler-frame heuristics of measurement-induced acceleration, we provide an explicit microstate construction that realizes the Unruh effect via source-driven excitations. In standard treatments, a uniformly accelerated observer perceives the Minkowski vacuum as a thermal bath at temperature
+\begin{equation}
+T = \frac{a}{2 \pi},
+\end{equation}
+where $a$ is the proper acceleration; this thermality arises from tracing out one Rindler wedge of an entangled vacuum. Our approach complements this by showing that the apparent thermal response can be realized through physically localized, bilocal sources that generate entangled particle pairs in left and right Rindler wedges.
+
+A bilocal driving source couples to Unruh modes, producing states
+\begin{equation}
+|\Psi_\omega\rangle = |1_\omega\rangle_L \, |1_\omega\rangle_R,
+\end{equation}
+which correspond to individual terms in the thermal ensemble. Measurement by an accelerated observer projects onto these microstates, producing a local energy-momentum impulse and registering a horizon entropy increment. In this sense, the “thermal” response is not solely a property of the vacuum, but emerges from the observer’s interaction with physically mediated microstates.
+
+We further refine the construction to control localization: by restricting Rindler modes to smaller wedges, intersecting wedges, or Gaussian-enveloped wave packets, the excitations can be made compact in space and time, smoothly interpolating between global thermality and sharply peaked, non-thermal microstates. This demonstrates that portions of the Unruh effect can be understood operationally, with acceleration-induced detection corresponding to discrete, physically realizable microstate events.
+
+This framework connects directly to emergent gravity: each detection event contributes a discrete energy-momentum impulse, producing a local acceleration which, via the equivalence principle, manifests as a gravitational effect. By summing over many such events across horizons, the familiar global gravitational and thermodynamic structures—Schwarzschild radius, Bekenstein bound, and horizon entropy—emerge naturally from the microphysical dynamics of information acquisition.
+
+\section{Emergent Proper Time}
+\label{sec:emergent_time}
+
+How can we quantize gravity without quantizing spacetime (or at least curvature)? And how can we do QFT computations in a probabilistic discrete spacetime?  It may be that these issues must be dealt with when trying to understand quantum gravity.  One may take the viewpoint that spacetime is made up of a mesh or sprinkling of Planck scale lengths and times, but this is not immediately Lorentz invariant and seems to side step the issues  \cite{brown}.  We instead take the viewpoint that space and time are actually properties of matter; that space and time only makes sense up to the resolution of the matter emanating it.  Using action to do this grants us automatic Lorentz invariance.  The approach also allows us to define a system where emergent proper time and space can be compared to gravity at classical scales.  We show how gravity is interpreted as the mechanics of entangled spacetimes.
+
+Proper time along a particle's worldline can be interpreted as a sequence of discrete ``ticks'' of action, each of magnitude $\hbar$, representing a minimal quantum of evolution. This construction is Lorentz-invariant, naturally connects to the phase factor $e^{iS/\hbar}$ in the path integral formulation, and can be understood as matter being sampled by the Higgs field or other persistent interactions. In this sense, massive particles act as a form of physical memory, while massless particles primarily carry information without enduring action quanta.
+
+Classical spacetime and particle trajectories emerge from the constructive interference of these ticks across all possible paths, reproducing smooth motion in the classical limit. The maximal rate at which these ticks can occur is bounded by the particle's mass-energy, consistent with the Bremermann or Nyquist limit, imposing a fundamental constraint on the flow of proper time. Viewed in this way, spacetime is not a fundamental entity, but rather an emergent structure arising from the informational content encoded in the discrete action of matter.
+
+\section{Emergenct Space: ER=EPR}
+\label{sec:emergent_space}
+
+Consider a bilocal source, \emph{Paz}, located in the past. She emits an entangled photon pair in the polarization Bell state 
+\begin{equation}
+\frac{1}{\sqrt{2}} \big( |H\rangle \otimes |V\rangle + |V\rangle \otimes |H\rangle \big),
+\end{equation}
+where $H$ and $V$ denote horizontal and vertical polarizations. Initially, the two photons are co-located at Paz, and the pair carries no net momentum, so there is no backreaction on the source.  
+
+The photons propagate across the past Rindler horizons into the left and right Rindler wedges, becoming microstates responsible for the Unruh-type acceleration experienced by the left observer, \emph{Lester}, and the right observer, \emph{Wright}. Each observer detects the photons in the $H/V$ polarization basis, recording classical bits of information in their respective memories. These recorded bits are perfectly correlated due to the initial entanglement.  
+
+Now, consider a future observer asking not ``what polarization was measured?'' but rather ``which observer recorded the $H$ polarization?'' The answer is a spatial label, left or right, effectively converting polarization information into spatial information. In this way, the classical correlations induced by the entangled photons produce emergent spatial structure, linking previously co-located degrees of freedom to distinct positions in the left and right wedges. This mechanism realizes an explicit microstate version of the ER = EPR principle within the Unruh framework: space itself emerges from the entanglement and measurement of localized quantum microstates.
+
+\section{pp-Wave Microstates and Spacetime Response}
+
+To model the gravitational effect of a single photon, we consider the Aichelburg--Sexl pp-wave solution in general relativity. Let 
+\begin{equation}
+u = t - z, \quad v = t + z,
+\end{equation}
+where the photon propagates along the null plane $u=0$, $z$ is the longitudinal direction, and $x,y$ are transverse coordinates. 
+
+Consider two test particles initially at rest at $y = 0$, $z = 0$, with fixed $x$ coordinates, before the photon arrives ($u<0$). As the photon crosses $u=0$ (the shock wave), the spacetime geometry produces two distinct effects on the test particles:
+
+\begin{enumerate}
+    \item \textbf{Longitudinal shift:} The $v$ coordinate is displaced by an amount proportional to $\ln(r)$, where $r^2 = x^2 + y^2$. Near the center ($x \to 0$), the shift becomes very large, effectively dragging the particle along at nearly the speed of light. During this process, no proper time elapses for the particle crossing the shock.
+    
+    \item \textbf{Transverse kick:} The gradient of the shift produces a transverse velocity toward the center of the wave, proportional to $1/r$ (or $1/x$ for $y=0$). This represents a focusing effect, pulling the particles toward the axis of propagation.
+\end{enumerate}
+
+From the perspective of emergent spacetime, this microstate illustrates how localized energy-momentum (here, a single photon) induces both longitudinal and transverse responses in the geometry. The shift in $v$ encodes a lightlike dragging effect, while the transverse kick produces spatial correlations between initially separated test particles. In our framework, such pp-wave interactions provide a **microstate-level mechanism** by which entangled or energetic quanta imprint spacetime structure, complementing the Rindler/Unruh construction and connecting directly to horizon microphysics.
+
+\section{Microstate Geometry and pp-Wave Realization of Horizon Entropy}
+
+To make the preceding heuristic arguments concrete, we construct an explicit microstate realization using a bilocal source setup reminiscent of the Unruh-driving framework \cite{player2026unruh}. Consider a past emitter, \emph{Paz}, who releases an entangled photon pair in the Bell state
+\begin{equation}
+\frac{1}{\sqrt{2}} \big( |H\rangle \otimes |V\rangle + |V\rangle \otimes |H\rangle \big),
+\end{equation}
+with equal and opposite momenta $\pm \mathbf{k}$. Initially, the photons are localized at Paz and carry no net momentum, so there is no backreaction on the emitter. As the photons propagate, they cross the past Rindler horizons into the left and right Rindler wedges, where two observers, \emph{Lester} and \emph{Wright}, record their polarization outcomes in the $H/V$ basis. Each measurement produces a classical bit, which is perfectly correlated between the observers.
+
+Crucially, a future observer may instead ask the question: ``Who observed $H$?'' The answer is a spatial bit, distinguishing left vs.\ right wedge. In this sense, the polarization information carried by the photons is converted into \emph{spatial information}, providing a direct microphysical mechanism for emergent space. This realizes ER=EPR at the level of single Unruh microstates, with the Rindler horizon acting as the substrate where information is physically encoded.
+
+To capture the gravitational imprint of each microstate, we model each photon as an Aichelburg--Sexl pp-wave propagating along the null plane $u = t - z = 0$ in Minkowski coordinates. Test particles at fixed transverse positions $(x, y)$ experience the pp-wave as a shock:
+\begin{itemize}
+    \item A longitudinal shift $\Delta v \sim \ln r^2$, with $r^2 = x^2 + y^2$, which drags particles along the lightlike direction without generating proper time.
+    \item Transverse kicks proportional to $\nabla \ln r$, focusing particles toward the wave center.
+\end{itemize}
+These effects encode the energy-momentum of the photon into the horizon geometry, identifying the transverse plane of the pp-wave with horizon area elements $dA = dx\,dy$. Each detection thus imprints a calculable contribution to the horizon entropy, with
+\begin{equation}
+\Delta S \sim \frac{8 \pi G m_\text{photon}}{\hbar c^3} \, \Delta E,
+\end{equation}
+matching the energy-entropy relation derived heuristically in Section~\ref{sec:energy_bounds}.
+
+In a steady-state emission scenario, continuous streams of entangled photons maintain the accelerations of Lester and Wright, and coarse-graining over many microstates recovers the familiar thermal Unruh spectrum. Thermality is therefore \emph{emergent}, not intrinsic: it arises from averaging over a large ensemble of source-driven microstates, each of which has a well-defined energy-momentum and horizon imprint.  
+
+This framework provides a concrete link between microstate-level dynamics, observer-dependent accelerations, and horizon thermodynamics. Each measurement-induced impulse has both a local physical effect (acceleration of the detector) and a global geometric imprint (contribution to horizon area and entropy), formalizing how the backreaction of quantum measurement can generate gravitational phenomena.
+
+\section{Conclusion}
+\section{Acknowledgements}
+
+I'm also grateful to ChatGPT for helpful discussions.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
