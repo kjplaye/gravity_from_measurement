@@ -73,38 +73,33 @@ This approach both complements and sharpens the thermodynamic gravity programme 
 \label{sec:heuristics}
 
 
-The central observation is simple. Landauer's principle associates a minimal energy cost with the acquisition of information \cite{landauer1961irreversibility}. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a frame-independent relation between information acquisition, energy transfer, and acceleration. This is not merely an algebraic convenience: it is a concrete dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state.
+The central observation is simple. Landauer's principle associates a minimal energy cost with the acquisition of information \cite{landauer1961irreversibility}. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a frame-independent relation between information acquisition, energy transfer, and acceleration (a version of the BHT first law). This is not merely an algebraic convenience: it is a concrete dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state. In this way we derive a sequence of standard results in black hole thermodynamics.
 
-We derive a sequence of standard results in black hole thermodynamics from a single physical observation: that information acquisition by an observer is equivalent, via the equivalence principle, to acceleration. The key move is to combine Landauer's principle with the Unruh relation, eliminating temperature and yielding a frame-independent equation that serves as the foundation for everything that follows. The results recovered here — the Schwarzschild radius, surface gravity, and Bekenstein-Hawking area law — are not new, but their derivation from the observation=acceleration identification is, and it provides the heuristic foundation for the explicit microstate constructions of later sections.
 \subsection{The Unruh-Landauer Relation}
 Landauer's principle states that the acquisition of $\Delta S$ bits of information by a physical observer requires a minimum energy transfer
 \begin{equation}
 \Delta E \geq k_B T \, \Delta S.
 \end{equation}
-For an observer undergoing proper acceleration aa
-a, the Unruh effect associates a temperature
+For an observer undergoing proper acceleration $a$, the Unruh effect associates a temperature
 \begin{equation}
 T = \frac{\hbar a}{2 \pi k_B c}
 \end{equation}
 with the local vacuum. Substituting into Landauer's bound eliminates $k_B T$, yielding
 \begin{equation}
 \boxed{\Delta E \geq \frac{\hbar a}{2\pi c} \, \Delta S.}
-\label{eq
-:UL}
+\label{eq:UL}
 \end{equation}
-This is the central result of the paper. Temperature has dropped out entirely: equation~\eqref{eq:UL} is a frame-independent relation between energy, acceleration, and information, with no reference to any thermal description. It can be read as the first law of black hole thermodynamics derived from below — from the physical cost of information acquisition — rather than postulated as a thermodynamic identity. In what follows, all standard results emerge as consequences of this single relation.
+Temperature has dropped out entirely: equation~\eqref{eq:UL} is a frame-independent relation between energy, acceleration, and information, with no reference to any thermal description. It can be read as the first law of black hole thermodynamics derived from below — from the physical cost of information acquisition — rather than postulated as a thermodynamic identity. In what follows, all standard results emerge as consequences of this single relation.
 We note that Landauer's principle is conventionally stated for information erasure rather than acquisition. Here we apply it to acquisition, which is the physically relevant process for an observer registering a measurement outcome. The bound has the same form in both cases, and we proceed with the understanding that this is a heuristic application whose precise justification is deferred to the microstate construction of Section~\ref{sec:driving}.
 \subsection{Momentum Transfer and Acceleration}
 The energy transfer $\Delta E$ implied by equation~\eqref{eq:UL} is carried by a physical quantum — matter or radiation — mediating the measurement interaction. We refer to this as the \emph{thrust quantum}. For a relativistic carrier, the associated momentum transfer is
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
 \end{equation}
-Let the interaction occur over a spatial scale rr
-r, so that the interaction time is $\Delta t \sim \frac{2r}{c} \Delta t \sim 2r/c$. For a detector of mass $m_d$, Newton's second law in impulse form gives
+Let the interaction occur over a spatial scale $r$, so that the interaction time is $\Delta t \sim 2r/c$. For a detector of mass $m_d$, Newton's second law in impulse form gives
 \begin{equation}
 a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{2 m_d r}.
-\label{eq
-:accel}
+\label{eq:accel}
 \end{equation}
 The factor of 2 in the interaction time is not an independent assumption: it will be fixed self-consistently by requiring that the characteristic interaction scale reproduces the Schwarzschild radius, as shown in the next subsection.
 \subsection{The Schwarzschild Radius}
@@ -112,12 +107,11 @@ The thrust quantum carries energy $\Delta E$ and produces an acceleration $a$ on
 \begin{equation}
 a = \frac{G m_t}{r^2},
 \end{equation}
-and substituting equation ~\eqref{eq:accel} with $\Delta E=m_t c^2 \Delta E = m_t c^2$, we obtain
+and substituting equation ~\eqref{eq:accel} with $\Delta E=m_t c^2$, we obtain
 \begin{equation}
 \frac{m_t c^2}{2 m_d r} = \frac{G m_t}{r^2}.
 \end{equation}
-Solving for rr
-r:
+Solving for $r$:
 \begin{equation}
 r = \frac{2 G m_d}{c^2} \equiv r_s,
 \end{equation}
@@ -128,14 +122,14 @@ Evaluating the acceleration at $r = r_s$ gives the surface gravity of the detect
 \begin{equation}
 \kappa = \frac{G m_d}{r_s^2} = \frac{c^4}{4 G m_d},
 \end{equation}
-in agreement with the standard Schwarzschild result. This is the acceleration that appears in the Unruh temperature associated with the detector's horizon,$T = \hbar \kappa / 2\pi k_B c$, providing an internal consistency check on the framework.
+in agreement with the standard Schwarzschild result. This is the acceleration that appears in the Unruh temperature associated with the detector's horizon, $T = \hbar \kappa / 2\pi k_B c$, providing an internal consistency check on the framework.
 
 \subsection{Bekenstein-Hawking Entropy}
 Returning to the Unruh-Landauer relation~\eqref{eq:UL} and substituting the surface gravity $\kappa$ for $a$, the entropy increment associated with an energy increment $\Delta E = c^2 \Delta m_d$ is
 \begin{equation}
 \Delta S \leq \frac{2\pi c}{\hbar \kappa} \Delta E = \frac{8\pi G m_d}{\hbar c^3} \cdot c^2 \Delta m_d.
 \end{equation}
-Expressing this in terms of the change in Schwarzschild area $\Delta A = 16\pi G^2 m_d \Delta m_d / c^4$:
+Expressing this in terms of the change in Schwarzschild area $\Delta A = 32\pi G^2 m_d \Delta m_d / c^4$:
 \begin{equation}
 \Delta S = \frac{\Delta A}{4 \ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
 \end{equation}
@@ -144,97 +138,6 @@ which is the Bekenstein-Hawking area law. Each measurement event contributes a d
 \subsection{Summary}
 Beginning from the single relation~\eqref{eq:UL}, and using only Newton's law and the equivalence principle, we have recovered the Schwarzschild radius, the surface gravity, and the Bekenstein-Hawking area law as consequences of the observation=acceleration identification. These are standard results, but their derivation here from the physical cost of information acquisition rather than from thermodynamic postulates is the point. The thrust quantum introduced in this section — the physical carrier of the measurement-induced impulse — will be given a precise microstate realization in the sections that follow, where it is identified with an individual photon modeled as an Aichelburg-Sexl pp-wave.
 
-\section{Motivating Heuristics - OLD}
-\label{sec:heuristics}
-
-In this section, we break down the physical consequences of measurement-induced information acquisition. First, in \emph{Energy Gain from Information}, we quantify the minimal energy associated with acquiring information via Landauer's principle and its relation to the measurement process. Next, in \emph{Momentum Transfer and Acceleration}, we show how this energy transfer produces a discrete impulse on the detector, generating an acceleration. In \emph{Gravitational Interpretation}, we connect this acceleration to an effective gravitational field via the equivalence principle and identify characteristic scales such as the Schwarzschild radius. Finally, in \emph{Energy Bounds and Information}, we relate the energy increments to horizon entropy, using the Unruh temperature to link local measurement effects to the Bekenstein--Hawking entropy bound, illustrating how gravity and thermodynamics emerge from information acquisition.
-
-\subsection{Energy Gain from Information}
-
-A measurement corresponds to the acquisition of information, which can be quantified by the change in Shannon entropy $\Delta S$ relative to the observer's knowledge. According to Landauer's principle, any physical encoding of this information requires a minimal energy cost. Converting the dimensionless Shannon entropy into physical units via Boltzmann's constant, we write
-\begin{equation}
-\Delta E \gtrsim k_B T \, \Delta S,
-\end{equation}
-where $T$ is the temperature associated with the detector; locally, for an accelerated observer, this is the Unruh temperature
-\begin{equation}
-\label{unruh_temp}
-T = \frac{\hbar a}{2 \pi k_B c}.
-\end{equation}
-
-We interpret this energy as being carried by a physical quantum, or \emph{thrust particle}, of effective mass $m_t$:
-\begin{equation}
-\Delta E = m_t c^2.
-\end{equation}
-
-In this formulation, the Landauer bound is heuristically applied to information gain rather than erasure. This provides a physically grounded link between the act of measurement, the energy-momentum transfer to the detector, and the subsequent dynamical effects, which underlie the measurement-induced acceleration and, ultimately, gravitational phenomena.
-
-
-\subsection{Momentum Transfer and Acceleration}
-
-The transfer of energy $\Delta E$ implies a momentum transfer
-\begin{equation}
-\Delta p = \frac{\Delta E}{c}.
-\end{equation}
-Assume that the interaction occurs over a spatial scale $2r$, we take
-\begin{equation}
-\Delta t \sim \frac{2r}{c},
-\end{equation}
-For a detector of mass $m_d$, this produces an acceleration over a time interval $\Delta t$:
-\begin{equation}
-\label{aeq}
-a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{c\, m_d \Delta t} =\frac{\Delta E}{2m_d r} = \frac{m_t c^2}{2m_d r}.
-\end{equation}
-
-The relation $a = \Delta p/(m_d \Delta t)$ implicitly invokes the impulse form of Newton’s second law. While this step is structurally similar to the appearance of $F = ma$ in Verlinde's entropic gravity construction \cite{entropic}, the interpretation here is different. In the present framework, the acceleration arises from explicit energy--momentum transfer associated with measurement backreaction, rather than from an entropy gradient and the holographic principle. In this sense, the argument provides a microphysical realization of the dynamical step that appears in entropic gravity.
-
-\subsection{Gravitational Interpretation}
-
-Comparing with Newtonian gravity,
-\begin{equation}
-a = \frac{G m_t}{r^2},
-\end{equation}
-xand using (\ref{aeq}), we obtain
-\begin{equation}
-\frac{m_t c^2}{2 m_d r} = \frac{G m_t}{r^2}.
-\end{equation}
-Solving for $r$ gives
-\begin{equation}
-r \sim \frac{2 G m_d}{c^2},
-\end{equation}
-which identifies the characteristic interaction scale with the Schwarzschild radius of the detector mass $m_d$.
-
-Evaluating the acceleration at this radius yields the surface gravity
-\begin{equation}
-\label{kappa}
-\kappa = a = \frac{G m_d}{r^2} = \frac{c^4}{4 G m_d},
-\end{equation}
-in agreement with the standard Schwarzschild result.
-
-\subsection{Energy Bounds and Information}
-
-Our measurement increases the observer's entropy by $\Delta S$.  
-Landauer's principle associates a minimal energy cost to this information acquisition, which we write heuristically as
-\begin{equation}
-\Delta E \gtrsim k_B T \, \Delta S,
-\end{equation}
-This energy gain occurs locally within the Rindler wedge and appears thermal when considered in isolation.
-
-Using the Unruh relation \ref{unruh_temp}, we eliminate $T$ and use the surface gravity \ref{kappa} to obtain
-
-\begin{equation}
-\Delta S \lesssim \frac{2\pi c}{\hbar a} \, \Delta E = \frac{8 \pi G m_d}{\hbar c^3} \, \Delta E.
-\end{equation}
-Substituting $\Delta E = c^2 \, \Delta m_d$, we have
-\begin{equation}
-\Delta S \sim \frac{8 \pi G m_d}{\hbar c} \, \Delta m_d.
-\end{equation}
-Expressed in terms of the change in horizon area $\Delta A = 16 \pi G^2 m_d \, \Delta m_d / c^4$, this gives
-\begin{equation}
-\Delta S \sim \frac{\Delta A}{4 \ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
-\end{equation}
-which reproduces the Bekenstein--Hawking area law. Each measurement contributes a discrete amount of entropy corresponding to the energy-momentum transfer it induces.
-
-In this way, the local measurement-induced energy transfer, interpreted through the Unruh effect and surface gravity, gives rise to the global horizon entropy. The local thermal description cancels in favor of a geometric entropy bound, allowing us to move from Rindler wedge physics to horizon thermodynamics.
 
 \section{Rindler/Unruh Microstates from a Bilocal Source}
 \label{sec:driving}
