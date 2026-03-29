@@ -72,7 +72,6 @@ This approach both complements and sharpens the thermodynamic gravity programme 
 \section{Motivating Heuristics}
 \label{sec:heuristics}
 
-
 The central observation is simple. Landauer's principle associates a minimal energy cost with the acquisition of information \cite{landauer1961irreversibility}. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a frame-independent relation between information acquisition, energy transfer, and acceleration (a version of the BHT first law). This is not merely an algebraic convenience: it is a concrete dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state. In this way we derive a sequence of standard results in black hole thermodynamics.
 
 \subsection{The Unruh-Landauer Relation}
@@ -138,96 +137,116 @@ which is the Bekenstein-Hawking area law. Each measurement event contributes a d
 \subsection{Summary}
 Beginning from the single relation~\eqref{eq:UL}, and using only Newton's law and the equivalence principle, we have recovered the Schwarzschild radius, the surface gravity, and the Bekenstein-Hawking area law as consequences of the observation=acceleration identification. These are standard results, but their derivation here from the physical cost of information acquisition rather than from thermodynamic postulates is the point. The thrust quantum introduced in this section — the physical carrier of the measurement-induced impulse — will be given a precise microstate realization in the sections that follow, where it is identified with an individual photon modeled as an Aichelburg-Sexl pp-wave.
 
+\section{Bilocal Microstate Construction}
+\label{sec:microstates}
 
-\section{Rindler/Unruh Microstates from a Bilocal Source}
-\label{sec:driving}
+The heuristic arguments of Section~\ref{sec:heuristics} establish a relationship between information acquisition, acceleration, and gravitational effects, but leave open the question of what a single microstate looks like concretely. In standard treatments, the Unruh effect is derived by coupling a detector to a pre-existing acceleration and reading off a thermal response from the vacuum. Following \cite{player2025driving}, we invert this logic: we place an interaction in the past, where a source injects non-thermal entangled excitations into the field, and show that the observer's accelerated response is driven by these source-induced excitations. The thermal ensemble then emerges as a coarse-grained aggregate of such microstates, rather than being a primitive property of the vacuum.
 
-Building on the local Rindler-frame heuristics of measurement-induced acceleration, we provide an explicit microstate construction that realizes the Unruh effect via source-driven excitations. In standard treatments, a uniformly accelerated observer perceives the Minkowski vacuum as a thermal bath at temperature
+\subsection{The Paz--Lester--Wright Setup}
+
+We adopt an Alice-and-Bob style naming convention. Three observers are placed at spacetime positions $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$, named \emph{Wright} (R), \emph{Lester} (L), and \emph{Paz} (P) respectively --- a mnemonic for Right, Left, and Past. Paz serves as the common causal ancestor of Wright and Lester, see Figure \ref{paz}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.75]{paz.png}
+\captionsetup{width=0.7\textwidth}
+\caption{A source in the past, Paz(P), emits an entangled particle pair that accelerates Wright(R) (to the right) and Lester(L) (to the left).}
+\label{paz}
+\end{figure}
+
+
+Paz emits an entangled pair of spin-0 massless scalar quanta\footnote{Strictly speaking, these are spin-0 massless scalar quanta; the polarization language used elsewhere is heuristic.} with momenta $\pm k$ and Rindler frequency $\omega = \omega_k$. The momenta are perfectly balanced, so the source exhibits no back reaction in this minimal model --- a simplification discussed further in Section~\ref{sec:drive_phy}. The two quanta propagate into the left and right Rindler wedges, where Lester and Wright detect them respectively.
+
+The state prepared by this emission is a controlled realization of a single term in the Unruh thermal ensemble:
 \begin{equation}
-T = \frac{a}{2 \pi},
+|\Psi_\omega\rangle_M = |1_\omega\rangle_L\, |1_\omega\rangle_R + \mathcal{O}(\text{higher order}),
+\label{eq:microstate}
 \end{equation}
-where $a$ is the proper acceleration; this thermality arises from tracing out one Rindler wedge of an entangled vacuum. Our approach complements this by showing that the apparent thermal response can be realized through physically localized, bilocal sources that generate entangled particle pairs in left and right Rindler wedges.
+rather than a superposition sampled from a thermal distribution. Wright's detection is therefore guaranteed, and is modeled as a PVM projection selecting a specific component of the thermal ensemble. The source does not contradict the thermal interpretation; it describes a specific microstate consistent with the broader ensemble.
 
-A bilocal driving source couples to Unruh modes, producing states
+\subsection{The Bilocal Source}
+
+Paz's emission is modeled as a bilocal driving source coupling to the quantum field $\phi$:
 \begin{equation}
-|\Psi_\omega\rangle = |1_\omega\rangle_L \, |1_\omega\rangle_R,
+J(x,y) = \lambda\, f_L(x)\, f_R(y),
 \end{equation}
-which correspond to individual terms in the thermal ensemble. Measurement by an accelerated observer projects onto these microstates, producing a local energy-momentum impulse and registering a horizon entropy increment. In this sense, the “thermal” response is not solely a property of the vacuum, but emerges from the observer’s interaction with physically mediated microstates.
-
-We further refine the construction to control localization: by restricting Rindler modes to smaller wedges, intersecting wedges, or Gaussian-enveloped wave packets, the excitations can be made compact in space and time, smoothly interpolating between global thermality and sharply peaked, non-thermal microstates. This demonstrates that portions of the Unruh effect can be understood operationally, with acceleration-induced detection corresponding to discrete, physically realizable microstate events.
-
-This framework connects directly to emergent gravity: each detection event contributes a discrete energy-momentum impulse, producing a local acceleration which, via the equivalence principle, manifests as a gravitational effect. By summing over many such events across horizons, the familiar global gravitational and thermodynamic structures—Schwarzschild radius, Bekenstein bound, and horizon entropy—emerge naturally from the microphysical dynamics of information acquisition.
-
-\section{pp-Wave Microstates and Spacetime Response}
-
-To model the gravitational effect of a single photon, we consider the Aichelburg--Sexl pp-wave solution in general relativity. Let 
+with the sourced Lagrangian
 \begin{equation}
-u = t - z, \quad v = t + z,
+\begin{aligned}
+\mathscr{L}_{\text{sourced}} &= \mathscr{L}_{\text{free}} + \frac{1}{2}\lambda \int f_L(x)\, f_R(y)\, \phi_+(x)\, \phi_+(y)\; + \text{h.c.} \\
+& = \mathscr{L}_{\text{free}} + \frac{1}{2}\lambda \left( q_{-k}^{L\dagger} q_{k}^{R\dagger} + q_{-k}^{L} q_{k}^{R} \right),
+\end{aligned}
+\label{eq:bilocal}
 \end{equation}
-where the photon propagates along the null plane $u=0$, $z$ is the longitudinal direction, and $x,y$ are transverse coordinates. 
+where $\lambda$ is a coupling constant, $f_L$ and $f_R$ are normalized mode profiles supported on the left and right wedges respectively, $\phi_+$ is the positive-frequency part of $\phi$, and $q_{-k}^{L\dagger}$, $q_{k}^{R\dagger}$ are creation operators for the corresponding modes. The last expression in equation~\eqref{eq:bilocal} is a squeezing interaction at frequency $\omega$: the bilocal source creates entangled Rindler excitations in both wedges simultaneously, in direct analogy with quadrature squeezed light generation in quantum optics~\cite{gerry2023introductory}. This is a quadratic generalization of the standard linear source in QFT~\cite{Schwinger_1966, ryder1996quantum}, with the product structure reflecting the paired nature of the excitations.
 
-Consider two test particles initially at rest at $y = 0$, $z = 0$, with fixed $x$ coordinates, before the photon arrives ($u<0$). As the photon crosses $u=0$ (the shock wave), the spacetime geometry produces two distinct effects on the test particles:
+When $f_L$ and $f_R$ are chosen to be the Rindler modes $l_{-k}$ and $r_k$, smearing with $\phi_+$ projects them onto the corresponding Unruh modes $\mu_{-k}^L$ and $\mu_k^R$, so that $q_{-k}^{L\dagger}$ and $q_{k}^{R\dagger}$ become the Unruh operators $c_{-k}^{L\dagger}$ and $c_{k}^{R\dagger}$. The resulting state is precisely equation~\eqref{eq:microstate}. Table~\ref{table:modes} summarises the correspondence between mode profiles, operators, and states.
+
+The connection to the standard Unruh vacuum is made explicit by writing the Minkowski vacuum in the Rindler basis:
+\begin{equation}
+|0\rangle_M = \prod_\omega \frac{1}{\cosh\theta_k} \sum_n \tanh^n\theta_k\; |n_\omega\rangle_L\, |n_\omega\rangle_R.
+\label{eq:vacuum}
+\end{equation}
+The bilocal source selects a single term from this sum at fixed $\omega$, replacing the full thermal superposition with a definite, non-thermal microstate. Apparent thermality arises from coarse-graining over many such microstates --- from effective ignorance of the source's detailed structure --- not from any intrinsic property of the vacuum.
+
+
+\subsection{Entanglement as Spatial Information: ER=EPR at the Microstate Level}
+
+Each measurement produces a polarization outcome --- $H$ or $V$ --- at each wedge, perfectly correlated between Lester and Wright. But consider a different question: not \emph{what} was observed, but \emph{where}. The question ``who observed $H$?'' has a binary answer: Lester (left wedge) or Wright (right wedge). This is a spatial bit --- a bit that encodes not a polarization state but a location in space.
+
+The entangled pair has therefore converted quantum information --- polarization entanglement --- into classical spatial information --- the left/right correlation. The Rindler horizon is the substrate on which this information is physically encoded: the two wedges are the two sides of the horizon, and the correlated measurement outcomes are the horizon's microstates. This is an operational realisation of ER=EPR at the level of individual microstates, with the entanglement between Lester and Wright's outcomes playing the role of the Einstein--Rosen bridge connecting their respective wedges.
+
+
+\section{Gravitational Imprint: the pp-Wave Realisation}
+\label{sec:ppwave}
+
+Each measurement event in the bilocal construction involves a photon transferring energy and momentum to an accelerated detector. We now model the gravitational imprint of this transfer by identifying each photon with an Aichelburg--Sexl (AS) pp-wave solution in general relativity~\cite{aichelburg1971gravitational}. The AS geometry is an exact solution describing the gravitational field of an ultrarelativistic point mass, and provides the natural geometric language for a single-photon microstate.
+
+\subsection{The AS pp-Wave and Its Effects}
+
+Let $u = t - z$ and $v = t + z$, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Test particles at fixed transverse positions $(x,y)$ experience two effects as the shock front crosses $u = 0$:
 
 \begin{enumerate}
-    \item \textbf{Longitudinal shift:} The $v$ coordinate is displaced by an amount proportional to $\ln(r)$, where $r^2 = x^2 + y^2$. Near the center ($x \to 0$), the shift becomes very large, effectively dragging the particle along at nearly the speed of light. During this process, no proper time elapses for the particle crossing the shock.
-    
-    \item \textbf{Transverse kick:} The gradient of the shift produces a transverse velocity toward the center of the wave, proportional to $1/r$ (or $1/x$ for $y=0$). This represents a focusing effect, pulling the particles toward the axis of propagation.
+    \item \textbf{Longitudinal shift.} The $v$ coordinate is displaced by
+    \begin{equation}
+    \Delta v \propto -\ln r^2, \qquad r^2 = x^2 + y^2.
+    \end{equation}
+    This shift is lightlike: no proper time elapses for a particle crossing the shock, but it is displaced along the null direction. Near the axis ($r \to 0$) the shift diverges, encoding the concentration of energy along the photon's trajectory.
+
+    \item \textbf{Transverse focusing.} The gradient of the longitudinal shift produces a transverse velocity
+    \begin{equation}
+    \Delta \mathbf{v}_\perp \propto \nabla \ln r \propto \frac{1}{r},
+    \end{equation}
+    directed toward the axis. Test particles are pulled toward the centre of the wave, regardless of their initial transverse separation.
 \end{enumerate}
 
-From the perspective of emergent spacetime, this microstate illustrates how localized energy-momentum (here, a single photon) induces both longitudinal and transverse responses in the geometry. The shift in $v$ encodes a lightlike dragging effect, while the transverse kick produces spatial correlations between initially separated test particles. In our framework, such pp-wave interactions provide a **microstate-level mechanism** by which entangled or energetic quanta imprint spacetime structure, complementing the Rindler/Unruh construction and connecting directly to horizon microphysics.
+\subsection{The Longitudinal Shift Makes Space}
 
-\section{Microstate Geometry and pp-Wave Realization of Horizon Entropy}
+The longitudinal shift deserves closer attention, because it carries a meaning beyond a mere coordinate displacement. The photon emitted by Paz propagates along the null direction; as it crosses the Rindler horizon, the AS shift displaces the future light cone of every test particle it passes. For the photon traveling into the right wedge, the shift pushes the right wedge's geometry in the $+v$ direction; for the entangled partner traveling into the left wedge, the shift pushes the left wedge in the $-v$ direction. The two wedges are displaced \emph{away from each other} along the longitudinal null direction.
 
-To make the preceding heuristic arguments concrete, we construct an explicit microstate realization using a bilocal source setup reminiscent of the Unruh-driving framework \cite{player2025driving}. Consider a past emitter, \emph{Paz}, who releases an entangled photon pair in the Bell state
+This is not merely a kinematic effect. The transverse plane of the pp-wave is identified with horizon area elements $dA = dx\,dy$, and the longitudinal shift creates a new null interval between the two wedges --- a region of spacetime that did not exist, in the sense of being causally accessible, before the photon passed. The bit of spatial information encoded in the left/right measurement outcome --- ``who observed $H$?'' --- refers to precisely this separation. The measurement event does not merely \emph{record} a spatial distinction; through the gravitational backreaction of the photon, it \emph{creates} the spatial separation that the bit describes.
+
+Put differently: the same physical event --- a photon crossing a horizon --- simultaneously encodes a classical bit and, via the AS longitudinal shift, generates the spatial structure that bit refers to. Space is not a pre-existing backdrop onto which information is written; it is produced, increment by increment, by the gravitational imprint of each measurement event. This is the microstate-level content of emergent space: each detection event contributes both an entropy increment and a spatial increment, and the two are the same thing described in different languages.
+
+\subsection{Horizon Entropy from Individual Microstates}
+
+Each detection event contributes a discrete entropy increment via the Bekenstein--Hawking relation derived in Section~\ref{sec:heuristics}:
 \begin{equation}
-\frac{1}{\sqrt{2}} \big( |H\rangle \otimes |V\rangle + |V\rangle \otimes |H\rangle \big),
+\Delta S = \frac{\Delta A}{4\ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
 \end{equation}
-with equal and opposite momenta $\pm \mathbf{k}$. Initially, the photons are localized at Paz and carry no net momentum, so there is no backreaction on the emitter. As the photons propagate, they cross the past Rindler horizons into the left and right Rindler wedges, where two observers, \emph{Lester} and \emph{Wright}, record their polarization outcomes in the $H/V$ basis. Each measurement produces a classical bit, which is perfectly correlated between the observers.
+where $\Delta A$ is the area element imprinted on the horizon by the transverse focusing of the pp-wave. Horizon entropy is therefore not a bulk thermodynamic quantity assigned to the horizon as a whole, but a sum of discrete, calculable contributions from individual measurement-induced interactions. The transverse focusing and the longitudinal shift are two aspects of the same microstate: focusing encodes the entropy increment in the area; the longitudinal shift encodes the spatial increment in the geometry.
 
-Crucially, a future observer may instead ask the question: ``Who observed $H$?'' The answer is a spatial bit, distinguishing left vs.\ right wedge. In this sense, the polarization information carried by the photons is converted into \emph{spatial information}, providing a direct microphysical mechanism for emergent space. This realizes ER=EPR at the level of single Unruh microstates, with the Rindler horizon acting as the substrate where information is physically encoded.
+\subsection{Coarse-Graining and the Emergence of Thermality}
 
-To capture the gravitational imprint of each microstate, we model each photon as an Aichelburg--Sexl pp-wave propagating along the null plane $u = t - z = 0$ in Minkowski coordinates. Test particles at fixed transverse positions $(x, y)$ experience the pp-wave as a shock:
-\begin{itemize}
-    \item A longitudinal shift $\Delta v \sim \ln r^2$, with $r^2 = x^2 + y^2$, which drags particles along the lightlike direction without generating proper time.
-    \item Transverse kicks proportional to $\nabla \ln r$, focusing particles toward the wave center.
-\end{itemize}
-These effects encode the energy-momentum of the photon into the horizon geometry, identifying the transverse plane of the pp-wave with horizon area elements $dA = dx\,dy$. Each detection thus imprints a calculable contribution to the horizon entropy, with
-\begin{equation}
-\Delta S \sim \frac{8 \pi G m_\text{photon}}{\hbar c^3} \, \Delta E,
-\end{equation}
-matching the energy-entropy relation derived heuristically in Section~\ref{sec:energy_bounds}.
+In a steady-state scenario, Paz continuously emits entangled pairs, and Lester and Wright continuously detect them. Each detection is an AS pp-wave microstate with a definite, non-thermal description in the global Minkowski frame: a specific photon energy, a specific transverse position, a specific longitudinal shift. Coarse-graining over this ensemble recovers the Unruh thermal spectrum at temperature $T = a/2\pi$, consistent with the vacuum decomposition of equation~\eqref{eq:vacuum}. The thermodynamic description of the horizon emerges from this averaging; it is not a feature of the individual microstates.
 
-In a steady-state emission scenario, continuous streams of entangled photons maintain the accelerations of Lester and Wright, and coarse-graining over many microstates recovers the familiar thermal Unruh spectrum. Thermality is therefore \emph{emergent}, not intrinsic: it arises from averaging over a large ensemble of source-driven microstates, each of which has a well-defined energy-momentum and horizon imprint.  
+This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
 
-This framework provides a concrete link between microstate-level dynamics, observer-dependent accelerations, and horizon thermodynamics. Each measurement-induced impulse has both a local physical effect (acceleration of the detector) and a global geometric imprint (contribution to horizon area and entropy), formalizing how the backreaction of quantum measurement can generate gravitational phenomena.
-
-\section{Emergent Proper Time}
-\label{sec:emergent_time}
-
-How can we quantize gravity without quantizing spacetime (or at least curvature)? And how can we do QFT computations in a probabilistic discrete spacetime?  It may be that these issues must be dealt with when trying to understand quantum gravity.  One may take the viewpoint that spacetime is made up of a mesh or sprinkling of Planck scale lengths and times, but this is not immediately Lorentz invariant and seems to side step the issues  \cite{brown}.  We instead take the viewpoint that space and time are actually properties of matter; that space and time only makes sense up to the resolution of the matter emanating it.  Using action to do this grants us automatic Lorentz invariance.  The approach also allows us to define a system where emergent proper time and space can be compared to gravity at classical scales.  We show how gravity is interpreted as the mechanics of entangled spacetimes.
-
-Proper time along a particle's worldline can be interpreted as a sequence of discrete ``ticks'' of action, each of magnitude $\hbar$, representing a minimal quantum of evolution. This construction is Lorentz-invariant, naturally connects to the phase factor $e^{iS/\hbar}$ in the path integral formulation, and can be understood as matter being sampled by the Higgs field or other persistent interactions. In this sense, massive particles act as a form of physical memory, while massless particles primarily carry information without enduring action quanta.
-
-Classical spacetime and particle trajectories emerge from the constructive interference of these ticks across all possible paths, reproducing smooth motion in the classical limit. The maximal rate at which these ticks can occur is bounded by the particle's mass-energy, consistent with the Bremermann or Nyquist limit, imposing a fundamental constraint on the flow of proper time. Viewed in this way, spacetime is not a fundamental entity, but rather an emergent structure arising from the informational content encoded in the discrete action of matter.
-
-
-\section{Emergenct Space: ER=EPR}
-\label{sec:emergent_space}
-
-Consider a bilocal source, \emph{Paz}, located in the past. She emits an entangled photon pair in the polarization Bell state 
-\begin{equation}
-\frac{1}{\sqrt{2}} \big( |H\rangle \otimes |V\rangle + |V\rangle \otimes |H\rangle \big),
-\end{equation}
-where $H$ and $V$ denote horizontal and vertical polarizations. Initially, the two photons are co-located at Paz, and the pair carries no net momentum, so there is no backreaction on the source.  
-
-The photons propagate across the past Rindler horizons into the left and right Rindler wedges, becoming microstates responsible for the Unruh-type acceleration experienced by the left observer, \emph{Lester}, and the right observer, \emph{Wright}. Each observer detects the photons in the $H/V$ polarization basis, recording classical bits of information in their respective memories. These recorded bits are perfectly correlated due to the initial entanglement.  
-
-Now, consider a future observer asking not ``what polarization was measured?'' but rather ``which observer recorded the $H$ polarization?'' The answer is a spatial label, left or right, effectively converting polarization information into spatial information. In this way, the classical correlations induced by the entangled photons produce emergent spatial structure, linking previously co-located degrees of freedom to distinct positions in the left and right wedges. This mechanism realizes an explicit microstate version of the ER = EPR principle within the Unruh framework: space itself emerges from the entanglement and measurement of localized quantum microstates.
 
 \section{Conclusion}
 \section{Acknowledgements}
 
-I'm also grateful to ChatGPT for helpful discussions.
+I'm also grateful to Claude and ChatGPT for helpful discussions.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
