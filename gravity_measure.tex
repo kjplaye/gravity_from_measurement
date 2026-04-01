@@ -29,7 +29,7 @@
 \begin{document}
 
 %title and author details
-\title{Gravity from Quantum Measurement}
+\title{Gravity from Quantum Measurement: From Microstates to Emergent Geometry}
 \author[ ]{Kevin Player\footnote{\textit{kjplaye@gmail.com}} \,\orcidlink{0009-0000-7180-7985}}
 
 \maketitle
@@ -37,14 +37,16 @@
 % \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
 
-\abstract{We propose a framework in which gravity can emerge from the physical backreaction of quantum measurement and the microstate dynamics of information acquisition. Standard results, including horizon scales and entropy bounds, follow from Landauer's principle at the Unruh temperature. We then present a concrete bilocal microstate construction as a case-study. Entangled pairs emitted from a localized source propagate into left and right Rindler wedges, where polarization measurement events produce discrete energy-momentum impulses and correlated classical bits. These microstates can be described geometrically using Aichelburg--Sexl pp-wave solutions, whose longitudinal shifts and transverse focusing imprint energy and information directly onto horizon geometry. This setup illustrates how individual measurement events contribute to horizon entropy, and how entanglement can be converted into spatial information, providing an operational realization of ER=EPR at the level of single microstates. The framework complements entropic and thermodynamic approaches by supplying a concrete, microphysical model linking quantum measurement, horizon dynamics, and emergent spacetime.}
+\abstract{We propose that gravity can be understood as the physical backreaction of quantum measurement. Standard results, horizon scales, entropy bounds, and the Bekenstein--Hawking area law, follow from Landauer's principle at the Unruh temperature, from which tempurature drops out entirely. To ground this, we examine a specific example from previous work, a bilocal microstate construction in which entangled photon pairs, emitted from a localised source, propagate into opposite Rindler wedges where polarisation measurements produce discrete energy-momentum impulses and correlated classical bits. Each microstate is described geometrically by an Aichelburg--Sexl pp-wave solution, whose longitudinal shift generates spatial separation between the wedges and whose transverse focusing increments the horizon area. The framework provides an operational realisation of ER=EPR at the level of individual microstates, and complements the thermodynamic approaches of Jacobson and Verlinde by supplying the microphysical process underlying each entropy increment.}
 
 \section{Introduction}
 
 Two landmark results establish that gravity and thermodynamics are deeply intertwined. Jacobson showed that the Einstein equations can be derived from thermodynamic identities applied to local Rindler horizons, with horizon entropy playing the role of the fundamental quantity from which spacetime dynamics emerge~\cite{jacobson1995thermodynamics}. Verlinde extended this perspective, arguing that gravitational forces arise from entropy gradients on holographic screens, recasting gravity as an entropic rather than a fundamental interaction~\cite{entropic}. Both frameworks, however, operate at the level of bulk thermodynamics and leave open a prior question: what physical process underlies each individual entropy increment?
 
-We argue that the answer is quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events---together with the causal correlations they induce---gives rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, by the equivalence principle, this impulse is locally indistinguishable from the effect of a gravitational field: no local measurement can distinguish the recoil associated with a quantum measurement event from thrust in a gravitational potential. Third, when such impulses are modelled geometrically---via Aichelburg--Sexl (AS) pp-wave solutions, as we show---they imprint energy and information directly onto horizon geometry, and coarse-graining over the resulting ensemble recovers standard horizon thermodynamics.
+We argue that the answer is quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events---together with the causal correlations they induce---gives rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, by the equivalence principle, this impulse is locally indistinguishable from the effect of a gravitational field: no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically---via Aichelburg--Sexl (AS) pp-wave solutions, as we explore---they imprint energy and information directly onto horizon geometry, and coarse-graining over the resulting ensemble recovers standard horizon thermodynamics.
 
+
+\subsection{Conceptual Roadmap}
 A unifying structure runs through all three of these relations, and it is worth making explicit before proceeding. In each case, the relation between two adjacent concepts has the same logical character: every instance of the more abstract concept is grounded in an instance of the more physical one, but not every instance of the more physical concept gives rise to the more abstract one \emph{for a given observer}. The gap in each case is filled by subjectivity. Quantum state reduction is always backed by an observation---it just is a Bayesian update on the observer's part---but an observation that carries no new information for that observer produces no state reduction. Equally, every observation is backed by an energy-momentum transfer, but not every such transfer constitutes an observation for you: an interaction involving a different observer leaves your state unchanged. The Unruh effect suggests the same structure extends to the equivalence principle: an accelerating observer perceives a thermal bath and attributes it to a gravitational field, while an inertial observer sees only vacuum. Whether an acceleration counts as gravity is perspectival in precisely the same sense. In each case the relation is an identification, not a causal link, and the identification is observer-relative.
 
 This stands in sharp contrast to the Penrose--Di\'osi objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity \emph{causes} quantum state reduction as an objective, observer-independent physical process. Figure~\ref{fig:diagram} summarises this contrast. The three solid arrows represent the perspectival grounding relations described above; the single dashed arrow represents the Penrose--Di\'osi causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
@@ -62,9 +64,9 @@ This stands in sharp contrast to the Penrose--Di\'osi objective collapse program
 \label{fig:diagram}
 \end{figure}
 
-To make this concrete, we build on the microstate construction of~\cite{player2025driving}, in which bilocal driving sources generate entangled Rindler excitations that realise individual terms of the Unruh thermal ensemble. The present paper applies and extends that construction. Entangled pairs emitted from a localised source propagate into left and right Rindler wedges; polarisation measurement events produce discrete energy-momentum impulses and correlated classical bits. We show that each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and that coarse-graining over the ensemble recovers standard horizon thermodynamics. This construction also provides an operational realisation of ER=EPR at the level of individual microstates: entanglement is converted into geometric information, and each measurement event contributes a discrete, calculable increment to horizon entropy.
+%To make this concrete, we build on the microstate construction of~\cite{player2025driving}, in which bilocal driving sources generate entangled Rindler excitations that realise individual terms of the Unruh thermal ensemble. The present paper applies and extends that construction. Entangled pairs emitted from a localised source propagate into left and right Rindler wedges; polarisation measurement events produce discrete energy-momentum impulses and correlated classical bits. We show that each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and that coarse-graining over the ensemble recovers standard horizon thermodynamics. This construction also provides an operational realisation of ER=EPR at the level of individual microstates: entanglement is converted into geometric information, and each measurement event contributes a discrete, calculable increment to horizon entropy.
 
-This approach both complements and sharpens the thermodynamic gravity programme of Jacobson and Verlinde. Jacobson's derivation of the Einstein equations from horizon thermodynamics and Verlinde's entropic force framework both operate at the level of bulk averages, leaving open the question of what physical process underlies each entropy increment. The present construction supplies that microstate realisation: each entropy increment corresponds to a physically mediated measurement event with a calculable energy-momentum transfer. Thermality is emergent rather than intrinsic, arising from coarse-graining over an ensemble of source-driven microstates, each of which admits a definite, non-thermal description in the global Minkowski frame. The thermodynamic results of both programmes are recovered as a consequence of this coarse-graining, rather than assumed as a starting point.
+%This approach both complements and sharpens the thermodynamic gravity programme of Jacobson and Verlinde. Jacobson's derivation of the Einstein equations from horizon thermodynamics and Verlinde's entropic force framework both operate at the level of bulk averages, leaving open the question of what physical process underlies each entropy increment. The present construction supplies that microstate realisation: each entropy increment corresponds to a physically mediated measurement event with a calculable energy-momentum transfer. Thermality is emergent rather than intrinsic, arising from coarse-graining over an ensemble of source-driven microstates, each of which admits a definite, non-thermal description in the global Minkowski frame. The thermodynamic results of both programmes are recovered as a consequence of this coarse-graining, rather than assumed as a starting point.
 
 
 [Section map paragraph todo]
@@ -72,7 +74,7 @@ This approach both complements and sharpens the thermodynamic gravity programme 
 \section{Motivating Heuristics}
 \label{sec:heuristics}
 
-The central observation is simple. Landauer's principle associates a minimal energy cost with the acquisition of information \cite{landauer1961irreversibility}. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a frame-independent relation between information acquisition, energy transfer, and acceleration (a version of the BHT first law). This is not merely an algebraic convenience: it is a concrete dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state. In this way we derive a sequence of standard results in black hole thermodynamics.
+The central observation is simple. Landauer's principle associates a minimal energy cost with the acquisition of information \cite{landauer1961irreversibility}. For an accelerated observer, the relevant temperature is the Unruh temperature \cite{unruh1976notes}. Substituting one into the other eliminates temperature entirely, yielding a relation between information acquisition, energy transfer, and acceleration (a version of the BHT first law). This is not merely an algebraic convenience: it is a concrete dictionary between the thermal description natural to a Rindler observer and the non-thermal global Minkowski description, with the apparent thermality of the vacuum emerging as a consequence of the observer's acceleration rather than as a fundamental property of the state. In this way we derive a sequence of standard results in black hole thermodynamics.
 
 \subsection{The Unruh-Landauer Relation}
 Landauer's principle states that the acquisition of $\Delta S$ bits of information by a physical observer requires a minimum energy transfer
@@ -95,14 +97,15 @@ The energy transfer $\Delta E$ implied by equation~\eqref{eq:UL} is carried by a
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
 \end{equation}
-Let the interaction occur over a spatial scale $r$, so that the interaction time is $\Delta t \sim 2r/c$. For a detector of mass $m_d$, Newton's second law in impulse form gives
+
+We take the interaction time to be of order the light-crossing time across the interaction region, $\Delta t \sim 2r/c$, corresponding to a causal exchange over the scale $r$. The numerical factor is not fixed a priori at this level; it will be determined by requiring consistency with the gravitational scale that emerges below. For a detector of mass $m_d$, Newton's second law in impulse form gives
 \begin{equation}
 a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{2 m_d r}.
 \label{eq:accel}
 \end{equation}
 The factor of 2 in the interaction time is not an independent assumption: it will be fixed self-consistently by requiring that the characteristic interaction scale reproduces the Schwarzschild radius, as shown in the next subsection.
 \subsection{The Schwarzschild Radius}
-The thrust quantum carries energy $\Delta E$ and produces an acceleration $a$ on the detector. Identifying this with the Newtonian gravitational acceleration due to a mass $m_t$ at distance $r$.
+This step should be understood as a calibration: we match the acceleration inferred from the measurement-induced impulse to the Newtonian gravitational field in order to identify the characteristic length scale associated with the detector. The thrust quantum carries energy $\Delta E$ and produces an acceleration $a$ on the detector. Identifying this with the Newtonian gravitational acceleration due to a mass $m_t$ at distance $r$.
 \begin{equation}
 a = \frac{G m_t}{r^2},
 \end{equation}
@@ -115,6 +118,8 @@ Solving for $r$:
 r = \frac{2 G m_d}{c^2} \equiv r_s,
 \end{equation}
 which is precisely the Schwarzschild radius of the detector mass $m_d$. This fixes the factor of 2 in the interaction time retroactively: the choice $\Delta r = 2r/c$ is the unique one consistent with Newtonian gravity and the correct Schwarzschild scale.
+
+It is notable that the resulting length scale is set by the detector mass $m_d$, rather than the source mass $m_t$. This reflects the fact that the construction is inherently observer-centred: the acceleration entering the argument is the response of the detector to the measurement-induced impulse, and the associated scale is therefore the horizon radius relevant to that observer. In this sense, the quantity $r_s$  should be interpreted not as the Schwarzschild radius of the source, but as the characteristic horizon scale associated with the detector as a physical system undergoing measurement. This is consistent with the observer-dependence of horizon structure in relativistic settings, as exemplified by the Unruh effect, where acceleration alone gives rise to a causal horizon.
 
 \subsection{Surface Gravity}
 Evaluating the acceleration at $r = r_s$ gives the surface gravity of the detector:
@@ -537,6 +542,78 @@ In a steady-state scenario, Paz continuously emits entangled pairs, and Lester a
 
 This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
 
+%------------------------------------------------------
+\section{Connecting Microstates to Emergent Geometry}
+\label{sec:emergent_geometry}
+%------------------------------------------------------
+
+The preceding sections established three key loci where the geometry responds to information-processing events: 
+
+\begin{enumerate}
+    \item \textbf{Paz in the past:} the bilocal source injects energy and angular momentum, which can be associated with a Schwarzschild-like mass $m_P$ encoding the initial acceleration of the detectors.
+    \item \textbf{Photon crossing the horizon:} each emitted photon carries energy $E=\hbar\omega$ and a helicity bit, producing an Aichelburg--Sexl pp-wave whose longitudinal shift generates a new null separation between wedges and whose transverse focusing increments the horizon area.
+    \item \textbf{Wright/Lester detectors:} absorption of the photon imprints energy and one classical bit into the matter-memory of each detector, producing local Schwarzschild-like responses $m_W, m_L$ and marking the accumulation of \emph{ticks}.
+\end{enumerate}
+
+Each of these loci has its own emergent time, defined operationally by the sequence of discrete \emph{ticks} accumulated in the proper time of matter carrying information. For the photon itself, no proper time elapses; it carries a \emph{pure transfer} of energy and one classical bit. The photon’s passage between emission and detection mediates correlations that are encoded as entanglement between the ticks of Wright and Lester, and as longitudinal shifts of the horizon in the pp-wave picture. 
+
+The Raychaudhuri equation applied to each infinitesimal horizon element ensures that the transverse focusing $\Delta \theta_\perp$ matches the area increment $\Delta A$ associated with a single microstate. This realizes the Bekenstein--Hawking relation at the level of individual detection events, making Jacobson’s thermodynamic argument manifest at the microstate scale.
+
+The longitudinal shifts, meanwhile, generate the \emph{spatial separation} that the entanglement between detectors refers to: space is created incrementally as a direct consequence of energy-momentum transfer and measurement. In this sense, ER=EPR is instantiated physically: the Einstein--Rosen bridge between the left and right wedges is not postulated, but emerges as the cumulative geometric imprint of paired ticks and photons, each producing correlated pp-wave distortions. 
+
+The sequence
+\begin{equation}
+\text{Paz source} \;\xrightarrow{\text{photon emission}}\; \text{pp-wave horizon shift} \;\xrightarrow{\text{detector absorption}}\; \text{matter ticks}
+\end{equation}
+provides a concrete operational dictionary linking energy, information, and geometry. Each step is reversible in principle except for the Landauer cost encoded in the matter-memory, and coarse-graining over many such events recovers the familiar thermal horizon description. 
+
+In this framework, \emph{space, time, and entropy emerge simultaneously from discrete microphysical events}. Proper time flows in the detectors via tick accumulation, spatial separation arises from longitudinal pp-wave shifts, and horizon area encodes entropy through transverse focusing. Each photon acts as a bridge between these emergent structures, unifying the information-theoretic, gravitational, and thermodynamic perspectives into a single microstate-level picture.
+
+\subsection{Horizon Area Change from a Single AS Photon}
+\label{sec:deltaA}
+
+The connection between energy flux across a null surface and horizon area change follows directly from Jacobson's derivation of the Einstein equations from horizon thermodynamics \cite{jacobson1995thermodynamics}. In his framework, for a null congruence generating a local Rindler horizon, the Raychaudhuri equation
+\begin{equation}
+\frac{d\theta}{du} = -\frac{1}{2}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} - 8\pi G T_{\mu\nu} k^\mu k^\nu
+\end{equation}
+relates the expansion $\theta$ to the energy-momentum flux $T_{\mu\nu}$ along null generators $k^\mu$. Integrating over the horizon patch and assuming linearised focusing gives
+\begin{equation}
+\delta A = 8 \pi G \int T_{\mu\nu} k^\mu k^\nu \, du\, d^2 x_\perp,
+\end{equation}
+which in Jacobson's derivation leads to the Einstein equation as a thermodynamic consistency condition. 
+
+The formal use of the Raychaudhuri equation and the identification of the area change $\delta A$ with the integrated null energy flux is exactly as in Jacobson. The logic that links energy flux to an infinitesimal area change along a null surface is unchanged.  
+
+In our microstate construction, the energy flux $T_{\mu\nu}$ is \emph{discrete}: it corresponds to a single AS photon carrying energy $\Delta E = \hbar \omega$. The area change becomes
+\begin{equation}
+\Delta A = 8 \pi G \, \Delta E,
+\end{equation}
+applied to the transverse patch intersected by the photon. Unlike the smooth, coarse-grained description in Jacobson, each microstate produces a calculable, individual contribution to the horizon area. Moreover, the longitudinal shift of the AS pp-wave simultaneously generates the \emph{spatial separation} that encodes the spatial bit in the ER=EPR construction. This demonstrates concretely that each detection event both writes a bit into the matter-memory of the detectors and creates the corresponding geometric imprint, unifying information, energy, and space at the level of a single microstate.
+
+Applying the Bekenstein--Hawking relation gives the entropy increment:
+\begin{equation}
+\Delta S = \frac{\Delta A}{4 \ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3}.
+\end{equation}
+Thus, the photon produces a discrete entropy contribution and a corresponding spatial increment: the horizon thermodynamics emerges microstate by microstate, rather than as a smooth, macroscopic average.
+
+This is a concrete, microphysical realization of Jacobson's ideas. Whereas Jacobson used horizon thermodynamics as a consistency argument to recover Einstein's equations, here each quantum of energy and information — each photon — produces a tangible change in horizon area and geometry, and the same event encodes information and space simultaneously. It gives a bridge from microscopic events (photon detection, tick accumulation, polarisation bits) to emergent spacetime, providing a detailed operational picture of ER=EPR and the origin of horizon entropy in a single, physically transparent step.
+
+\subsection{Planck-Unit Horizon Area from a Single Photon}
+\label{sec:planck_area}
+
+Each AS pp-wave microstate corresponds to a single photon transferring energy $\Delta E = \hbar \omega$ to an accelerated detector. From the Bekenstein--Hawking relation, the associated horizon area increment is
+\begin{equation}
+\Delta A = 4 \ell_P^2 \, \Delta S = 4 \ell_P^2 \frac{\Delta E}{T_\text{eff}} ,
+\end{equation}
+where $T_\text{eff}$ is the effective Unruh temperature seen by the detector.
+
+In Planck units, this gives
+\begin{equation}
+\Delta A \sim 8\pi \ell_P^2 \frac{\hbar \omega}{m_P c^2},
+\end{equation}
+where $m_P = \sqrt{\hbar c/G}$ is the Planck mass. Each photon therefore imprints a discrete patch of area on the horizon, measured in multiples of $\ell_P^2$, linking the minimal quantum of action $\hbar$ directly to the minimal increment of horizon area.
+
+This is a special case of the standard Bekenstein--Hawking law: instead of considering a macroscopic black hole or a coarse-grained ensemble, we see that a single actionable quantum (a photon) produces a calculable Planck-scale increment. It makes the horizon \emph{operationally granular}, with each Planck-area patch corresponding to a single measurement event, a single Landauer tick, and a single spatial bit. This establishes a concrete bridge between quantum information, energy transfer, and emergent geometry.
 
 \section{Conclusion}
 \section{Acknowledgements}
