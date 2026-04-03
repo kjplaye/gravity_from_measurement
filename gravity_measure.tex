@@ -29,7 +29,7 @@
 \begin{document}
 
 %title and author details
-\title{Gravity from Quantum Measurement: From Microstates to Emergent Geometry}
+\title{From Quantum Measurement to Gravity}
 \author[ ]{Kevin Player\footnote{\textit{kjplaye@gmail.com}} \,\orcidlink{0009-0000-7180-7985}}
 
 \maketitle
@@ -37,16 +37,18 @@
 % \epigraph{The Unruh effect tells us that what we call particles is really just a matter of perspective.}{Lee Smolin}
 
 
-\abstract{We propose that gravity can be understood as the physical backreaction of quantum measurement. Standard results, horizon scales, entropy bounds, and the Bekenstein--Hawking area law, follow from Landauer's principle at the Unruh temperature as consequences of Newton's laws. To ground our idea, we extend a specific example from our previous work, a bilocal microstate construction where entangled photon pairs emitted from a localized source, propagate into opposite Rindler wedges. We show how polarisation measurements produce discrete energy-momentum impulses and correlated classical bits. Each such microstate is described geometrically at the horizon by an Aichelburg--Sexl pp-wave solution, whose longitudinal shift generates spatial separation between the wedges and whose transverse focusing increments the horizon area. The framework provides an operational realisation of ER=EPR at the level of these individual microstates, and complements the thermodynamic approaches of Jacobson and Verlinde by supplying a microphysical process underlying each entropy increment.}
+\abstract{We propose that gravity can be understood as the physical backreaction of quantum measurement. Standard results, horizon scales, entropy bounds, and the Bekenstein--Hawking area law, follow from Landauer's principle at the Unruh temperature as consequences of Newton's laws of motion and gravitation. To ground our idea, we extend a specific example from our previous work, a bilocal microstate construction where entangled photon pairs emitted from a localized source, propagate into opposite Rindler wedges. We show how polarisation measurements produce discrete energy-momentum impulses and correlated classical bits. Each such microstate is described geometrically at the horizon by an Aichelburg--Sexl pp-wave solution, whose longitudinal shift generates spatial separation between the wedges and whose transverse focusing increments the horizon area. The framework provides an operational realisation of ER=EPR at the level of these individual microstates, and complements the thermodynamic approaches of Jacobson and Verlinde by supplying a microphysical process underlying each entropy increment.}
+
+% TODO: Integrate matter clock substrate and action in a way that does not increase the length too much
 
 \section{Introduction}
 
 Two landmark results establish that gravity and Unurh thermodynamics are deeply intertwined. Jacobson showed that the Einstein equations can be derived from thermodynamic identities applied to local Rindler horizons, with horizon entropy playing the role of the fundamental quantity from which spacetime dynamics emerge~\cite{jacobson1995thermodynamics}. Verlinde extended this perspective, arguing that gravitational forces arise from entropy gradients on holographic screens, recasting gravity as an entropic rather than a fundamental interaction~\cite{entropic}. Both frameworks, however, operate at the level of bulk thermodynamics and leave open a prior question: what physical process underlies each individual entropy increment?
 
-We argue that the answer is quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events---together with the causal correlations they induce---gives rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, by the equivalence principle, this impulse is locally indistinguishable from the effect of a gravitational field: no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically---via Aichelburg--Sexl (AS) pp-wave solutions, as we explore---they imprint energy and information directly onto horizon geometry, and coarse-graining over the resulting ensemble recovers standard horizon thermodynamics. A unifying structure runs through the relations, and it is worth pausing to discuss the general ideas involved before diving into our explicit example. 
+We argue that the answer is quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, gives rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, by the equivalence principle, this impulse is locally indistinguishable from the effect of a gravitational field: no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically, via Aichelburg--Sexl (AS) pp-wave solutions, as we explore, they imprint energy and information directly onto horizon geometry, and coarse-graining over the resulting ensemble recovers standard horizon thermodynamics. A unifying structure runs through the relations, and it is worth pausing to discuss the general ideas involved before diving into our explicit example. 
 
 \subsection{Conceptual Roadmap and Subjective Relations}
-In each case in our argument, the relation between two adjacent concepts has the same logical character: every instance of the more abstract concept is grounded in an instance of the more physical one, but not every instance of the more physical concept gives rise to the more abstract one \emph{for a given observer}. The gap in each case is filled by subjectivity. Quantum state reduction is always backed by an observation---it is a Bayesian update on the observer's part---but an observation that carries no new information for that observer produces no state reduction. Equally, every observation is backed by an energy-momentum transfer, but not every such transfer constitutes an observation for you: an interaction involving a different ``observer'' leaves your knowledge unchanged. The Unruh effect suggests the same structure extends to the equivalence principle: an accelerating observer perceives a thermal bath and attributes it to a gravitational field, while an inertial observer sees only vacuum. Whether an acceleration counts as gravity is perspectival in precisely the same sense. In each case the relation is an identification, not a causal link, and the identification is observer-relative.
+In each case in our argument, the relation between two adjacent concepts has the same logical character: every instance of the more abstract concept is grounded in an instance of the more physical one, but not every instance of the more physical concept gives rise to the more abstract one \emph{for a given observer}. The gap in each case is filled by subjectivity. Quantum state reduction is always backed by an observation, it is a Bayesian update on the observer's part, but an observation that carries no new information for that observer produces no state reduction. Equally, every observation is backed by an energy-momentum transfer, but not every such transfer constitutes an observation for you: an interaction involving a different ``observer'' leaves your knowledge unchanged. The Unruh effect suggests the same structure extends to the equivalence principle: an accelerating observer perceives a thermal bath and attributes it to a gravitational field, while an inertial observer sees only vacuum. Whether an acceleration counts as gravity is perspectival in precisely the same sense. In each case the relation is an identification, not a causal link, and the identification is observer-relative.
 
 This stands in sharp contrast to the Di\'osi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity \emph{causes} quantum state reduction as an objective, observer-independent physical process. Figure~\ref{fig:diagram} summarises this contrast. The three solid arrows represent the perspectival grounding relations described above; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
 
@@ -63,12 +65,102 @@ This stands in sharp contrast to the Di\'osi--Penrose objective collapse program
 \label{fig:diagram}
 \end{figure}
 
-%To make this concrete, we build on the microstate construction of~\cite{player2025driving}, in which bilocal driving sources generate entangled Rindler excitations that realise individual terms of the Unruh thermal ensemble. The present paper applies and extends that construction. Entangled pairs emitted from a localised source propagate into left and right Rindler wedges; polarisation measurement events produce discrete energy-momentum impulses and correlated classical bits. We show that each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and that coarse-graining over the ensemble recovers standard horizon thermodynamics. This construction also provides an operational realisation of ER=EPR at the level of individual microstates: entanglement is converted into geometric information, and each measurement event contributes a discrete, calculable increment to horizon entropy.
+To make this concrete, we build on the microstate construction of~\cite{player2025driving}, in which bilocal driving sources generate entangled Rindler excitations that realise individual terms of the Unruh thermal ensemble. The present paper applies and extends that construction. Entangled pairs emitted from a localised source propagate into left and right Rindler wedges; polarisation measurement events produce discrete energy-momentum impulses and correlated classical bits. We show that each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and that coarse-graining over the ensemble recovers standard horizon thermodynamics. This construction also provides an operational realisation of ER=EPR at the level of individual microstates: entanglement is converted into geometric information, and each measurement event contributes a discrete, calculable increment to horizon entropy.
 
 %This approach both complements and sharpens the thermodynamic gravity programme of Jacobson and Verlinde. Jacobson's derivation of the Einstein equations from horizon thermodynamics and Verlinde's entropic force framework both operate at the level of bulk averages, leaving open the question of what physical process underlies each entropy increment. The present construction supplies that microstate realisation: each entropy increment corresponds to a physically mediated measurement event with a calculable energy-momentum transfer. Thermality is emergent rather than intrinsic, arising from coarse-graining over an ensemble of source-driven microstates, each of which admits a definite, non-thermal description in the global Minkowski frame. The thermodynamic results of both programmes are recovered as a consequence of this coarse-graining, rather than assumed as a starting point.
 
+\subsection{Relation to existing Literature}
+The idea that spacetime geometry is connected to quantum information 
+has been developed along several distinct lines, none of which supplies 
+the microstate-level operational picture we develop here. Jacobson's 
+derivation of the Einstein equations from horizon thermodynamics~\cite{jacobson1995thermodynamics} 
+and Verlinde's entropic gravity programme~\cite{entropic} both operate 
+at the level of bulk thermodynamic averages, leaving open the question 
+of what physical process underlies each individual entropy increment. 
+Van Raamsdonk~\cite{van2010building} argued that entanglement between 
+boundary degrees of freedom is what holds bulk geometry together, and 
+that reducing entanglement tears spacetime apart, a result that 
+motivates our identification of the ER=EPR bridge with correlated 
+measurement events, though his framework operates with thermal 
+boundary states rather than individual non-thermal microstates. 
+Susskind and Maldacena's ER=EPR correspondence~\cite{maldacena2013cool} 
+identifies entangled pairs with Einstein--Rosen bridges at the level 
+of bulk thermodynamics; we realise this correspondence operationally 
+at the level of a single microstate, with a calculable geometric 
+imprint sourced by a specific bilocal emission event.
 
-[Section map paragraph todo]
+% NOTE: Verify Van Raamsdonk 2010 cite key and Susskind-Maldacena 
+% 2013 cite key before submission.
+
+The closest antecedent to our geometric construction is the 
+gravitational shockwave programme of Dray and 't~Hooft~\cite{dray1985gravitational} and 't~Hooft's subsequent S-matrix approach to black hole 
+scattering~\cite{thooft1996}. % NOTE: Verify 't Hooft S-matrix 
+% cite key --- there are several papers, check which is the 
+% primary reference. Their construction uses Aichelburg--Sexl 
+solutions sourced by infalling classical or semiclassical particles 
+to define scattering amplitudes at the horizon, and the longitudinal 
+position shift of the AS wave is the fundamental horizon degree of 
+freedom in their picture, in precise agreement with our geometric 
+construction. The key difference is that 't~Hooft's sources are 
+classical infalling particles rather than quantum entangled pairs 
+emitted from a common ancestor in the past, and the measurement and 
+information acquisition framing is absent from his construction. Our 
+bilocal source selects individual non-thermal microstates from the 
+Unruh ensemble, giving each AS imprint a definite quantum origin and 
+connecting the geometric shift directly to a classical bit acquired 
+by an observer.
+
+Microstate counting for black holes has been approached from several 
+directions. Strominger and Vafa~\cite{strominger1996microscopic} achieved 
+exact entropy counting for extremal black holes using D-brane 
+configurations in string theory, establishing that black hole entropy 
+has a microscopic origin, but the microstates are defined 
+algebraically in a high-energy string framework far removed from 
+the operational measurement picture developed here. Carlip~\cite{carlip1999} 
+% NOTE: Check Carlip cite --- his horizon entropy from Virasoro 
+% algebra paper, approximately 1999--2000.
+derived black hole entropy from the Virasoro algebra of 
+diffeomorphisms at the horizon boundary, identifying microstates 
+with boundary excitations; our AS pp-wave imprints may provide a 
+physical realisation of these boundary excitations in terms of 
+measurement events, a connection we leave for future work. Bianchi's 
+loop quantum gravity microstate counting~\cite{bianchi2012} 
+% NOTE: Verify Bianchi cite key --- his horizon entropy from 
+% spin network punctures paper.
+assigns discrete area increments to individual spin network punctures 
+at the horizon, structurally analogous to our result that each 
+measurement event contributes a discrete AS-wave area increment; 
+the difference is that our punctures have a definite dynamical 
+origin in a quantum measurement event rather than a kinematical 
+definition in the LQG Hilbert space.
+
+Interior reconstruction via the Papadodimas--Raju 
+programme~\cite{papadodimas2013} % NOTE: Verify cite key.
+addresses how degrees of freedom behind the horizon are encoded in 
+exterior operators, a question closely related to our spatial bit 
+argument in Section \ref{sec:erepr}. Their framework requires thermality of the boundary state, 
+whereas our construction works microstate by microstate with a 
+non-thermal source; it would be interesting to determine whether 
+our classical spatial record, the anticorrelated helicity bits 
+registered by Wright and Lester, realises the interior 
+reconstruction map at the single-microstate level, but we leave 
+this comparison for future work.
+
+What distinguishes the present construction from all of these 
+approaches is the combination of three features that do not appear 
+together elsewhere in the literature: a non-thermal bilocal source 
+that selects individual microstates from the Unruh ensemble rather 
+than assuming thermality as a primitive; the identification of each 
+microstate with a specific quantum measurement event carrying a 
+calculable energy-momentum transfer; and an operational realisation 
+of ER=EPR at the single-microstate level with a concrete geometric 
+imprint. Each of these features appears in isolation in various 
+forms across the literature, but their combination, and in 
+particular the grounding of horizon geometry in individual 
+measurement events rather than bulk thermodynamic averages,
+appears to be new.
+
+% TODO [Section map paragraph todo]
 
 \section{Motivating Heuristics}
 \label{sec:heuristics}
@@ -93,7 +185,7 @@ with the local vacuum. Substituting into Landauer's bound eliminates $k_B T$, yi
 \end{equation}
 Temperature has dropped out entirely: equation~\eqref{eq:UL} is a temperature-independent relation between energy, acceleration, and information, suitable for the Minkowski vacuum. In what follows, standard results emerge as consequences of this single relation and Newton's laws.
 \subsection{Momentum Transfer and Acceleration}
-The energy transfer $\Delta E$ implied by equation~\eqref{eq:UL} is carried by a physical quantum — matter or radiation — mediating the measurement interaction. We refer to this as the \emph{thrust quantum} of effective mass $m_t$. (This will actually be a pure energy carrier our later microstate example.)
+The energy transfer $\Delta E$ implied by equation~\eqref{eq:UL} is carried by a physical quantum — matter or radiation — mediating the measurement interaction. We refer to this as the \emph{thrust quantum} of effective mass $m_t$. (This will actually be a pure energy carrier in our later microstate example.)
 For a relativistic carrier, the associated momentum transfer is
 \begin{equation}
 \Delta p = \frac{\Delta E}{c}.
@@ -105,7 +197,7 @@ a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{2 m_d r}.
 \label{eq:accel}
 \end{equation}
 \subsection{The Schwarzschild Radius}
-This step should be understood as a calibration: we match the acceleration inferred from the measurement-induced impulse to the Newtonian gravitational field in order to identify the characteristic length scale associated with the detector. The thrust quantum carries energy $\Delta E$ and produces an acceleration $a$ on the detector. Identifying this with the Newtonian gravitational acceleration due to the mass $m_t$ at distance $r$.
+We match the acceleration inferred from the measurement-induced impulse to the Newtonian gravitational field in order to identify the characteristic length scale associated with the detector. The thrust quantum carries energy $\Delta E$ and produces an acceleration $a$ on the detector. Identifying this with the Newtonian gravitational acceleration due to the mass $m_t$ at distance $r$.
 \begin{equation}
 a = \frac{G m_t}{r^2},
 \end{equation}
@@ -157,7 +249,7 @@ The heuristic arguments of Section~\ref{sec:heuristics} establish a relationship
 We now upgrade this construction from a spin-0 scalar field in the original source~\cite{player2025driving} to the spin-1 electromagnetic
 field. This is not merely a technical generalisation. As we show, the photon carries a unit
 of action $\hbar$ per cycle alongside its energy $E = \hbar\omega$, which closes the
-Landauer gap left open in Section~\ref{sec:heuristics}: the minimum actionable event in the
+Landauer gap left open in Section~\ref{sec:heuristics}: in each wedge, the minimum actionable event in the
 construction is precisely a single photon, and its polarisation state constitutes the
 classical bit acquired by each observer. The anticorrelated helicities of the entangled pair
 are the natural completion of the $\mathbb{Z}_2$ swap symmetry between wedges, and as we
@@ -170,7 +262,7 @@ horizon consistent with the ER=EPR identification.
 
 We retain the Alice-and-Bob style naming convention. Three observers are placed at spacetime
 positions $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$, named \emph{Wright}~(R), \emph{Lester}~(L),
-and \emph{Paz}~(P) respectively --- a mnemonic for Right, Left, and Past. Paz serves as the
+and \emph{Paz}~(P) respectively, a mnemonic for Right, Left, and Past. Paz serves as the
 common causal ancestor of Wright and Lester (see Figure~\ref{paz}).
 
 \begin{figure}[h]
@@ -187,6 +279,15 @@ Paz emits an entangled pair of spin-1 massless photons with momenta $\pm k$ and 
 %------------------------------------------------------
 \subsection{Double-Null Gauge}
 %------------------------------------------------------
+
+% TODO
+% The double-null gauge condition $A_+ = A_- = 0$ simultaneously 
+% fixes both null components of the gauge field, leaving only the 
+% two transverse physical degrees of freedom. This is a stronger 
+% condition than standard light-cone gauge and is motivated here 
+% by the $\mathbb{Z}_2$ symmetry of the bilocal construction; 
+% we verify that it is consistent with the equations of motion 
+% and does not over-constrain the physical degrees of freedom.
 
 The emission event naturally defines two null directions: the right-moving photon has
 wave-vector $k^\mu_R$ and the left-moving photon has wave-vector $k^\mu_L = -k^\mu_R$. These
@@ -343,7 +444,7 @@ We show how information is encoded in matter and energy and is reflected in the 
 
 A massive particle accumulates phase along its worldline at a rate set by its rest energy. The Compton frequency relation $f = E/h$ assigns a natural frequency to any mass $m$, and Bremermann's computational limit~\cite{bremermann1962optimization} independently recovers the same rate $f = mc^2/h$ as the maximum clock rate, or Nyquist rate, of any physical system with that energy $E$. These two results agree because they are both expressions of the same underlying fact: a quantum of action $\hbar$ is the minimal unit of physical evolution, and $mc^2/h$ is the rate at which a mass $m$ consumes such quanta.
 
-Each such quantum corresponds to one tick of the phase $e^{iS/\hbar}$ in the path integral, and classical trajectories emerge from the constructive interference of these ticks across paths. Paths separated by less than one tick of action --- less than $\hbar$ --- contribute indistinguishably to the interference, so the trajectory is resolved only down to the scale set by $\hbar/E$: this is precisely the Heisenberg uncertainty at energy $E$, and coarser descriptions of the trajectory discard the sub-tick phase information that finer energy scales would reveal. This agrees notionally with the old quantum physics of Bohr and Sommerfeld and only picks up finer phase information at higher effective energy scales.
+Each such quantum corresponds to one tick of the phase $e^{iS/\hbar}$ in the path integral, and classical trajectories emerge from the constructive interference of these ticks across paths. Paths separated by less than one tick of action, less than $\hbar$, contribute indistinguishably to the interference, so the trajectory is resolved only down to the scale set by $\hbar/E$: this is precisely the Heisenberg uncertainty at energy $E$, and coarser descriptions of the trajectory discard the sub-tick phase information that finer energy scales would reveal. This agrees notionally with the old quantum physics of Bohr and Sommerfeld and only picks up finer phase information at higher effective energy scales.
 
 % TODO: Renormalization and effective field theory enters in? At each energy 
 % scale, the Wilsonian RG integrates out sub-tick phase information, leaving 
@@ -354,7 +455,7 @@ Each such quantum corresponds to one tick of the phase $e^{iS/\hbar}$ in the pat
 % measurement-event ticks (Landauer-cost ticks) contribute to the 
 % gravitational field, a natural cutoff may emerge. Worth developing carefully.
 
-This gives matter a precise sense in which it is a \emph{substrate for information}: it accumulates ticks, and each tick is a discrete unit of action, Lorentz-invariant and recorded in the particle's proper time. Matter is persistent memory in the operational sense that its history of ticks is physically encoded in its state and cannot be erased without an energy cost governed by Landauer's principle. The maximum rate of this memory is bounded by Bremermann.x
+This gives matter a precise sense in which it is a \emph{substrate for information}: it accumulates ticks, and each tick is a discrete unit of action, Lorentz-invariant and recorded in the particle's proper time. Matter is persistent memory in the operational sense that its history of ticks is physically encoded in its state and cannot be erased without an energy cost governed by Landauer's principle. The maximum rate of this memory is bounded by Bremermann.
 
 % TODO: Develop channel capacity and dynamic range more carefully. 
 % Bremermann gives the tick rate $mc^2/h$ as the bandwidth. Bekenstein, 
@@ -589,6 +690,138 @@ In Planck units, this gives
 where $m_P = \sqrt{\hbar c/G}$ is the Planck mass. Each photon therefore imprints a discrete patch of area on the horizon, measured in multiples of $\ell_P^2$, linking the minimal quantum of action $\hbar$ directly to the minimal increment of horizon area.
 
 This is a special case of the standard Bekenstein--Hawking law: instead of considering a macroscopic black hole or a coarse-grained ensemble, we see that a single actionable quantum (a photon) produces a calculable Planck-scale increment. It makes the horizon \emph{operationally granular}, with each Planck-area patch corresponding to a single measurement event, a single Landauer tick, and a single spatial bit. This establishes a concrete bridge between quantum information, energy transfer, and emergent geometry.
+
+\section{Appendix: Consistency of the Double-Null Gauge Condition}
+% Verification that double-null gauge does not over-constrain physical degrees of freedom
+
+We verify that the double-null gauge condition $A_+ = A_- = 0$ is consistent with 
+Maxwell's equations and leaves exactly two physical degrees of freedom.
+
+\subsection*{Coordinates and Notation}
+
+In double-null coordinates $(x^+, x^-, x^1, x^2)$ the Minkowski metric reads
+\begin{equation}
+    ds^2 = -2\,dx^+\,dx^- + (dx^1)^2 + (dx^2)^2,
+\end{equation}
+so that $\partial_+ = \partial/\partial x^+$, $\partial_- = \partial/\partial x^-$, and 
+the d'Alembertian is
+\begin{equation}
+    \Box = -2\partial_+\partial_- + \partial_i\partial^i, \qquad i = 1,2.
+\end{equation}
+The gauge field has components $A_\mu = (A_+, A_-, A_1, A_2)$ and transforms as
+\begin{equation}
+    A_\mu \to A_\mu + \partial_\mu\Lambda
+\end{equation}
+under a gauge transformation with parameter $\Lambda(x^+, x^-, x^1, x^2)$.
+
+\subsection*{Imposing the Gauge Conditions in Stages}
+
+The single gauge parameter $\Lambda$ is a function of all four coordinates. We use 
+it in three stages, each consuming a different functional dependence.
+
+\paragraph{Stage 1: $A_+ = 0$.}
+Requiring $A_+ + \partial_+\Lambda = 0$ determines $\Lambda$ as a function of $x^+$:
+\begin{equation}
+    \Lambda(x^+, x^-, x^i) = -\int^{x^+} A_+(s, x^-, x^i)\,ds 
+                              + \Lambda_0(x^-, x^i),
+\end{equation}
+where $\Lambda_0(x^-, x^i)$ is an arbitrary residual function independent of $x^+$.
+
+\paragraph{Stage 2: $A_- = 0$.}
+Under the residual freedom $\Lambda_0(x^-, x^i)$, the $A_-$ component transforms as
+$A_- \to A_- + \partial_-\Lambda_0$. Setting this to zero determines $\Lambda_0$ as a 
+function of $x^-$:
+\begin{equation}
+    \Lambda_0(x^-, x^i) = -\int^{x^-} A_-(s, x^i)\,ds + \Lambda_1(x^i),
+\end{equation}
+where $\Lambda_1(x^i)$ is a residual function of the transverse coordinates only.
+
+\paragraph{Stage 3: Transverse Coulomb condition $\partial^i A_i = 0$.}
+Under the remaining freedom $\Lambda_1(x^i)$, the transverse components transform as 
+$A_i \to A_i + \partial_i\Lambda_1$. Imposing $\partial^i A_i = 0$ requires
+\begin{equation}
+    \nabla^2_\perp\Lambda_1 = -\partial^i A_i,
+\end{equation}
+which is a Poisson equation in the transverse plane with a unique solution (up to 
+harmonic functions, fixed by boundary conditions). This exhausts the gauge freedom 
+entirely.
+
+The three conditions have consumed the full gauge parameter $\Lambda$ in stages, 
+with no over-determination: each stage uses a strictly different functional 
+dependence of $\Lambda$.
+
+\subsection*{Physical Degrees of Freedom}
+
+After imposing $A_+ = A_- = 0$ and $\partial^i A_i = 0$, the remaining components 
+are $A_1$ and $A_2$ subject to one differential constraint $\partial^i A_i = 0$. 
+In momentum space this reads $k^i A_i = 0$.
+
+For our specific construction, the photons propagate in the $\pm z$ direction, 
+so their wave-vectors are purely null: $k^i_\perp = 0$ for $i = 1,2$. The 
+transverse Coulomb condition $k^i A_i = 0$ is therefore trivially satisfied for 
+any $A_1, A_2$, and both transverse components are independent. The two circular 
+polarisation vectors
+\begin{equation}
+    \epsilon^i_{(+1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}, \qquad
+    \epsilon^i_{(-1)} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}
+\end{equation}
+are the two independent physical degrees of freedom, corresponding to helicity 
+$\lambda = \pm 1$. This is the correct count for a massless spin-1 field in four 
+dimensions.
+
+\subsection*{Consistency with Maxwell's Equations}
+
+With $A_+ = A_- = 0$ and $\partial^i A_i = 0$, the non-zero field strength 
+components are
+\begin{equation}
+    F_{+i} = \partial_+ A_i, \qquad F_{-i} = \partial_- A_i, \qquad 
+    F_{ij} = \partial_i A_j - \partial_j A_i, \qquad F_{+-} = 0.
+\end{equation}
+Maxwell's equations $\partial^\mu F_{\mu\nu} = J_\nu$ decompose as follows.
+
+\paragraph{Transverse components $\nu = i$:}
+\begin{equation}
+    -2\partial_+\partial_- A_i + \partial^j(\partial_j A_i - \partial_i A_j) = J_i.
+\end{equation}
+Using $\partial^i A_i = 0$, the second term simplifies to $\partial^j\partial_j A_i$, 
+giving the standard wave equation
+\begin{equation}
+    \boxed{\Box A_i = J_i.}
+    \label{eq:wave}
+\end{equation}
+
+\paragraph{Null components $\nu = \pm$:}
+\begin{equation}
+    -\partial^i\partial_\pm A_i = J_\pm.
+\end{equation}
+These are constraint equations relating the null source components to the transverse 
+field. For our bilocal source, which is purely transverse, $J_+ = J_- = 0$, and the 
+constraints reduce to
+\begin{equation}
+    \partial^i\partial_\pm A_i = 0.
+\end{equation}
+Differentiating the transverse Coulomb condition $\partial^i A_i = 0$ with respect 
+to $x^\pm$ gives $\partial^i(\partial_\pm A_i) = 0$, so these constraints are 
+automatically satisfied. \checkmark
+
+\subsection*{Summary}
+
+The double-null gauge condition $A_+ = A_- = 0$ supplemented by the transverse 
+Coulomb condition $\partial^i A_i = 0$:
+\begin{enumerate}
+    \item uses the gauge freedom of $\Lambda$ completely and without over-determination,
+          via a three-stage procedure consuming the $x^+$-, $x^-$-, and $x^i$-dependent
+          parts of $\Lambda$ in sequence;
+    \item leaves exactly two physical degrees of freedom, the helicity eigenstates
+          $\lambda = \pm 1$, consistent with the known count for a massless spin-1 field;
+    \item reduces Maxwell's equations to the standard transverse wave equation
+          $\Box A_i = J_i$, with the null constraint equations automatically satisfied
+          for a purely transverse source.
+\end{enumerate}
+The gauge is therefore internally consistent and does not over-constrain the physical 
+degrees of freedom. The $\mathbb{Z}_2$ wedge-swap symmetry is preserved throughout: 
+conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
+is privileged over the other.
 
 \section{Conclusion}
 \section{Acknowledgements}
