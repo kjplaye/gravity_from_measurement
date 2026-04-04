@@ -69,7 +69,9 @@ To make this concrete, we build on the microstate construction of~\cite{player20
 
 %This approach both complements and sharpens the thermodynamic gravity programme of Jacobson and Verlinde. Jacobson's derivation of the Einstein equations from horizon thermodynamics and Verlinde's entropic force framework both operate at the level of bulk averages, leaving open the question of what physical process underlies each entropy increment. The present construction supplies that microstate realisation: each entropy increment corresponds to a physically mediated measurement event with a calculable energy-momentum transfer. Thermality is emergent rather than intrinsic, arising from coarse-graining over an ensemble of source-driven microstates, each of which admits a definite, non-thermal description in the global Minkowski frame. The thermodynamic results of both programmes are recovered as a consequence of this coarse-graining, rather than assumed as a starting point.
 
-\subsection{Relation to existing Literature}
+A closely related perspective is provided by relational and information-theoretic interpretations of quantum theory. Carlo Rovelli’s relational quantum mechanics \cite{rovelli1996relational} and the QBist programme associated with Christopher Fuchs \cite{fuchs2014introduction} both treat the quantum state as observer-dependent, encoding information rather than objective physical reality. In these frameworks, measurement is understood as an update of an observer’s knowledge, not a universal physical collapse. The Unruh effect \cite{unruh1976notes} provides a direct physical analogue of this observer-relativity: particle content and thermality themselves become observer-dependent notions, tied to acceleration. Our construction extends this shared principle across domains, identifying quantum state reduction, thermality, and gravitational effects as different aspects of observer-relative descriptions grounded in underlying physical interactions. This viewpoint also sharpens the conceptual tension highlighted by Eugene Wigner \cite{wigner1995remarks}, where different observers may consistently assign different physical descriptions to the same process, suggesting that the resulting geometric imprints in our framework may likewise be observer-dependent. Finally, the present approach may be viewed as a concrete dynamical realisation of John Archibald Wheeler \cite{wheeler2018information}, in which discrete acts of information acquisition give rise not only to effective physical laws but to spacetime geometry itself.
+
+\subsection{Relation to recent existing Literature}
 The idea that spacetime geometry is connected to quantum information 
 has been developed along several distinct lines, none of which supplies 
 the microstate-level operational picture we develop here. Jacobson's 
@@ -88,6 +90,11 @@ identifies entangled pairs with Einstein--Rosen bridges at the level
 of bulk thermodynamics; we realise this correspondence operationally 
 at the level of a single microstate, with a calculable geometric 
 imprint sourced by a specific bilocal emission event.
+
+% TODO: Integrate these as well
+%  - Relational QM (Rovelli): facts are observer-relative
+%  - QBism: quantum states = Bayesian states of belief
+%  - Unruh effect: particle content is observer-dependent
 
 % NOTE: Verify Van Raamsdonk 2010 cite key and Susskind-Maldacena 
 % 2013 cite key before submission.
@@ -160,6 +167,85 @@ particular the grounding of horizon geometry in individual
 measurement events rather than bulk thermodynamic averages,
 appears to be new.
 
+% TODO 1 — Measurement vs decoherence
+%
+% Clarify whether “measurement events” are:
+% 
+% observer-dependent updates only
+% or physically distinguished interactions (e.g. decoherence, amplification)
+% 
+% Why it matters:
+% QBism/Rovelli → epistemic
+% Your model → physical backreaction
+% 
+% 👉 You need to reconcile:
+% 
+% “Bayesian update” vs “produces AS shockwave”
+
+% 🔴 TODO 2 — Observer-dependent geometry
+% 
+% Explicitly state whether different observers:
+% 
+% assign different geometries
+% or just different decompositions of the same geometry
+% 
+% Why it matters:
+% Wigner’s friend makes this unavoidable.
+% 
+% 👉 Add a sentence like:
+% 
+% “We leave open whether the induced geometric description is itself observer-relative or whether a consistency condition enforces agreement at the coarse-grained level.”
+%
+
+% 🔴 TODO 3 — Mapping impulses → Einstein equations
+% 
+% Make explicit how:
+% 
+% discrete AS shockwaves
+% → coarse-grain
+% → smooth metric satisfying Einstein equations
+% 
+% Why it matters:
+% This is the bridge from “nice idea” → “theory of gravity.”
+
+% 🔴 TODO 4 — Conservation laws
+% 
+% Clarify:
+% 
+% where the energy-momentum in measurement comes from
+% how conservation is enforced across observers
+% 
+% Why it matters:
+% Otherwise it looks like measurement creates stress-energy.
+
+% 🔴 TODO 5 — Role of Unruh temperature (crucial)
+% 
+% You mention it in the abstract, but:
+% 
+% TODO: Derive explicitly how Landauer cost at Unruh temperature
+% → gives Bekenstein–Hawking area increment
+% 
+% This is one of your strongest claims, but also a likely attack point.
+
+% 🔴 TODO 6 — Microstate identity
+% 
+% Define precisely what constitutes a “single microstate event”:
+% 
+% one detection?
+% one entangled pair?
+% one classical bit?
+% 
+% Why it matters:
+% Everything (entropy, geometry, ER=EPR) depends on this unit.
+
+% 🔴 TODO 7 — Relation to Wheeler (strengthen this!)
+% 
+% Right now it’s just a nod.
+% 
+% 👉 Consider making explicit:
+% 
+% “In contrast to Wheeler’s largely conceptual ‘it from bit’, we identify a concrete dynamical mechanism—measurement-induced energy-momentum transfer—by which bits generate spacetime structure.”
+
 % TODO [Section map paragraph todo]
 
 \section{Motivating Heuristics}
@@ -170,9 +256,11 @@ Landauer's principle associates a minimal energy cost with the acquisition of in
 \subsection{The Unruh-Landauer Relation}
 Landauer's principle suggests that the acquisition of $\Delta H$ bits of information by a physical observer requires a minimum energy transfer
 \begin{equation}
-  \Delta E \geq k_B \ln(2)\, T \, \Delta H.
+  \Delta E \geq k_B T \, \Delta H.
 \end{equation}
 We note that Landauer's principle is conventionally stated for information erasure rather than acquisition. Here we apply it to acquisition, which is the physically relevant process for an observer registering a measurement outcome. The bound has the same form in both cases; we apply it to acquisition on the grounds that registering a measurement outcome is physically equivalent to a bit being written into the detector's state, which is the process Landauer's principle governs.
+
+% TODO: Put in the missing ln(2) as a footnote or more.
 
 For an observer undergoing proper acceleration $a$, the Unruh effect associates a temperature
 \begin{equation}
@@ -180,10 +268,10 @@ T = \frac{\hbar a}{2 \pi k_B c}
 \end{equation}
 with the local vacuum. Substituting into Landauer's bound eliminates $k_B T$, yielding
 \begin{equation}
-\boxed{\Delta E \geq \frac{\hbar a \ln(2)}{2\pi c} \, \Delta H.}
+\boxed{\Delta E \geq \frac{\hbar a}{2\pi c} \, \Delta H.}
 \label{eq:UL}
 \end{equation}
-Temperature has dropped out entirely: equation~\eqref{eq:UL} is a temperature-independent relation between energy, acceleration, and information, suitable for the Minkowski vacuum. In what follows, standard results emerge as consequences of this single relation and Newton's laws.
+Temperature has dropped out entirely: equation~\eqref{eq:UL} is a temperature-independent relation between energy, acceleration, and information, suitable for the Minkowski vacuum. Acceleration sets the energy scale of information. In what follows, standard results emerge as consequences of this single relation and Newton's laws.
 \subsection{Momentum Transfer and Acceleration}
 The energy transfer $\Delta E$ implied by equation~\eqref{eq:UL} is carried by a physical quantum — matter or radiation — mediating the measurement interaction. We refer to this as the \emph{thrust quantum} of effective mass $m_t$. (This will actually be a pure energy carrier in our later microstate example.)
 For a relativistic carrier, the associated momentum transfer is
@@ -196,6 +284,9 @@ We take the interaction time to be the order of the light-crossing time across t
 a = \frac{\Delta p}{m_d \Delta t} = \frac{\Delta E}{2 m_d r}.
 \label{eq:accel}
 \end{equation}
+
+This perspective is closely related in spirit to Erik Verlinde’s entropic gravity \cite{entropic}, where forces arise from entropy gradients, but differs in that the present construction grounds each entropy increment in a discrete measurement event with an associated energy-momentum transfer, rather than in a coarse-grained thermodynamic gradient.
+
 \subsection{The Schwarzschild Radius}
 We match the acceleration inferred from the measurement-induced impulse to the Newtonian gravitational field in order to identify the characteristic length scale associated with the detector. The thrust quantum carries energy $\Delta E$ and produces an acceleration $a$ on the detector. Identifying this with the Newtonian gravitational acceleration due to the mass $m_t$ at distance $r$.
 \begin{equation}
@@ -223,13 +314,15 @@ in agreement with the standard Schwarzschild result. This is the acceleration th
 \subsection{Bekenstein-Hawking Entropy}
 Returning to the Unruh-Landauer relation~\eqref{eq:UL} and substituting the surface gravity $\kappa$ for $a$, the entropy increment associated with an energy increment $\Delta E = c^2 \Delta m_d$ is
 \begin{equation}
-\ln(2) \Delta H \leq \frac{2\pi c}{\hbar \kappa} \Delta E = \frac{8\pi G m_d}{\hbar c^3} \cdot c^2 \Delta m_d.
+\Delta H \leq \frac{2\pi c}{\hbar \kappa} \Delta E = \frac{8\pi G m_d}{\hbar c^3} \cdot c^2 \Delta m_d.
 \end{equation}
 Expressing this in terms of the change in Schwarzschild area $\Delta A = 32\pi G^2 m_d \Delta m_d / c^4$:
 \begin{equation}
-\ln(2) \Delta H \le \frac{\Delta A}{4 \ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
+\Delta H \le \frac{\Delta A}{4 \ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
 \end{equation}
 which is the Bekenstein-Hawking area law. Each measurement event contributes a discrete entropy increment proportional to the area imprinted on the horizon by the associated energy-momentum transfer.
+
+This derivation parallels Jacob Bekenstein’s original argument \cite{bekenstein}, in which the entropy increase of a black hole is inferred from the minimal energy required to localize and drop a system across the horizon; here, the same structure emerges from the minimal energy cost of registering information at the horizon scale.
 
 The two bounds are saturated simultaneously when $a = c^2/R$ — which is exactly the condition for being {\it at a horizon}. The horizon is therefore not just where thermodynamics happens to work out, it is the unique locus where the minimum cost of information acquisition equals the maximum information content of the region.
 
@@ -251,7 +344,7 @@ field. This is not merely a technical generalisation. As we show, the photon car
 of action $\hbar$ per cycle alongside its energy $E = \hbar\omega$, which closes the
 Landauer gap left open in Section~\ref{sec:heuristics}: in each wedge, the minimum actionable event in the
 construction is precisely a single photon, and its polarisation state constitutes the
-classical bit acquired by each observer. The anticorrelated helicities of the entangled pair
+classical bit acquired by each observer from detection. The anticorrelated helicities of the entangled pair
 are the natural completion of the $\mathbb{Z}_2$ swap symmetry between wedges, and as we
 discuss in Section~\ref{sec:ppwave}, they imprint a definite geometric signature onto the
 horizon consistent with the ER=EPR identification.
@@ -350,6 +443,22 @@ where $a^{L\dagger}_{-k,(-1)}$ and $a^{R\dagger}_{k,(+1)}$ are creation operator
 
 Each photon carries energy $E = \hbar\omega$ and, as a mode of the electromagnetic field, constitutes precisely one quantum of action $\hbar$ per oscillation cycle. The thrust quantum of Section~\ref{sec:heuristics} is thereby identified with a single photon: the minimum actionable event is the emission and detection of one such quantum. The energy transferred per bit acquired is $\Delta E = \hbar\omega$, saturating the Unruh--Landauer bound~\eqref{eq:UL} at the fundamental quantum level. This closes the Landauer gap: registering a photon's helicity writes one classical bit into the detector's physical state, which is precisely the process Landauer's principle governs.
 
+% TODO: This saturation is a very strong claim
+% 
+% 
+% Unruh–Landauer bound depends on acceleration 
+% 𝑎
+% a
+% ħω is independent of 
+% 𝑎
+% a
+% 
+% 👉 So saturation requires:
+% 
+% ω tuned to acceleration scale
+% 
+% This needs to be stated explicitly, or it looks accidental.
+
 %------------------------------------------------------
 \subsection{Polarisation Bogoliubov Transformation}
 %------------------------------------------------------
@@ -440,7 +549,7 @@ information onto the horizon.
 \section{Matter as Substrate: Ticks, Memory, and the Thrust Quantum}
 \label{sec:substrate}
 
-We show how information is encoded in matter and energy and is reflected in the horizon geometry. This requires a physical account of what it means for matter to \emph{carry} information.
+The Unruh–Landauer relation of Section~\ref{sec:heuristics} constrains the minimal energy required to register information, but does not specify where that information resides physically. The present section addresses this gap by identifying matter as the substrate in which such information is stored, with each act of acquisition corresponding to the deposition of a discrete quantum of action into the detector’s degrees of freedom. We show how information is encoded in matter and energy and is reflected in the horizon geometry. This requires a physical account of what it means for matter to \emph{carry} information.
 
 A massive particle accumulates phase along its worldline at a rate set by its rest energy. The Compton frequency relation $f = E/h$ assigns a natural frequency to any mass $m$, and Bremermann's computational limit~\cite{bremermann1962optimization} independently recovers the same rate $f = mc^2/h$ as the maximum clock rate, or Nyquist rate, of any physical system with that energy $E$. These two results agree because they are both expressions of the same underlying fact: a quantum of action $\hbar$ is the minimal unit of physical evolution, and $mc^2/h$ is the rate at which a mass $m$ consumes such quanta.
 
@@ -467,13 +576,12 @@ This gives matter a precise sense in which it is a \emph{substrate for informati
 % Compton wavelength substitution in the Bekenstein bound needs careful 
 % treatment.
 
-A massless particle --- the photon --- has no rest frame, no proper time, and accumulates no
-action between emission and absorption. It does not tick. It therefore carries no persistent
+The distinction between massless and massive degrees of freedom is therefore operational: massless quanta transmit information, while massive systems retain it, accumulating the action quanta that constitute physical memory. A massless particle, the photon, has no rest frame, no proper time, and accumulates no action between emission and absorption. It does not tick. It therefore carries no persistent
 memory and cannot serve as a substrate. Its role in the present construction is precisely
 that of a pure information carrier. A single photon carries exactly two irreducible
 constituents, distinct in kind:
 
- \begin{itemize}
+\begin{itemize}
 
 \item \textbf{One quantum of action $\hbar$}: the physical transfer, 
 deposited as energy $\hbar\omega$ into the detector, incrementing its 
@@ -693,6 +801,61 @@ logical structure is identical.
 \label{zigzag}
 \end{figure}
 
+% 🔴 TODO 1 — Make “tick = action quantum” precise
+% 
+% Right now it’s intuitive.
+% 
+% You could ask:
+% 
+% Is each tick exactly 
+% Δ
+% 𝑆
+% =
+% ℏ
+% ΔS=ℏ?
+% Is there a counting operator?
+% 🔴 TODO 2 — Clarify bit vs tick
+% 
+% You already sense this tension.
+% 
+% Right now:
+% 
+% photon → 1 bit + 1 ħ
+% matter → many ħ → many ticks
+% 
+% 👉 Question:
+% 
+% Is 1 bit always tied to 1 tick?
+% 
+% Or:
+% 
+% Are bits emergent from many ticks?
+% 
+% This is crucial.
+
+% 🔴 TODO 3 — Connect to Bekenstein bound explicitly
+% 
+% You hinted:
+% 
+% Bremermann → rate
+% Bekenstein → total capacity
+% 
+% 👉 You can frame:
+% 
+% ticks = temporal density
+% Bekenstein = spatial capacity
+% 
+% That would unify space + time information.
+% 
+% 🔴 TODO 4 — Gravitating vs non-gravitating ticks
+% 
+% Your comment about cosmological constant is excellent.
+% 
+% 👉 Core idea:
+% 
+% Only irreversible (Landauer) ticks gravitate?
+% 
+% That could be huge if developed carefully.
 
 \section{Gravitational Imprint: the pp-Wave Realisation}
 \label{sec:ppwave}
@@ -740,9 +903,11 @@ In a steady-state scenario, Paz continuously emits entangled pairs, and Lester a
 This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
 
 %------------------------------------------------------
-\section{Connecting Microstates to Emergent Geometry}
+\section{Microstates and Emergent Geometry}
 \label{sec:emergent_geometry}
 %------------------------------------------------------
+
+The matter-clock picture developed in Section~\ref{sec:substrate} assigns a discrete quantum of action $\hbar$ to each information-bearing event recorded in matter. From this perspective, the Einstein–Hilbert action may be understood as the coarse-grained, geometric encoding of the cumulative action of such ticks, with spacetime curvature representing the redistribution of locally accumulated action across null surfaces.
 
 The preceding sections established three key loci where the geometry responds to information-processing events: 
 
@@ -811,6 +976,32 @@ In Planck units, this gives
 where $m_P = \sqrt{\hbar c/G}$ is the Planck mass. Each photon therefore imprints a discrete patch of area on the horizon, measured in multiples of $\ell_P^2$, linking the minimal quantum of action $\hbar$ directly to the minimal increment of horizon area.
 
 This is a special case of the standard Bekenstein--Hawking law: instead of considering a macroscopic black hole or a coarse-grained ensemble, we see that a single actionable quantum (a photon) produces a calculable Planck-scale increment. It makes the horizon \emph{operationally granular}, with each Planck-area patch corresponding to a single measurement event, a single Landauer tick, and a single spatial bit. This establishes a concrete bridge between quantum information, energy transfer, and emergent geometry.
+
+\subsection{Einstein--Hilbert Action from Matter Ticks}
+\label{sec:EH_action}
+
+Each information-bearing event deposits a discrete quantum of action $\hbar$ into the matter substrate. In the bilocal construction, these are the \emph{ticks} accumulated in the proper time of massive detectors (Section~\ref{sec:substrate}). While locally recorded as proper-time increments, the cumulative effect of many such ticks produces a geometric response in spacetime: in the continuum limit, the Einstein--Hilbert action
+\begin{equation}
+S_\text{EH} = \frac{1}{16 \pi G} \int d^4 x \sqrt{-g}\, R
+\end{equation}
+can be understood as the coarse-grained sum of these microphysical actions.
+
+The Aichelburg--Sexl (AS) pp-wave solutions of Section~\ref{sec:ppwave} provide a concrete illustration. Each photon emitted by the bilocal source deposits energy $\Delta E = \hbar \omega$ and one classical bit into a detector, producing a local increment of spacetime curvature. In this sense, the AS solution can be interpreted as a \emph{distributional contribution} to the Einstein--Hilbert action at the level of a single microstate. Transverse focusing encodes the horizon area increment (entropy), while the longitudinal shift encodes the spatial separation associated with the entangled bit. Both arise from the same deposited matter action.
+
+Mathematically, the area increment $\Delta A$ associated with a single photon/tick scales as
+\begin{equation}
+\Delta A \sim G \times (\text{matter action per tick}) \sim G \hbar,
+\end{equation}
+so in Planck units each tick corresponds to a Planck-area contribution to the coarse-grained curvature. This establishes a direct bridge between the minimal quantum of action, the Planck-scale horizon area, and the emergent geometric response.
+
+From an information-theoretic perspective, the Landauer cost associated with each bit corresponds to the irreversible deposition of $\hbar$ into matter, which then sources a geometric response through the Einstein--Hilbert coupling. Proper time, spatial separation, and horizon area all emerge together: ticks advance matter clocks, longitudinal shifts produce space, and transverse focusing encodes entropy.
+
+In the dense limit of many microstates, the discrete accumulation of ticks recovers the smooth Einstein--Hilbert action, with curvature representing the coarse-grained effect of individual measurement-induced contributions. In this way, the Einstein--Hilbert action is nothing other than the geometric bookkeeping of accumulated matter-action events: spacetime curvature is a record of information processed by matter.
+
+\subsection{Einstein--Hilbert Action and Information Flow}
+\label{sec:EH_information}
+
+The microstate construction allows us to interpret the Einstein--Hilbert (EH) action operationally in terms of discrete information-processing events. Each locus — the Paz source, photon-mediated horizon crossing, and the Lester/Wright detectors — contributes a localized increment of curvature, corresponding to a discrete EH action $\Delta S_\text{EH} \sim \hbar$ per tick. The massive detectors accumulate proper-time ticks at the Bremermann rate $f = mc^2/h$, making their worldlines physical information channels: each tick represents a quantum of action and a unit of matter-memory capable of storing one or more classical bits. Photons serve as the channel carriers, transferring discrete energy $\hbar\omega$ along null geodesics and conveying a single bit of polarization information. At the horizon, the transverse focusing of each pp-wave encodes a Planck-scale area increment, effectively acting as a spatial memory array that integrates the incoming channel inputs. In this picture, the conservation of energy-momentum corresponds directly to a conservation of action and information: the total number of ticks emitted by sources equals the total number absorbed by matter plus the geometric contribution manifested in horizon curvature. The EH action thus emerges as the cumulative record of tick-by-tick energy and information transfers, unifying action, proper time, channel capacity, and emergent spacetime geometry within a single, operational framework.
 
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
 % Verification that double-null gauge does not over-constrain physical degrees of freedom
@@ -944,7 +1135,7 @@ degrees of freedom. The $\mathbb{Z}_2$ wedge-swap symmetry is preserved througho
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
 
-\section{Emergent Spacetime from Ticks and Correlations}
+\section{Appendix: Emergent Spacetime from Ticks and Correlations}
 \label{sec:emergent_spacetime}
 
 The bilocal construction of Section~\ref{sec:microstates} and the matter substrate argument
