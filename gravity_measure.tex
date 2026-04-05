@@ -1,3 +1,68 @@
+% ╔══════════════════════════════════════════════════════════════╗
+% ║              MAJOR OPEN PROBLEMS from Claude                 ║
+% ╚══════════════════════════════════════════════════════════════╝
+
+% 🔴 TODO A — Continuum limit and the Einstein-Hilbert action
+% The paper produces discrete AS pp-wave imprints microstate by 
+% microstate. The central missing result is showing that the 
+% ensemble of such imprints satisfies the Einstein-Hilbert 
+% variational principle in the continuum limit, recovering 
+% Jacobson's result from below rather than assuming it from above.
+% Without this the framework is a compelling programme rather than
+% a derived theory of gravity. This is the most important TODO.
+
+% 🔴 TODO B — Carlip connection
+% If each AS pp-wave imprint corresponds to a specific 
+% diffeomorphism at the horizon boundary, there is a direct map 
+% from individual measurement events to the Virasoro algebra that 
+% Carlip uses to derive black hole entropy. This would close a 
+% significant gap in Carlip's programme, which identifies the 
+% symmetry but not the physical process that excites it. Should 
+% be investigated as a potential central result rather than 
+% deferred to future work.
+
+% TODO B2 Carnot cycle?
+
+% 🔴 TODO C — The zig-zag identification
+% The structural identity between the bilocal construction and the
+% Penrose-Dirac zig-zag mechanism at the level of individual 
+% events is the most surprising result in the paper. It should be
+% made precise: does the Higgs condensate play the role of P for 
+% all massive particles simultaneously, and does this connect the
+% present framework directly to the standard model? If the 
+% identification holds it should be promoted to a central result.
+
+% 🔴 TODO D — Two gravitational contributions
+% Free samples (pure phase accumulation) and absorption samples 
+% (Landauer-cost measurement events) may source gravity 
+% differently: free samples contribute to the smooth background 
+% stress-energy of standard GR, while absorption samples 
+% contribute discrete AS pp-wave increments. Whether these are 
+% two aspects of a single gravitational response or genuinely 
+% distinct contributions needs to be made precise. The 
+% cosmological constant problem may connect to the mismatch 
+% between the two.
+
+% 🔴 TODO E — Equivalence principle arrow and observer-relativity
+% The diagram in Section 1 treats the equivalence principle 
+% arrow as perspectival in the same sense as the Bayesian update 
+% arrow. This needs more careful justification: the equivalence 
+% principle has a local geometric character that is harder to make
+% fully observer-relative. A precise account of what "for a given
+% observer" means for a Rindler observer with no definite global 
+% trajectory is needed to make the diagram's claim rigorous.
+
+% 🔴 TODO F — Gravitational memory and record erasure
+% Each absorption sample leaves an AS pp-wave imprint — a 
+% permanent geometric record of the measurement event, an 
+% instance of the gravitational memory effect. When the classical 
+% bit stored in matter is eventually erased, Landauer requires an 
+% energy cost. Does this erasure produce a second gravitational 
+% contribution, and does it connect to horizon evaporation or 
+% the decay of gravitational memory? The relationship between 
+% the information lifecycle and the geometric imprint lifecycle 
+% needs development.\documentclass[12pt,a4paper]{article}
+
 \documentclass[12pt,a4paper]{article}
 \usepackage[width=.75\textwidth]{caption}
 \usepackage{graphicx}
@@ -28,8 +93,9 @@
 % \pagestyle{fancy}
 \begin{document}
 
+
 %title and author details
-\title{The Role of Quantum Measurement in Gravity}
+\title{A Role for Quantum Measurement in Gravity}
 \author[ ]{Kevin Player\footnote{\textit{kjplaye@gmail.com}} \,\orcidlink{0009-0000-7180-7985}}
 
 \maketitle
@@ -1089,6 +1155,230 @@ leave for future work.
 % imprints satisfies the EH variational principle in the continuum 
 % limit, which would recover Jacobson's result at the microstate level.
 
+\section{From AS Imprints to the Einstein--Hilbert Action}
+\label{sec:EH}
+
+The preceding sections established that each measurement event 
+produces a discrete AS pp-wave imprint on the horizon, contributing 
+a calculable area increment $\Delta A = 8\pi G \hbar\omega$ and an 
+entropy increment $\Delta S = \Delta A / 4\ell_P^2$. We now ask 
+whether the ensemble of such imprints, in the continuum limit, is 
+consistent with the Einstein--Hilbert action as the governing 
+variational principle of the emergent geometry.
+
+\subsection{The Metric Perturbation from a Single AS Imprint}
+
+Each AS pp-wave sourced by a photon of energy $\hbar\omega$ 
+propagating along $u = 0$ contributes a metric perturbation of the 
+form
+\begin{equation}
+    h_{uu}(u, \mathbf{x}_\perp) 
+    = 16\pi G \hbar\omega\; \delta(u)\; \Phi(\mathbf{x}_\perp),
+    \label{eq:AS_metric}
+\end{equation}
+where $\Phi(\mathbf{x}_\perp) = -\ln|\mathbf{x}_\perp|^2 / 4\pi$ 
+is the two-dimensional Coulomb potential sourced by a unit charge 
+at the origin, satisfying $\nabla^2_\perp \Phi = \delta^{(2)}(\mathbf{x}_\perp)$. 
+This is an exact solution of the vacuum Einstein equations away 
+from the source worldline~\cite{aichelburg1971gravitational}. The 
+delta function in $u$ localises the imprint to the null surface 
+of the photon's passage, and the Coulomb profile encodes the 
+transverse focusing of the congruence.
+
+\subsection{Continuum Limit}
+
+Consider a steady-state ensemble of measurement events with 
+number density $n(u, \mathbf{x}_\perp)$ per unit null time per 
+unit transverse area, each contributing energy $\hbar\omega$. The 
+total metric perturbation is
+\begin{equation}
+    \bar{h}_{uu}(u, \mathbf{x}_\perp) 
+    = 16\pi G \hbar\omega \int 
+        n(u', \mathbf{x}'_\perp)\; 
+        \delta(u - u')\; 
+        \Phi(\mathbf{x}_\perp - \mathbf{x}'_\perp)\; 
+        du'\, d^2x'_\perp.
+\end{equation}
+In the continuum limit, where the event density $n$ is slowly 
+varying on the scale of $c/\omega$, this convolution reduces to
+\begin{equation}
+    \bar{h}_{uu}(u, \mathbf{x}_\perp) 
+    \approx 16\pi G\, T_{uu}^{\mathrm{eff}}(u, \mathbf{x}_\perp),
+    \label{eq:hbar_uu}
+\end{equation}
+where $T_{uu}^{\mathrm{eff}} = \hbar\omega\, n$ is the effective 
+null energy flux of the ensemble. This is precisely the linearised 
+Einstein equation sourced by $T_{uu}^{\mathrm{eff}}$, confirming 
+that the ensemble of AS imprints is consistent with the Einstein 
+equations at linear order.
+
+\subsection{Connection to the Einstein--Hilbert Action}
+
+The linearised result~\eqref{eq:hbar_uu} suggests a deeper 
+connection. In Jacobson's derivation~\cite{jacobson1995thermodynamics}, 
+the Einstein equations emerge as the condition that the 
+thermodynamic identity $\delta Q = T\, dS$ holds for every local 
+Rindler horizon. In our construction, each AS imprint contributes 
+a term
+\begin{equation}
+    \delta S_{\mathrm{EH}}^{(i)} 
+    = \frac{1}{16\pi G} \int R\, \sqrt{-g}\; d^4x
+    \bigg|_{\mathrm{single\;imprint}}
+    \sim \frac{\Delta A}{4\ell_P^2} = \Delta S,
+\end{equation}
+consistent with the Bekenstein--Hawking entropy increment per 
+microstate. The natural conjecture is that the Einstein--Hilbert 
+action is the generating functional for the ensemble of AS 
+imprints: its variation with respect to the metric reproduces 
+the Einstein equations, whose solutions are the coarse-grained 
+aggregate of discrete pp-wave contributions.
+
+Making this precise requires showing that the distributional 
+contributions~\eqref{eq:AS_metric}, summed over the full 
+ensemble with the weights $\tanh^{2n}\theta_\Omega$ of the 
+Minkowski vacuum decomposition, reproduce the Einstein--Hilbert 
+variational principle in the continuum limit. This is equivalent 
+to showing that Jacobson's thermodynamic argument holds 
+microstate by microstate rather than only in the bulk average, 
+which is the central open problem of the framework. We conjecture 
+that this holds and leave its proof for future work, noting that 
+the linear-order consistency established in~\eqref{eq:hbar_uu} 
+is a necessary condition that is already satisfied.
+
+\subsection{Implications}
+
+If the conjecture holds, the Einstein--Hilbert action acquires a 
+microstate interpretation: it is the coarse-grained geometric 
+encoding of the cumulative action of irreversible measurement 
+events, with each term in the path integral corresponding to a 
+specific history of AS imprints. The path integral over metrics 
+becomes a sum over measurement histories, weighted by the 
+thermodynamic cost of each irreversible sample. Spacetime 
+geometry is then not a background on which quantum fields 
+propagate, but the aggregate record of the information 
+acquisition events that constitute physical observation.
+
+This reframes the quantization of gravity as a question about 
+the statistical mechanics of measurement events rather than 
+about the quantization of the metric itself. The discrete 
+structure is already present at the level of individual 
+microstates; the smooth geometry of general relativity emerges 
+in the same way that thermodynamics emerges from statistical 
+mechanics, as a coarse-grained description that discards 
+microstate identity in favour of bulk averages.
+
+% \section{The Bilocal Landauer Cycle}
+% \label{sec:landauer_cycle}
+% 
+% The bilocal construction of Section~\ref{sec:microstates} describes 
+% a single emission event: a source $\mathcal{P}$ in the past produces 
+% an entangled pair, which propagates into the left and right Rindler 
+% wedges. We now close this into a thermodynamic cycle by introducing 
+% a future absorber $\mathcal{F}$ symmetric to $\mathcal{P}$, and 
+% replacing the absorbing detectors $\mathcal{R}$ and $\mathcal{L}$ 
+% with reflecting mirrors. The result is a quantum analogue of the 
+% Carnot cycle, with $\mathcal{P}$ as the entropy source, $\mathcal{F}$ 
+% as the entropy sink, and the mirrors as the working substance. The 
+% cycle is summarised in Figure~\ref{fig:landauer_cycle}.
+% 
+% \subsection{Setup and Stages}
+% 
+% Four observers are placed symmetrically: $\mathcal{P}$ at $(-1,0)$, 
+% $\mathcal{R}$ at $(0,1)$, $\mathcal{L}$ at $(0,-1)$, and 
+% $\mathcal{F}$ at $(1,0)$, the future analogue of $\mathcal{P}$. 
+% $\mathcal{R}$ and $\mathcal{L}$ are now mirrors: they reflect 
+% incident photons without writing a permanent classical bit into 
+% matter-memory. The cycle proceeds in four stages.
+% 
+% \paragraph{Stage A $\to$ B: Emission and past horizon shift.}
+% $\mathcal{P}$ emits an entangled photon pair with anticorrelated 
+% helicities. Each photon crosses the past Rindler horizon of its 
+% respective wedge, producing an AS pp-wave longitudinal shift that 
+% displaces the two wedges \emph{away} from each other in opposite 
+% null directions. Space is created: a new null interval opens between 
+% the wedges. At this stage the state is globally entangled, the von 
+% Neumann entropy of the pair is nonzero, and the Shannon entropy of 
+% any classical record is zero — no bit has been written.
+% 
+% \paragraph{Stage B $\to$ C: Reflection at the mirrors.}
+% The photons reach $\mathcal{R}$ and $\mathcal{L}$ and are reflected. 
+% This is a reversible unitary operation: the helicity is exchanged 
+% under reflection, the entanglement is preserved, and no Landauer 
+% cost is incurred. No AS imprint is produced at the mirrors, because 
+% no irreversible absorption sample occurs. The global state remains 
+% pure and the Shannon entropy of any classical record remains zero. 
+% This is the B$\to$C step of the quantum Landauer cycle: reversible 
+% correlation without entropy export.
+% 
+% \paragraph{Stage C $\to$ D: Propagation and future horizon shift.}
+% The reflected photons propagate toward $\mathcal{F}$, crossing the 
+% future Rindler horizons of their respective wedges. The AS pp-wave 
+% longitudinal shift now acts in the \emph{opposite} null direction, 
+% displacing the two wedges \emph{toward} each other. The space 
+% created in Stage A$\to$B is removed: the null interval contracts 
+% symmetrically.
+% 
+% \paragraph{Stage D $\to$ A: Absorption at $\mathcal{F}$ and cycle 
+% closure.}
+% $\mathcal{F}$ absorbs both photons. This is the irreversible step: 
+% one quantum of action $\hbar$ is deposited into $\mathcal{F}$'s 
+% matter-memory per photon, one classical bit is written, and the 
+% Landauer cost $\Delta E \geq k_B T \ln 2$ is paid. The entropy 
+% exported at $\mathcal{F}$ closes the cycle, playing the role of the 
+% cold reservoir in the classical Carnot analogy. Interference between 
+% the two photons at $\mathcal{F}$ is possible if and only if no bit 
+% was written at the mirrors: the presence or absence of interference 
+% at $\mathcal{F}$ is the operational test distinguishing the 
+% reversible mirror cycle from an irreversible absorber cycle.
+% 
+% \subsection{Steady State and the Gravitational Restoring Force}
+% 
+% In a single cycle, Stage A$\to$B creates a null separation between 
+% the wedges and Stage C$\to$D removes it. For the cycle to close 
+% exactly in steady state, the net geometric effect must vanish: the 
+% space created by the past horizon shifts must equal the space removed 
+% by the future horizon shifts. In the symmetric mirror construction 
+% this is guaranteed by the $\mathbb{Z}_2$ symmetry of the source: 
+% the past and future AS shifts are equal and opposite by construction.
+% 
+% However, the mirrors themselves are massive, and their separation 
+% generates a gravitational attraction between them. This attraction 
+% is the restoring force that maintains the steady-state geometry: 
+% without it, repeated emission cycles would drive the wedges apart 
+% indefinitely. The gravitational attraction between $\mathcal{R}$ 
+% and $\mathcal{L}$ is therefore not incidental but necessary for the 
+% cycle to be thermodynamically closed. At equilibrium, the 
+% outward null displacement from each emission event is balanced by 
+% the inward gravitational pull, yielding a stable separation 
+% $r \sim r_s$, the Schwarzschild radius of the mirror mass, 
+% consistent with the heuristic argument of 
+% Section~\ref{sec:heuristics}.
+% 
+% \subsection{Shannon versus von Neumann Entropy}
+% 
+% The cycle makes precise the distinction between von Neumann and 
+% Shannon entropy in the bilocal construction. The von Neumann entropy 
+% of the entangled pair is nonzero throughout Stages A through C: 
+% entanglement is a property of the global state and is preserved by 
+% the unitary mirror reflection. The Shannon entropy of any classical 
+% record is zero throughout these stages: no bit has been written into 
+% any matter-memory. At Stage D, absorption at $\mathcal{F}$ converts 
+% von Neumann entropy into Shannon entropy irreversibly. The Landauer 
+% cost is the thermodynamic price of this conversion.
+% 
+% The AS pp-wave imprint is the geometric witness of this conversion: 
+% it is produced at $\mathcal{F}$ when the bit is written, and not at 
+% $\mathcal{R}$ or $\mathcal{L}$ where the reflection is reversible. 
+% Space is created and removed symmetrically by the mirror cycle; the 
+% net geometric increment per cycle is zero. A net geometric increment 
+% accumulates only when a mirror is replaced by an absorber, that is, 
+% only when irreversible Shannon entropy is produced. Spacetime 
+% geometry grows exactly as fast as classical information is 
+% irreversibly written into matter.
+ 
+% TODO: For this to work we need to actually build more conceptual and physical arguments, it is too weak as written, it need to connect more strongly to the information theory esspecially section 4.
+
+
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
 % Verification that double-null gauge does not over-constrain physical degrees of freedom
@@ -1233,95 +1523,95 @@ is privileged over the other.
 % \label{sec:emergent_spacetime}
 % 
 % The bilocal construction of Section~\ref{sec:microstates} and the matter substrate argument
-of Section~\ref{sec:substrate} together suggest a picture in which spacetime is not a
-background arena but an emergent property of matter and its correlations. We develop this
-picture here, drawing on~\cite{player2025spacetime}. The central claim is that time and
-space are distinct emergent phenomena with distinct physical origins: time emerges from the
-sample count of a single massive particle, and space emerges from the phase difference between
-sample counts of two or more correlated systems. Together they give emergent spacetime without
-assuming a geometric background.
-
-%------------------------------------------------------
-\subsection{Emergent Time: Samples as Proper Time}
-%------------------------------------------------------
-
-A massive particle at rest oscillates at the Compton frequency
-\begin{equation}
-    \omega = \frac{mc^2}{\hbar},
-\end{equation}
-and accumulates phase $e^{i\omega t}$ along its worldline. We define the \emph{sample set}
-of the particle between proper times $\tau_1$ and $\tau_2$ as the set of zero crossings of
-this phase:
-\begin{equation}
-    \mathcal{T}_{\tau_1,\tau_2} = \left\{\tau \in [\tau_1,\tau_2] : \tau \in
-    \frac{2\pi}{\omega}\mathbb{Z}\right\}.
-\end{equation}
-The cardinality $|\mathcal{T}|$ is the sample count between the two events. This is a
-Lorentz-invariant quantity: it is the number of times the particle's phase completes a full
-cycle, which is an intrinsic property of the worldline independent of any external observer.
-Proper time is the continuum limit of sample counting, and the Compton frequency $\omega =
-mc^2/\hbar$ is simultaneously the Bremermann rate, the maximum sample rate for a system
-of energy $mc^2$, and the Nyquist rate for the matter channel.
-
-The sample count admits a natural Hilbert space description. We define
-\begin{equation}
-    \mathcal{H}(T) = \mathrm{Span}\left\{|0\rangle, |1\rangle, |2\rangle, \ldots\right\},
-\end{equation}
-where $|n\rangle$ represents an observable sample count of $n$. The position operator
-$\hat{N}|n\rangle = n|n\rangle$ is the sample number operator, and its conjugate under the
-discrete Fourier transform is the frequency operator on the circle group $S^1$, with the
-Nyquist frequency as the maximum. Wavefunctions $\psi(n)$ on $\mathcal{H}(T)$ describe
-superpositions of sample counts, and classical proper time emerges from the expectation value
-$\langle\hat{N}\rangle$ in states sharply peaked around large $n$.
-
-% TODO: Show that the standard Hamiltonian evolution of quantum mechanics is recovered 
-% from wavefunctions on sample space in the flat spacetime embedding. This requires finding 
-% a Lagrangian for sample space that restricts to the usual Lagrangian in the embedded case.
-% See \cite{player2025spacetime} for the outline of this programme.
-
-%------------------------------------------------------
-\subsection{Emergent Space: Phase Difference as Spatial Separation}
-%------------------------------------------------------
-
-A single particle's sample count gives time but not space. Space requires at least two
-correlated systems. Consider a particle in quantum superposition traversing two spatially
-separated paths, with sample counts $n_1$ and $n_2$ accumulated along each path. The
-interference pattern produced when the paths recombine is labelled by the fringe index
-\begin{equation}
-    k = n_1 - n_2,
-\label{eq:fringe}
-\end{equation}
-which is the sample difference between the two paths. Each value of $k$ corresponds to a
-distinct fringe of constructive interference, and the spatial separation between fringes
-is set by the Compton wavelength $\lambda = h/mc$. The fringe index $k$ is therefore a
-spatial quantum number: it labels a position in space relative to the interference pattern,
-and space emerges as the eigenvalue spectrum of the operator
-\begin{equation}
-    \hat{K} = \hat{N}_1 - \hat{N}_2
-\end{equation}
-acting on the joint Hilbert space
-\begin{equation}
-    \mathcal{H}(T_1, T_2) = \mathcal{H}(T_1) \otimes \mathcal{H}(T_2)
-    = \bigoplus_{k \in \mathbb{Z}} \mathcal{P}_k,
-\end{equation}
-where $\mathcal{P}_k = \mathrm{Span}\{|i\rangle \otimes |j\rangle : i - j = k\}$ is the
-eigenspace of $\hat{K}$ with eigenvalue $k$~\cite{player2025spacetime}. The spatial
-position is the eigenvalue of $\hat{K}$; it is not assumed but derived from the relative
-sample count.
-
-The structure of $\mathcal{H}(T_1, T_2)$ makes an important point: we do not symmetrise
-the tensor product, because $|i\rangle \otimes |j\rangle$ and $|j\rangle \otimes |i\rangle$
-represent physically distinct configurations, the particle went through path 1 first in
-one case and path 2 first in the other. The two sample counts are distinguishable, and space
-inherits that distinguishability.
-
-Curvature enters naturally in this language. In flat spacetime, the sample counts $n_1,
-\ldots, n_m$ for $m$ paths are linearly related: any $n_i$ is a linear combination of
-$n_1$ and $n_2$~\cite{player2025spacetime}. In curved spacetime, the geodesic paths between
-points acquire different lengths, and the sample counts are nonlinearly related in precisely
-the way that encodes the curvature. Gravity, in this picture, is the statement that the
-sample relationships between correlated matter systems are nonlinear, and the Einstein
-equations are the consistency conditions on those nonlinear relationships.
+% of Section~\ref{sec:substrate} together suggest a picture in which spacetime is not a
+% background arena but an emergent property of matter and its correlations. We develop this
+% picture here, drawing on~\cite{player2025spacetime}. The central claim is that time and
+% space are distinct emergent phenomena with distinct physical origins: time emerges from the
+% sample count of a single massive particle, and space emerges from the phase difference between
+% sample counts of two or more correlated systems. Together they give emergent spacetime without
+% assuming a geometric background.
+% 
+% %------------------------------------------------------
+% \subsection{Emergent Time: Samples as Proper Time}
+% %------------------------------------------------------
+% 
+% A massive particle at rest oscillates at the Compton frequency
+% \begin{equation}
+%     \omega = \frac{mc^2}{\hbar},
+% \end{equation}
+% and accumulates phase $e^{i\omega t}$ along its worldline. We define the \emph{sample set}
+% of the particle between proper times $\tau_1$ and $\tau_2$ as the set of zero crossings of
+% this phase:
+% \begin{equation}
+%     \mathcal{T}_{\tau_1,\tau_2} = \left\{\tau \in [\tau_1,\tau_2] : \tau \in
+%     \frac{2\pi}{\omega}\mathbb{Z}\right\}.
+% \end{equation}
+% The cardinality $|\mathcal{T}|$ is the sample count between the two events. This is a
+% Lorentz-invariant quantity: it is the number of times the particle's phase completes a full
+% cycle, which is an intrinsic property of the worldline independent of any external observer.
+% Proper time is the continuum limit of sample counting, and the Compton frequency $\omega =
+% mc^2/\hbar$ is simultaneously the Bremermann rate, the maximum sample rate for a system
+% of energy $mc^2$, and the Nyquist rate for the matter channel.
+% 
+% The sample count admits a natural Hilbert space description. We define
+% \begin{equation}
+%     \mathcal{H}(T) = \mathrm{Span}\left\{|0\rangle, |1\rangle, |2\rangle, \ldots\right\},
+% \end{equation}
+% where $|n\rangle$ represents an observable sample count of $n$. The position operator
+% $\hat{N}|n\rangle = n|n\rangle$ is the sample number operator, and its conjugate under the
+% discrete Fourier transform is the frequency operator on the circle group $S^1$, with the
+% Nyquist frequency as the maximum. Wavefunctions $\psi(n)$ on $\mathcal{H}(T)$ describe
+% superpositions of sample counts, and classical proper time emerges from the expectation value
+% $\langle\hat{N}\rangle$ in states sharply peaked around large $n$.
+% 
+% % TODO: Show that the standard Hamiltonian evolution of quantum mechanics is recovered 
+% % from wavefunctions on sample space in the flat spacetime embedding. This requires finding 
+% % a Lagrangian for sample space that restricts to the usual Lagrangian in the embedded case.
+% % See \cite{player2025spacetime} for the outline of this programme.
+% 
+% %------------------------------------------------------
+% \subsection{Emergent Space: Phase Difference as Spatial Separation}
+% %------------------------------------------------------
+% 
+% A single particle's sample count gives time but not space. Space requires at least two
+% correlated systems. Consider a particle in quantum superposition traversing two spatially
+% separated paths, with sample counts $n_1$ and $n_2$ accumulated along each path. The
+% interference pattern produced when the paths recombine is labelled by the fringe index
+% \begin{equation}
+%     k = n_1 - n_2,
+% \label{eq:fringe}
+% \end{equation}
+% which is the sample difference between the two paths. Each value of $k$ corresponds to a
+% distinct fringe of constructive interference, and the spatial separation between fringes
+% is set by the Compton wavelength $\lambda = h/mc$. The fringe index $k$ is therefore a
+% spatial quantum number: it labels a position in space relative to the interference pattern,
+% and space emerges as the eigenvalue spectrum of the operator
+% \begin{equation}
+%     \hat{K} = \hat{N}_1 - \hat{N}_2
+% \end{equation}
+% acting on the joint Hilbert space
+% \begin{equation}
+%     \mathcal{H}(T_1, T_2) = \mathcal{H}(T_1) \otimes \mathcal{H}(T_2)
+%     = \bigoplus_{k \in \mathbb{Z}} \mathcal{P}_k,
+% \end{equation}
+% where $\mathcal{P}_k = \mathrm{Span}\{|i\rangle \otimes |j\rangle : i - j = k\}$ is the
+% eigenspace of $\hat{K}$ with eigenvalue $k$~\cite{player2025spacetime}. The spatial
+% position is the eigenvalue of $\hat{K}$; it is not assumed but derived from the relative
+% sample count.
+% 
+% The structure of $\mathcal{H}(T_1, T_2)$ makes an important point: we do not symmetrise
+% the tensor product, because $|i\rangle \otimes |j\rangle$ and $|j\rangle \otimes |i\rangle$
+% represent physically distinct configurations, the particle went through path 1 first in
+% one case and path 2 first in the other. The two sample counts are distinguishable, and space
+% inherits that distinguishability.
+% 
+% Curvature enters naturally in this language. In flat spacetime, the sample counts $n_1,
+% \ldots, n_m$ for $m$ paths are linearly related: any $n_i$ is a linear combination of
+% $n_1$ and $n_2$~\cite{player2025spacetime}. In curved spacetime, the geodesic paths between
+% points acquire different lengths, and the sample counts are nonlinearly related in precisely
+% the way that encodes the curvature. Gravity, in this picture, is the statement that the
+% sample relationships between correlated matter systems are nonlinear, and the Einstein
+% equations are the consistency conditions on those nonlinear relationships.
 
 % TODO: Make the connection between nonlinear sample relationships and the Einstein equations
 % precise. The heuristics section derives the Einstein equations from Unruh--Landauer; 
@@ -1365,132 +1655,132 @@ equations are the consistency conditions on those nonlinear relationships.
 % and the sample picture into a single condition.
 
 %------------------------------------------------------
-\subsection{Summary}
+%\subsection{Summary}
 %------------------------------------------------------
 
-Time and space emerge from matter in distinct but complementary ways:
-
-\begin{itemize}
-    \item \textbf{Emergent time}: the sample count $|\mathcal{T}|$ along a single worldline,
-    with the Compton frequency as the Nyquist rate and proper time as the continuum limit.
-    \item \textbf{Emergent space}: the sample difference $k = n_1 - n_2$ between two
-    correlated systems, with the Compton wavelength setting the fringe scale and spatial
-    position as the eigenvalue of $\hat{K}$.
-    \item \textbf{Emergent curvature}: the nonlinearity of sample relationships across
-    multiple paths, encoding the deviation from flat spacetime.
-\end{itemize}
-
-In the bilocal construction, the photon from $\mathcal{P}$ is the physical event that correlates
-$\mathcal{R}$'s and $\mathcal{L}$'s sample counts, establishing the spatial separation between the wedges
-as a classical fact. The horizon is the zero eigenspace of $\hat{K}$. Gravity is the
-mechanics of correlated sample counts. Spacetime is what matter does.
-
-\section{Unifying the Saturation Conditions}
-\label{sec:unifying}
-
-The heuristics of Section~\ref{sec:heuristics} and the sample picture of 
-Section~\ref{sec:emergent_spacetime} each arrive independently at a 
-saturation condition that singles out the horizon. We now show these are 
-the same condition expressed in three complementary languages: 
-thermodynamic, energetic, and information-theoretic.
-
-\subsection{The Energy Ratio $\alpha$}
-
-For a physical system of mass $m$ with characteristic radius $R$, define
-\begin{equation}
-    \alpha \equiv \frac{E_\hbar}{E_G} 
-    = \frac{mc^2}{Gm^2/R} 
-    = \frac{c^2 R}{Gm},
-    \label{eq:alpha_def}
-\end{equation}
-where $E_\hbar = mc^2$ is the rest energy, which sets the Bremermann 
-sample rate $f = mc^2/h$, and $E_G = Gm^2/R$ is the gravitational 
-self-energy of the configuration. The ratio $\alpha$ is dimensionless 
-and measures how far the system is from the regime in which quantum and 
-gravitational energy scales coincide.
-
-Physical configurations accessible to an external observer satisfy 
-$E_\hbar \geq E_G$, equivalently $\alpha \geq 1$: a system with 
-$E_G > E_\hbar$ would lie within its own Schwarzschild radius and be 
-causally inaccessible. Setting $\alpha = 1$ gives
-\begin{equation}
-    R_{\alpha=1} = \frac{Gm}{c^2} \sim r_s = \frac{2Gm}{c^2},
-    \label{eq:alpha_horizon}
-\end{equation}
-which is the Schwarzschild radius up to an $O(1)$ numerical factor 
-reflecting the conventional choice of $E_G$. As with the factor of 2 
-absorbed into the interaction time $\Delta t = 2r/c$ in 
-Section~\ref{sec:heuristics}, this factor is fixed by requiring 
-consistency with Newtonian gravity at the horizon scale; it does not 
-affect the parametric identification.
-
-\subsection{Three Languages for the Same Condition}
-
-The condition $\alpha = 1$ is the same physical statement as the 
-Landauer saturation condition of Section~\ref{sec:heuristics} and the 
-sample-accumulation limit of Section~\ref{sec:emergent_spacetime}. 
-The three descriptions are:
-
-\paragraph{Thermodynamic language.}
-The Unruh--Landauer bound and the Bekenstein--Hawking area law saturate 
-simultaneously when $a = c^2/R$. Using the conversion between Boltzmann 
-entropy and Shannon bits,
-\begin{equation}
-    S_B = k_B \ln 2 \cdot H,
-    \label{eq:SB_H}
-\end{equation}
-the Unruh--Landauer bound~\eqref{eq:UL} expressed in bits reads
-\begin{equation}
-    \Delta E \geq \frac{\hbar a \ln 2}{2\pi c}\,\Delta H,
-    \label{eq:UL_bits}
-\end{equation}
-and saturates when $a = c^2/R \sim c^4/Gm$, i.e.\ at 
-$R \sim Gm/c^2 \sim r_s$. The horizon is the unique locus where the 
-minimum energy cost per bit acquired equals the maximum information 
-content per unit area.
-
-\paragraph{Energetic language.}
-The ratio $\alpha = E_\hbar/E_G$ reaches its minimum value of unity at 
-$R \sim r_s$. At this point the quantum energy available for sample 
-accumulation exactly equals the gravitational self-energy: no further 
-information can be written into the system by an external observer 
-without the system collapsing. The inequality $\alpha \geq 1$ is the 
-energetic form of the holographic bound, the information capacity of 
-the system, set by $E_\hbar$, must be at least as large as the 
-gravitational cost of sustaining the configuration, set by $E_G$.
-
-\paragraph{Sample language.}
-The Bremermann rate $f = mc^2/h$ sets the maximum rate at which matter 
-accumulates quanta of action $\hbar$ as samples. The gravitational 
-self-energy $E_G \sim Gm^2/R$ sets the scale at which samples in one 
-region of matter are gravitationally correlated with samples in another. 
-At $\alpha = 1$ these two rates coincide: the intrinsic sample rate of the 
-matter equals the rate at which the gravitational field can propagate 
-correlations between samples. The horizon is therefore the surface at which 
-the local information processing rate and the global gravitational 
-coupling are in balance.
-
-\subsection{The Horizon as a Fixed Point}
-
-These three descriptions converge on a single structural statement: 
-\emph{the horizon is the fixed point of the map between quantum 
-information content and gravitational geometry}. Away from the horizon, 
-$\alpha > 1$: the matter has more information capacity than the 
-gravitational field accounts for, and space is created sample by sample as 
-described in Section~\ref{sec:ppwave}. At the horizon, $\alpha = 1$: 
-the two accounts balance exactly, the Landauer bound~\eqref{eq:UL_bits} 
-saturates, the Bekenstein--Hawking area law is tight, and the 
-sample-to-gravitational-energy ratio reaches its minimum. 
-
-The $\alpha$ ratio makes the thermodynamic statement of 
-Section~\ref{sec:heuristics} precise in energetic terms, and the sample 
-language makes it precise in terms of the physical process, matter 
-accumulating correlated quanta of action, that underlies both. All 
-three are expressions of the same fixed-point condition: the horizon is 
-not where thermodynamics happens to work out, but the unique locus where 
-the minimum cost of information acquisition, the maximum information 
-content of the region, and the balance between quantum and gravitational 
-energy scales are simultaneously achieved.
+% Time and space emerge from matter in distinct but complementary ways:
+% 
+% \begin{itemize}
+%     \item \textbf{Emergent time}: the sample count $|\mathcal{T}|$ along a single worldline,
+%     with the Compton frequency as the Nyquist rate and proper time as the continuum limit.
+%     \item \textbf{Emergent space}: the sample difference $k = n_1 - n_2$ between two
+%     correlated systems, with the Compton wavelength setting the fringe scale and spatial
+%     position as the eigenvalue of $\hat{K}$.
+%     \item \textbf{Emergent curvature}: the nonlinearity of sample relationships across
+%     multiple paths, encoding the deviation from flat spacetime.
+% \end{itemize}
+% 
+% In the bilocal construction, the photon from $\mathcal{P}$ is the physical event that correlates
+% $\mathcal{R}$'s and $\mathcal{L}$'s sample counts, establishing the spatial separation between the wedges
+% as a classical fact. The horizon is the zero eigenspace of $\hat{K}$. Gravity is the
+% mechanics of correlated sample counts. Spacetime is what matter does.
+% 
+% \section{Unifying the Saturation Conditions}
+% \label{sec:unifying}
+% 
+% The heuristics of Section~\ref{sec:heuristics} and the sample picture of 
+% Section~\ref{sec:emergent_spacetime} each arrive independently at a 
+% saturation condition that singles out the horizon. We now show these are 
+% the same condition expressed in three complementary languages: 
+% thermodynamic, energetic, and information-theoretic.
+% 
+% \subsection{The Energy Ratio $\alpha$}
+% 
+% For a physical system of mass $m$ with characteristic radius $R$, define
+% \begin{equation}
+%     \alpha \equiv \frac{E_\hbar}{E_G} 
+%     = \frac{mc^2}{Gm^2/R} 
+%     = \frac{c^2 R}{Gm},
+%     \label{eq:alpha_def}
+% \end{equation}
+% where $E_\hbar = mc^2$ is the rest energy, which sets the Bremermann 
+% sample rate $f = mc^2/h$, and $E_G = Gm^2/R$ is the gravitational 
+% self-energy of the configuration. The ratio $\alpha$ is dimensionless 
+% and measures how far the system is from the regime in which quantum and 
+% gravitational energy scales coincide.
+% 
+% Physical configurations accessible to an external observer satisfy 
+% $E_\hbar \geq E_G$, equivalently $\alpha \geq 1$: a system with 
+% $E_G > E_\hbar$ would lie within its own Schwarzschild radius and be 
+% causally inaccessible. Setting $\alpha = 1$ gives
+% \begin{equation}
+%     R_{\alpha=1} = \frac{Gm}{c^2} \sim r_s = \frac{2Gm}{c^2},
+%     \label{eq:alpha_horizon}
+% \end{equation}
+% which is the Schwarzschild radius up to an $O(1)$ numerical factor 
+% reflecting the conventional choice of $E_G$. As with the factor of 2 
+% absorbed into the interaction time $\Delta t = 2r/c$ in 
+% Section~\ref{sec:heuristics}, this factor is fixed by requiring 
+% consistency with Newtonian gravity at the horizon scale; it does not 
+% affect the parametric identification.
+% 
+% \subsection{Three Languages for the Same Condition}
+% 
+% The condition $\alpha = 1$ is the same physical statement as the 
+% Landauer saturation condition of Section~\ref{sec:heuristics} and the 
+% sample-accumulation limit of Section~\ref{sec:emergent_spacetime}. 
+% The three descriptions are:
+% 
+% \paragraph{Thermodynamic language.}
+% The Unruh--Landauer bound and the Bekenstein--Hawking area law saturate 
+% simultaneously when $a = c^2/R$. Using the conversion between Boltzmann 
+% entropy and Shannon bits,
+% \begin{equation}
+%     S_B = k_B \ln 2 \cdot H,
+%     \label{eq:SB_H}
+% \end{equation}
+% the Unruh--Landauer bound~\eqref{eq:UL} expressed in bits reads
+% \begin{equation}
+%     \Delta E \geq \frac{\hbar a \ln 2}{2\pi c}\,\Delta H,
+%     \label{eq:UL_bits}
+% \end{equation}
+% and saturates when $a = c^2/R \sim c^4/Gm$, i.e.\ at 
+% $R \sim Gm/c^2 \sim r_s$. The horizon is the unique locus where the 
+% minimum energy cost per bit acquired equals the maximum information 
+% content per unit area.
+% 
+% \paragraph{Energetic language.}
+% The ratio $\alpha = E_\hbar/E_G$ reaches its minimum value of unity at 
+% $R \sim r_s$. At this point the quantum energy available for sample 
+% accumulation exactly equals the gravitational self-energy: no further 
+% information can be written into the system by an external observer 
+% without the system collapsing. The inequality $\alpha \geq 1$ is the 
+% energetic form of the holographic bound, the information capacity of 
+% the system, set by $E_\hbar$, must be at least as large as the 
+% gravitational cost of sustaining the configuration, set by $E_G$.
+% 
+% \paragraph{Sample language.}
+% The Bremermann rate $f = mc^2/h$ sets the maximum rate at which matter 
+% accumulates quanta of action $\hbar$ as samples. The gravitational 
+% self-energy $E_G \sim Gm^2/R$ sets the scale at which samples in one 
+% region of matter are gravitationally correlated with samples in another. 
+% At $\alpha = 1$ these two rates coincide: the intrinsic sample rate of the 
+% matter equals the rate at which the gravitational field can propagate 
+% correlations between samples. The horizon is therefore the surface at which 
+% the local information processing rate and the global gravitational 
+% coupling are in balance.
+% 
+% \subsection{The Horizon as a Fixed Point}
+% 
+% These three descriptions converge on a single structural statement: 
+% \emph{the horizon is the fixed point of the map between quantum 
+% information content and gravitational geometry}. Away from the horizon, 
+% $\alpha > 1$: the matter has more information capacity than the 
+% gravitational field accounts for, and space is created sample by sample as 
+% described in Section~\ref{sec:ppwave}. At the horizon, $\alpha = 1$: 
+% the two accounts balance exactly, the Landauer bound~\eqref{eq:UL_bits} 
+% saturates, the Bekenstein--Hawking area law is tight, and the 
+% sample-to-gravitational-energy ratio reaches its minimum. 
+% 
+% The $\alpha$ ratio makes the thermodynamic statement of 
+% Section~\ref{sec:heuristics} precise in energetic terms, and the sample 
+% language makes it precise in terms of the physical process, matter 
+% accumulating correlated quanta of action, that underlies both. All 
+% three are expressions of the same fixed-point condition: the horizon is 
+% not where thermodynamics happens to work out, but the unique locus where 
+% the minimum cost of information acquisition, the maximum information 
+% content of the region, and the balance between quantum and gravitational 
+% energy scales are simultaneously achieved.
 
 \section{Conclusion}
 \section{Acknowledgements}
