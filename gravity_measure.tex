@@ -1155,118 +1155,118 @@ leave for future work.
 % imprints satisfies the EH variational principle in the continuum 
 % limit, which would recover Jacobson's result at the microstate level.
 
-\section{From AS Imprints to the Einstein--Hilbert Action}
-\label{sec:EH}
-
-The preceding sections established that each measurement event 
-produces a discrete AS pp-wave imprint on the horizon, contributing 
-a calculable area increment $\Delta A = 8\pi G \hbar\omega$ and an 
-entropy increment $\Delta S = \Delta A / 4\ell_P^2$. We now ask 
-whether the ensemble of such imprints, in the continuum limit, is 
-consistent with the Einstein--Hilbert action as the governing 
-variational principle of the emergent geometry.
-
-\subsection{The Metric Perturbation from a Single AS Imprint}
-
-Each AS pp-wave sourced by a photon of energy $\hbar\omega$ 
-propagating along $u = 0$ contributes a metric perturbation of the 
-form
-\begin{equation}
-    h_{uu}(u, \mathbf{x}_\perp) 
-    = 16\pi G \hbar\omega\; \delta(u)\; \Phi(\mathbf{x}_\perp),
-    \label{eq:AS_metric}
-\end{equation}
-where $\Phi(\mathbf{x}_\perp) = -\ln|\mathbf{x}_\perp|^2 / 4\pi$ 
-is the two-dimensional Coulomb potential sourced by a unit charge 
-at the origin, satisfying $\nabla^2_\perp \Phi = \delta^{(2)}(\mathbf{x}_\perp)$. 
-This is an exact solution of the vacuum Einstein equations away 
-from the source worldline~\cite{aichelburg1971gravitational}. The 
-delta function in $u$ localises the imprint to the null surface 
-of the photon's passage, and the Coulomb profile encodes the 
-transverse focusing of the congruence.
-
-\subsection{Continuum Limit}
-
-Consider a steady-state ensemble of measurement events with 
-number density $n(u, \mathbf{x}_\perp)$ per unit null time per 
-unit transverse area, each contributing energy $\hbar\omega$. The 
-total metric perturbation is
-\begin{equation}
-    \bar{h}_{uu}(u, \mathbf{x}_\perp) 
-    = 16\pi G \hbar\omega \int 
-        n(u', \mathbf{x}'_\perp)\; 
-        \delta(u - u')\; 
-        \Phi(\mathbf{x}_\perp - \mathbf{x}'_\perp)\; 
-        du'\, d^2x'_\perp.
-\end{equation}
-In the continuum limit, where the event density $n$ is slowly 
-varying on the scale of $c/\omega$, this convolution reduces to
-\begin{equation}
-    \bar{h}_{uu}(u, \mathbf{x}_\perp) 
-    \approx 16\pi G\, T_{uu}^{\mathrm{eff}}(u, \mathbf{x}_\perp),
-    \label{eq:hbar_uu}
-\end{equation}
-where $T_{uu}^{\mathrm{eff}} = \hbar\omega\, n$ is the effective 
-null energy flux of the ensemble. This is precisely the linearised 
-Einstein equation sourced by $T_{uu}^{\mathrm{eff}}$, confirming 
-that the ensemble of AS imprints is consistent with the Einstein 
-equations at linear order.
-
-\subsection{Connection to the Einstein--Hilbert Action}
-
-The linearised result~\eqref{eq:hbar_uu} suggests a deeper 
-connection. In Jacobson's derivation~\cite{jacobson1995thermodynamics}, 
-the Einstein equations emerge as the condition that the 
-thermodynamic identity $\delta Q = T\, dS$ holds for every local 
-Rindler horizon. In our construction, each AS imprint contributes 
-a term
-\begin{equation}
-    \delta S_{\mathrm{EH}}^{(i)} 
-    = \frac{1}{16\pi G} \int R\, \sqrt{-g}\; d^4x
-    \bigg|_{\mathrm{single\;imprint}}
-    \sim \frac{\Delta A}{4\ell_P^2} = \Delta S,
-\end{equation}
-consistent with the Bekenstein--Hawking entropy increment per 
-microstate. The natural conjecture is that the Einstein--Hilbert 
-action is the generating functional for the ensemble of AS 
-imprints: its variation with respect to the metric reproduces 
-the Einstein equations, whose solutions are the coarse-grained 
-aggregate of discrete pp-wave contributions.
-
-Making this precise requires showing that the distributional 
-contributions~\eqref{eq:AS_metric}, summed over the full 
-ensemble with the weights $\tanh^{2n}\theta_\Omega$ of the 
-Minkowski vacuum decomposition, reproduce the Einstein--Hilbert 
-variational principle in the continuum limit. This is equivalent 
-to showing that Jacobson's thermodynamic argument holds 
-microstate by microstate rather than only in the bulk average, 
-which is the central open problem of the framework. We conjecture 
-that this holds and leave its proof for future work, noting that 
-the linear-order consistency established in~\eqref{eq:hbar_uu} 
-is a necessary condition that is already satisfied.
-
-\subsection{Implications}
-
-If the conjecture holds, the Einstein--Hilbert action acquires a 
-microstate interpretation: it is the coarse-grained geometric 
-encoding of the cumulative action of irreversible measurement 
-events, with each term in the path integral corresponding to a 
-specific history of AS imprints. The path integral over metrics 
-becomes a sum over measurement histories, weighted by the 
-thermodynamic cost of each irreversible sample. Spacetime 
-geometry is then not a background on which quantum fields 
-propagate, but the aggregate record of the information 
-acquisition events that constitute physical observation.
-
-This reframes the quantization of gravity as a question about 
-the statistical mechanics of measurement events rather than 
-about the quantization of the metric itself. The discrete 
-structure is already present at the level of individual 
-microstates; the smooth geometry of general relativity emerges 
-in the same way that thermodynamics emerges from statistical 
-mechanics, as a coarse-grained description that discards 
-microstate identity in favour of bulk averages.
-
+% \section{From AS Imprints to the Einstein--Hilbert Action}
+% \label{sec:EH}
+% 
+% The preceding sections established that each measurement event 
+% produces a discrete AS pp-wave imprint on the horizon, contributing 
+% a calculable area increment $\Delta A = 8\pi G \hbar\omega$ and an 
+% entropy increment $\Delta S = \Delta A / 4\ell_P^2$. We now ask 
+% whether the ensemble of such imprints, in the continuum limit, is 
+% consistent with the Einstein--Hilbert action as the governing 
+% variational principle of the emergent geometry.
+% 
+% \subsection{The Metric Perturbation from a Single AS Imprint}
+% 
+% Each AS pp-wave sourced by a photon of energy $\hbar\omega$ 
+% propagating along $u = 0$ contributes a metric perturbation of the 
+% form
+% \begin{equation}
+%     h_{uu}(u, \mathbf{x}_\perp) 
+%     = 16\pi G \hbar\omega\; \delta(u)\; \Phi(\mathbf{x}_\perp),
+%     \label{eq:AS_metric}
+% \end{equation}
+% where $\Phi(\mathbf{x}_\perp) = -\ln|\mathbf{x}_\perp|^2 / 4\pi$ 
+% is the two-dimensional Coulomb potential sourced by a unit charge 
+% at the origin, satisfying $\nabla^2_\perp \Phi = \delta^{(2)}(\mathbf{x}_\perp)$. 
+% This is an exact solution of the vacuum Einstein equations away 
+% from the source worldline~\cite{aichelburg1971gravitational}. The 
+% delta function in $u$ localises the imprint to the null surface 
+% of the photon's passage, and the Coulomb profile encodes the 
+% transverse focusing of the congruence.
+% 
+% \subsection{Continuum Limit}
+% 
+% Consider a steady-state ensemble of measurement events with 
+% number density $n(u, \mathbf{x}_\perp)$ per unit null time per 
+% unit transverse area, each contributing energy $\hbar\omega$. The 
+% total metric perturbation is
+% \begin{equation}
+%     \bar{h}_{uu}(u, \mathbf{x}_\perp) 
+%     = 16\pi G \hbar\omega \int 
+%         n(u', \mathbf{x}'_\perp)\; 
+%         \delta(u - u')\; 
+%         \Phi(\mathbf{x}_\perp - \mathbf{x}'_\perp)\; 
+%         du'\, d^2x'_\perp.
+% \end{equation}
+% In the continuum limit, where the event density $n$ is slowly 
+% varying on the scale of $c/\omega$, this convolution reduces to
+% \begin{equation}
+%     \bar{h}_{uu}(u, \mathbf{x}_\perp) 
+%     \approx 16\pi G\, T_{uu}^{\mathrm{eff}}(u, \mathbf{x}_\perp),
+%     \label{eq:hbar_uu}
+% \end{equation}
+% where $T_{uu}^{\mathrm{eff}} = \hbar\omega\, n$ is the effective 
+% null energy flux of the ensemble. This is precisely the linearised 
+% Einstein equation sourced by $T_{uu}^{\mathrm{eff}}$, confirming 
+% that the ensemble of AS imprints is consistent with the Einstein 
+% equations at linear order.
+% 
+% \subsection{Connection to the Einstein--Hilbert Action}
+% 
+% The linearised result~\eqref{eq:hbar_uu} suggests a deeper 
+% connection. In Jacobson's derivation~\cite{jacobson1995thermodynamics}, 
+% the Einstein equations emerge as the condition that the 
+% thermodynamic identity $\delta Q = T\, dS$ holds for every local 
+% Rindler horizon. In our construction, each AS imprint contributes 
+% a term
+% \begin{equation}
+%     \delta S_{\mathrm{EH}}^{(i)} 
+%     = \frac{1}{16\pi G} \int R\, \sqrt{-g}\; d^4x
+%     \bigg|_{\mathrm{single\;imprint}}
+%     \sim \frac{\Delta A}{4\ell_P^2} = \Delta S,
+% \end{equation}
+% consistent with the Bekenstein--Hawking entropy increment per 
+% microstate. The natural conjecture is that the Einstein--Hilbert 
+% action is the generating functional for the ensemble of AS 
+% imprints: its variation with respect to the metric reproduces 
+% the Einstein equations, whose solutions are the coarse-grained 
+% aggregate of discrete pp-wave contributions.
+% 
+% Making this precise requires showing that the distributional 
+% contributions~\eqref{eq:AS_metric}, summed over the full 
+% ensemble with the weights $\tanh^{2n}\theta_\Omega$ of the 
+% Minkowski vacuum decomposition, reproduce the Einstein--Hilbert 
+% variational principle in the continuum limit. This is equivalent 
+% to showing that Jacobson's thermodynamic argument holds 
+% microstate by microstate rather than only in the bulk average, 
+% which is the central open problem of the framework. We conjecture 
+% that this holds and leave its proof for future work, noting that 
+% the linear-order consistency established in~\eqref{eq:hbar_uu} 
+% is a necessary condition that is already satisfied.
+% 
+% \subsection{Implications}
+% 
+% If the conjecture holds, the Einstein--Hilbert action acquires a 
+% microstate interpretation: it is the coarse-grained geometric 
+% encoding of the cumulative action of irreversible measurement 
+% events, with each term in the path integral corresponding to a 
+% specific history of AS imprints. The path integral over metrics 
+% becomes a sum over measurement histories, weighted by the 
+% thermodynamic cost of each irreversible sample. Spacetime 
+% geometry is then not a background on which quantum fields 
+% propagate, but the aggregate record of the information 
+% acquisition events that constitute physical observation.
+% 
+% This reframes the quantization of gravity as a question about 
+% the statistical mechanics of measurement events rather than 
+% about the quantization of the metric itself. The discrete 
+% structure is already present at the level of individual 
+% microstates; the smooth geometry of general relativity emerges 
+% in the same way that thermodynamics emerges from statistical 
+% mechanics, as a coarse-grained description that discards 
+% microstate identity in favour of bulk averages.
+ 
 % \section{The Bilocal Landauer Cycle}
 % \label{sec:landauer_cycle}
 % 
