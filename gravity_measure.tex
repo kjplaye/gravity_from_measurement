@@ -144,7 +144,7 @@ argument in Section \ref{sec:erepr}. Their framework requires thermality of the 
 whereas our construction works microstate by microstate with a 
 non-thermal source; it would be interesting to determine whether 
 our classical spatial record, the anticorrelated helicity bits 
-registered by Wright and Lester, realizes the interior 
+registered by $\mathcal{R}$ and $\mathcal{L}$, realizes the interior 
 reconstruction map at the single-microstate level, but we leave 
 this comparison for future work.
 
@@ -306,24 +306,23 @@ discuss in Section~\ref{sec:ppwave}, they imprint a definite geometric signature
 horizon consistent with the ER=EPR identification.
 
 %------------------------------------------------------
-\subsection{The Paz--Lester--Wright Setup}
+\subsection{Three Observers}
 %------------------------------------------------------
 
-We retain the Alice-and-Bob style naming convention. Three observers are placed at spacetime
-positions $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$, named \emph{Wright}~(R), \emph{Lester}~(L),
-and \emph{Paz}~(P) respectively, a mnemonic for Right, Left, and Past. Paz serves as the
-common causal ancestor of Wright and Lester (see Figure~\ref{paz}).
+Three observers are placed at spacetime
+positions $(t,z) = (0,1)$, $(0,-1)$, and $(-1,0)$, named \emph{$\mathcal{R}$} - {\it Right}, \emph{$\mathcal{L}$} - {\it Left}, and \emph{$\mathcal{P}$} - {\it Past} respectively. $\mathcal{P}$ serves as the
+common causal ancestor of $\mathcal{R}$ and $\mathcal{L}$ (see Figure~\ref{paz}).
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.75]{paz.png}
 \captionsetup{width=0.7\textwidth}
-\caption{A source in the past, Paz~(P), emits an entangled photon pair that accelerates Wright~(R) into the right Rindler wedge and Lester~(L) into the left Rindler wedge. The two null directions of propagation define the $z^+$ and $z^-$ axes of the double-null
+\caption{A source in the past, $\mathcal{P}$, emits an entangled photon pair that accelerates $\mathcal{R}$ into the right Rindler wedge and $\mathcal{L}$ into the left Rindler wedge. The two null directions of propagation define the $z^+$ and $z^-$ axes of the double-null
 coordinate system.}
 \label{paz}
 \end{figure}
 
-Paz emits an entangled pair of spin-1 massless photons with momenta $\pm k$ and Rindler frequency $\omega = \omega_k$. The momenta are perfectly balanced, so the source exhibits no net back-reaction in this minimal model. The two photons propagate into the left and right Rindler wedges, where Lester and Wright detect them respectively, each registering a helicity eigenvalue and acquiring one classical bit of information.
+$\mathcal{P}$ emits an entangled pair of spin-1 massless photons with momenta $\pm k$ and Rindler frequency $\omega = \omega_k$. The momenta are perfectly balanced, so the source exhibits no net back-reaction in this minimal model. The two photons propagate into the left and right Rindler wedges, where $\mathcal{L}$ and $\mathcal{R}$ detect them respectively, each registering a helicity eigenvalue and acquiring one classical bit of information.
 
 %------------------------------------------------------
 \subsection{Double-Null Gauge}
@@ -395,7 +394,7 @@ The sourced Lagrangian reads
 \end{aligned}
 \label{eq:bilocal_lag}
 \end{equation}
-where $a^{L\dagger}_{-k,(-1)}$ and $a^{R\dagger}_{k,(+1)}$ are creation operators for left-wedge helicity $-1$ and right-wedge helicity $+1$ modes respectively. The interaction term in~\eqref{eq:bilocal_lag} is a two-mode squeezing interaction at frequency $\omega$, now resolved by helicity: it is the direct vector-field analogue of the scalar squeezing interaction~\cite{gerry2023introductory}, with the anticorrelated polarisation structure made explicit. The photon pair carries total angular momentum zero, consistent with emission from a scalar source at Paz.
+where $a^{L\dagger}_{-k,(-1)}$ and $a^{R\dagger}_{k,(+1)}$ are creation operators for left-wedge helicity $-1$ and right-wedge helicity $+1$ modes respectively. The interaction term in~\eqref{eq:bilocal_lag} is a two-mode squeezing interaction at frequency $\omega$, now resolved by helicity: it is the direct vector-field analogue of the scalar squeezing interaction~\cite{gerry2023introductory}, with the anticorrelated polarisation structure made explicit. The photon pair carries total angular momentum zero, consistent with emission from a scalar source at $\mathcal{P}$.
 
 Each photon carries energy $E = \hbar\omega$ and, as a mode of the electromagnetic field, constitutes precisely one quantum of action $\hbar$ per oscillation cycle. The thrust quantum of Section~\ref{sec:heuristics} is thereby identified with a single photon: the minimum actionable event is the emission and detection of one such quantum.
 
@@ -473,7 +472,7 @@ $(\lambda, -\lambda) = (+1,-1)$, yielding the single-microstate
       + \mathcal{O}(\text{higher order}).
 \label{eq:microstate_vec}
 \end{equation}
-Wright's detection of helicity $+1$ and Lester's detection of helicity $-1$ are therefore
+$\mathcal{R}$'s detection of helicity $+1$ and $\mathcal{L}$'s detection of helicity $-1$ are therefore
 perfectly anticorrelated: each measurement event yields one classical bit, and the two bits
 are the complement of one another.
 
@@ -581,8 +580,8 @@ properties of matter that compose naturally under union.
 % only at absorption samples that collapse the sum into a specific outcome. 
 % This would make QFT and the present framework complementary: QFT 
 % computes the free sample structure, this framework adds the missing 
-% observation layer. The mirror / future Paz quantum eraser construction 
-% (Wright and Lester as mirrors allowing interference at future Paz iff 
+% observation layer. The mirror / future $\mathcal{P}$ quantum eraser construction 
+% ($\mathcal{R}$ and $\mathcal{L}$ as mirrors allowing interference at future $\mathcal{P}$ iff 
 % no bit was written) is the concrete test case for this identification. 
 % Needs careful development before inclusion in the main text.
 
@@ -615,7 +614,7 @@ detected, one quantum of action $\hbar$ is deposited persistently into the
 detector's matter-memory, and one helicity outcome is written as a classical 
 bit. The Landauer cost $\Delta E \geq k_B T \ln 2$ is paid immediately and 
 in full on acquisition. This is the sample category that drives the bilocal 
-construction: Wright and Lester each undergo exactly one absorption sample per 
+construction: $\mathcal{R}$ and $\mathcal{L}$ each undergo exactly one absorption sample per 
 emitted pair, and it is these samples whose gravitational imprint is modelled 
 by the AS pp-wave in Section~\ref{sec:ppwave}.
 
@@ -643,10 +642,10 @@ emission without ever producing a permanent classical record.
 It is worth noting that the absorption/free/emission classification 
 is observer-relative in the same sense as quantum state reduction 
 itself. What constitutes an irreversible absorption sample for one 
-observer may be a free sample for an external observer. If Wright truly forgets the helicity 
+observer may be a free sample for an external observer. If $\mathcal{R}$ truly forgets the helicity 
 outcome, in the sense that his matter-memory becomes disentangled 
 from the bit, the photon can interfere with its partner at a 
-future Paz. The classification is not a property of the interaction 
+future $\mathcal{P}$. The classification is not a property of the interaction 
 itself but of the observer's epistemic access to the outcome. True 
 irreversibility is approached asymptotically as the bit becomes 
 correlated with an increasing number of environmental degrees of 
@@ -692,9 +691,9 @@ The structural parallel with the bilocal construction is very close:
 
 \begin{itemize}
     \item The two Weyl 2-spinors, moving at $c$ in opposite directions with opposite
-    helicity, correspond to the two photons emitted by Paz into the left and right
+    helicity, correspond to the two photons emitted by $\mathcal{P}$ into the left and right
     Rindler wedges.
-    \item The Higgs field plays the role of Wright and Lester: it is the common mediator whose
+    \item The Higgs field plays the role of $\mathcal{R}$ and $\mathcal{L}$: it is the common mediator whose
     interaction reflects the entangled pair and sets the interaction rate.
     \item Between Higgs interactions, each 2-spinor is massless and moves at $c$,
     carrying no persistent memory, pure information carriers, exactly as the photons
@@ -718,7 +717,7 @@ null directions. Each spinor therefore has a local Rindler structure relative to
 from the perspective of the right-moving spinor, the left-moving spinor is behind a causal
 horizon, and vice versa. The Higgs interaction is the event that collapses this local
 horizon and produces one sample, one unit of proper time, exactly as the photon
-absorption by Wright collapses the Rindler horizon and produces one sample in the bilocal
+absorption by $\mathcal{R}$ collapses the Rindler horizon and produces one sample in the bilocal
 construction.
 
 This gives a precise sense in which mass is an accumulated measurement history. Each Higgs
@@ -750,7 +749,7 @@ a sample of proper time is produced.
 
 The zig-zag mechanism therefore provides a physical grounding for the matter substrate
 argument at the level of individual particles. The bilocal construction of
-Section~\ref{sec:microstates} is the macroscopic version of the same structure: Wright and Lester
+Section~\ref{sec:microstates} is the macroscopic version of the same structure: $\mathcal{R}$ and $\mathcal{L}$
 play the role of the Higgs field, the two photons play the role of the two Weyl spinors, and
 they produce samples of proper time in the zig-zag picture. The difference in scale is large but the
 logical structure is identical.
@@ -759,7 +758,7 @@ logical structure is identical.
 % microstate construction are the same structure at different scales. If this can
 % be made precise, it would connect the origin of mass directly to the measurement
 % framework developed in this paper. In particular, the Higgs field as a bilocal
-% source warrants investigation: does the Higgs condensate play the role of Paz
+% source warrants investigation: does the Higgs condensate play the role of $\mathcal{P}$
 % for all massive particles simultaneously, and does the Mexican hat potential
 % correspond to a specific choice of bilocal mode profile? This connection to the
 % standard model would significantly extend the scope of the framework.
@@ -879,14 +878,14 @@ appearance of this count, proportional to area rather than volume, is a conseque
 Unruh--Landauer and Bekenstein relations derived in Section~\ref{sec:heuristics} for a spherically symmetric mass distribution and does not require holography as an independent postulate.
 
 This reframing has a direct consequence for the ER=EPR identification developed in
-Section \ref{sec:erepr} below. The correlated measurement outcomes of Wright and Lester are not encoded in the horizon geometry in the first instance, they are encoded in the matter of their
+Section \ref{sec:erepr} below. The correlated measurement outcomes of $\mathcal{R}$ and $\mathcal{L}$ are not encoded in the horizon geometry in the first instance, they are encoded in the matter of their
 respective detectors, each of which has absorbed one photon and increased its Bremermann 
 sampling rate by $\Delta f = \hbar\omega/h$. The geometric correlations between the two wedges, realized as correlated AS pp-wave imprints in Section~\ref{sec:ppwave}, are downstream of this matter-level encoding. The bridge, if it exists, is built from correlated samples, not from the horizon itself.
 
 
 \section{pp-Wave Geometry}
 \label{sec:ppwave}
-WLOG we introduce coordinates for the photon traveling from Paz $(-1,0)$ to Wright $(0,1)$. Let $u = t - z + 1$ and $v = t + z + 1$, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is Paz's location, $(u,v)$ = $(0,2)$ is Wright's location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rinder horizon. The situtation is reversed for the left moving photon, we swap $u$ and $v$ to describe photon moving from Paz to Lester.
+WLOG we introduce coordinates for the photon traveling from $\mathcal{P}$ $(-1,0)$ to $\mathcal{R}$ $(0,1)$. Let $u = t - z + 1$ and $v = t + z + 1$, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is $\mathcal{P}$'s location, $(u,v)$ = $(0,2)$ is $\mathcal{R}$'s location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rinder horizon. The situtation is reversed for the left moving photon, we swap $u$ and $v$ to describe photon moving from $\mathcal{P}$ to $\mathcal{L}$.
 
 \subsection{The AS pp-Wave and Its Effects}
 
@@ -908,13 +907,13 @@ Test particles at fixed transverse positions $(x,y)$ experience two effects as t
 
 \subsection{The Longitudinal Shift Makes Space}
 
-The longitudinal shift deserves closer attention, because it carries a meaning beyond a mere coordinate displacement. The photon emitted by Paz propagates along the null direction; as it crosses the Rindler horizon, the AS shift displaces the future light cone of every test particle it passes. For the photon traveling into the right wedge, the shift pushes the right wedge's geometry in the $+v$ direction; for the entangled partner traveling into the left wedge, the shift pushes the left wedge in the $-v$ direction. The two wedges are displaced \emph{away from each other} along the longitudinal null direction. See Figure \ref{paz_shift}.
+The longitudinal shift deserves closer attention, because it carries a meaning beyond a mere coordinate displacement. The photon emitted by $\mathcal{P}$ propagates along the null direction; as it crosses the Rindler horizon, the AS shift displaces the future light cone of every test particle it passes. For the photon traveling into the right wedge, the shift pushes the right wedge's geometry in the $+v$ direction; for the entangled partner traveling into the left wedge, the shift pushes the left wedge in the $-v$ direction. The two wedges are displaced \emph{away from each other} along the longitudinal null direction. See Figure \ref{paz_shift}.
 
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.75]{paz_shift.png}
 \captionsetup{width=0.7\textwidth}
-\caption{The green arrows show the longitudinal shift  that occurs where the photons cross the horizon. Test particles are pushed outwards away from $z=0$ due to the creation of space along the null lines originating from Paz.}
+\caption{The green arrows show the longitudinal shift  that occurs where the photons cross the horizon. Test particles, shown in yellow, are pushed outwards away from $z=0$ due to the creation of space along the null lines originating from $\mathcal{P}$.}
 \label{paz_shift}
 \end{figure}
 
@@ -939,7 +938,7 @@ horizons in opposite null directions.
  
 % \subsection{Coarse-Graining and the Emergence of Thermality}
 % 
-% In a steady-state scenario, Paz continuously emits entangled pairs, and Lester and Wright continuously detect them. Each detection is an AS pp-wave microstate with a definite, non-thermal description in the global Minkowski frame: a specific photon energy, a specific transverse position, a specific longitudinal shift. Coarse-graining over this ensemble recovers the Unruh thermal spectrum at temperature $T = a/2\pi$, consistent with the vacuum decomposition of equation~\eqref{eq:vacuum}. The thermodynamic description of the horizon emerges from this averaging; it is not a feature of the individual microstates.
+% In a steady-state scenario, $\mathcal{P}$ continuously emits entangled pairs, and $\mathcal{L}$ and $\mathcal{R}$ continuously detect them. Each detection is an AS pp-wave microstate with a definite, non-thermal description in the global Minkowski frame: a specific photon energy, a specific transverse position, a specific longitudinal shift. Coarse-graining over this ensemble recovers the Unruh thermal spectrum at temperature $T = a/2\pi$, consistent with the vacuum decomposition of equation~\eqref{eq:vacuum}. The thermodynamic description of the horizon emerges from this averaging; it is not a feature of the individual microstates.
 % 
 % This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
  
@@ -947,16 +946,16 @@ horizons in opposite null directions.
 \section{Entanglement as Spatial Information: ER=EPR}
 \label{sec:erepr}
 
-Each measurement produces a polarisation outcome\footnote{We are analyzing the case where Lester and Wright both use the $H$/ $V$ basis.}, $H$ or $V$, at each wedge, perfectly
-anticorrelated between Lester and Wright. But consider a different question: not \emph{what}
+Each measurement produces a polarisation outcome\footnote{We are analyzing the case where $\mathcal{L}$ and $\mathcal{R}$ both use the $H$/ $V$ basis.}, $H$ or $V$, at each wedge, perfectly
+anticorrelated between $\mathcal{L}$ and $\mathcal{R}$. But consider a different question: not \emph{what}
 was observed, but \emph{where}. The question ``who observed $H$?'' has a binary answer:
-Lester (left wedge) or Wright (right wedge). This is a \emph{spatial bit}, a bit that
+$\mathcal{L}$ (left wedge) or $\mathcal{R}$ (right wedge). This is a \emph{spatial bit}, a bit that
 encodes not a polarisation state but a location in space.
 
 Each measurement event has exactly two
 irreducible constituents: one quantum of action $\hbar$ written persistently into the
 detector's matter-memory as a series of samples, and one bit of polarisation registered as a classical
-outcome. The entanglement between Wright and Lester is consumed in producing these two
+outcome. The entanglement between $\mathcal{R}$ and $\mathcal{L}$ is consumed in producing these two
 records, an increase in sampling rate and one bit at each wedge. What remains
 after measurement is not a
 remnant of the entanglement but its classical residue: the perfect anticorrelation between
@@ -969,7 +968,7 @@ opposite helicities by design.
 The information is carried by the matter of the detectors, not by the horizon. As
 established in Section~\ref{sec:substrate}, the horizon is a boundary that makes the
 left/right distinction sharp; it is the matter on each side that accumulates the samples and
-holds the classical record. Wright's detector has absorbed one photon, increased its sampling rate, and registered helicity $\pm 1$. Lester's detector has absorbed one photon, increased its sampling rate, and registered helicity $\mp 1$. The two records are perfectly complementary by the anticorrelated structure of the bilocal source, and their complementarity is encoded in matter before it
+holds the classical record. $\mathcal{R}$'s detector has absorbed one photon, increased its sampling rate, and registered helicity $\pm 1$. $\mathcal{L}$'s detector has absorbed one photon, increased its sampling rate, and registered helicity $\mp 1$. The two records are perfectly complementary by the anticorrelated structure of the bilocal source, and their complementarity is encoded in matter before it
 is reflected in geometry.
 
 
@@ -991,7 +990,7 @@ The spatial bit is therefore not merely a
 record of which side the photon landed on. It is a label for which of the two correlated
 geometric deformations was realized, and the two labels together reconstruct the bridge.
 This is an operational realization of ER=EPR at the level of individual microstates: the
-entanglement between Lester and Wright's outcomes is not a stand-in for the bridge but is
+entanglement between $\mathcal{L}$ and $\mathcal{R}$'s outcomes is not a stand-in for the bridge but is
 physically instantiated in the pair of correlated samples whose geometric imprint
 \emph{is} the bridge. The bridge is built from matter, sample by sample.
 
@@ -1016,12 +1015,12 @@ The matter-clock picture developed in Section~\ref{sec:substrate} assigns a disc
 The preceding sections established three key loci where the geometry responds to information-processing events: 
 
 \begin{enumerate}
-    \item \textbf{Paz in the past:} the bilocal source injects energy and angular momentum, which can be associated with a Schwarzschild-like mass $m_P$ encoding the initial acceleration of the detectors.
+    \item \textbf{$\mathcal{P}$ in the past:} the bilocal source injects energy and angular momentum, which can be associated with a Schwarzschild-like mass $m_P$ encoding the initial acceleration of the detectors.
     \item \textbf{Photon crossing the horizon:} each emitted photon carries energy $E=\hbar\omega$ and a helicity bit, producing an Aichelburg--Sexl pp-wave whose longitudinal shift generates a new null separation between wedges and whose transverse focusing increments the horizon area.
-    \item \textbf{Wright/Lester detectors:} absorption of the photon imprints energy and one classical bit into the matter-memory of each detector, producing local Schwarzschild-like responses $m_W, m_L$ and marking the accumulation of \emph{samples}.
+    \item \textbf{$\mathcal{R}$/$\mathcal{L}$ detectors:} absorption of the photon imprints energy and one classical bit into the matter-memory of each detector, producing local Schwarzschild-like responses $m_W, m_L$ and marking the accumulation of \emph{samples}.
 \end{enumerate}
 
-Each of these loci has its own emergent time, defined operationally by the sequence of discrete \emph{samples} accumulated in the proper time of matter carrying information. For the photon itself, no proper time elapses; it carries a \emph{pure transfer} of energy and one classical bit. The photon’s passage between emission and detection mediates correlations that are encoded as entanglement between the samples of Wright and Lester, and as longitudinal shifts of the horizon in the pp-wave picture. 
+Each of these loci has its own emergent time, defined operationally by the sequence of discrete \emph{samples} accumulated in the proper time of matter carrying information. For the photon itself, no proper time elapses; it carries a \emph{pure transfer} of energy and one classical bit. The photon’s passage between emission and detection mediates correlations that are encoded as entanglement between the samples of $\mathcal{R}$ and $\mathcal{L}$, and as longitudinal shifts of the horizon in the pp-wave picture. 
 
 The Raychaudhuri equation applied to each infinitesimal horizon element ensures that the transverse focusing $\Delta \theta_\perp$ matches the area increment $\Delta A$ associated with a single microstate. This realizes the Bekenstein--Hawking relation at the level of individual detection events, making Jacobson’s thermodynamic argument manifest at the microstate scale.
 
@@ -1029,7 +1028,7 @@ The longitudinal shifts, meanwhile, generate the \emph{spatial separation} that 
 
 The sequence
 \begin{equation}
-\text{Paz source} \;\xrightarrow{\text{photon emission}}\; \text{pp-wave horizon shift} \;\xrightarrow{\text{detector absorption}}\; \text{matter samples}
+\text{$\mathcal{P}$ source} \;\xrightarrow{\text{photon emission}}\; \text{pp-wave horizon shift} \;\xrightarrow{\text{detector absorption}}\; \text{matter samples}
 \end{equation}
 provides a concrete operational dictionary linking energy, information, and geometry. Each step is reversible in principle except for the Landauer cost encoded in the matter-memory, and coarse-graining over many such events recovers the familiar thermal horizon description. 
 
@@ -1221,10 +1220,10 @@ degrees of freedom. The $\mathbb{Z}_2$ wedge-swap symmetry is preserved througho
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
 
-\section{Appendix: Emergent Spacetime from Samples and Correlations}
-\label{sec:emergent_spacetime}
-
-The bilocal construction of Section~\ref{sec:microstates} and the matter substrate argument
+% \section{Appendix: Emergent Spacetime from Samples and Correlations}
+% \label{sec:emergent_spacetime}
+% 
+% The bilocal construction of Section~\ref{sec:microstates} and the matter substrate argument
 of Section~\ref{sec:substrate} together suggest a picture in which spacetime is not a
 background arena but an emergent property of matter and its correlations. We develop this
 picture here, drawing on~\cite{player2025spacetime}. The central claim is that time and
@@ -1325,16 +1324,16 @@ equations are the consistency conditions on those nonlinear relationships.
 % \subsection{The Bilocal Construction as Emergent Spacetime}
 % %------------------------------------------------------
 % 
-% The Paz--Lester--Wright setup of Section~\ref{sec:microstates} is a concrete realization
-% of the emergent spacetime picture. Wright and Lester play the role of the two paths: each
-% accumulates samples in their respective Rindler wedge, and the photons from Paz are the
+% The $\mathcal{P}$--$\mathcal{L}$--$\mathcal{R}$ setup of Section~\ref{sec:microstates} is a concrete realization
+% of the emergent spacetime picture. $\mathcal{R}$ and $\mathcal{L}$ play the role of the two paths: each
+% accumulates samples in their respective Rindler wedge, and the photons from $\mathcal{P}$ are the
 % physical carriers that establish the correlation between their sample counts.
 % 
 % The spatial bit, the fringe index $k = n_R - n_L$, is the emergent spatial quantum
-% number of the construction. Before measurement, $k$ is indefinite: Wright and Lester have
+% number of the construction. Before measurement, $k$ is indefinite: $\mathcal{R}$ and $\mathcal{L}$ have
 % not yet registered their photons, and the spatial separation between the wedges is a quantum
-% superposition of fringe indices. After measurement, $k$ is definite: Wright registered
-% helicity $+1$ and Lester registered helicity $-1$, and the spatial separation between them
+% superposition of fringe indices. After measurement, $k$ is definite: $\mathcal{R}$ registered
+% helicity $+1$ and $\mathcal{L}$ registered helicity $-1$, and the spatial separation between them
 % is a classical fact encoded in their respective matter-memories.
 % 
 % The Rindler horizon is the surface $k = 0$, the locus of zero sample difference. Points
@@ -1372,8 +1371,8 @@ Time and space emerge from matter in distinct but complementary ways:
     multiple paths, encoding the deviation from flat spacetime.
 \end{itemize}
 
-In the bilocal construction, the photon from Paz is the physical event that correlates
-Wright's and Lester's sample counts, establishing the spatial separation between the wedges
+In the bilocal construction, the photon from $\mathcal{P}$ is the physical event that correlates
+$\mathcal{R}$'s and $\mathcal{L}$'s sample counts, establishing the spatial separation between the wedges
 as a classical fact. The horizon is the zero eigenspace of $\hat{K}$. Gravity is the
 mechanics of correlated sample counts. Spacetime is what matter does.
 
