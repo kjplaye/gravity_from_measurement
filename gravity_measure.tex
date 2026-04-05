@@ -45,7 +45,7 @@ Two landmark results establish that gravity and Unurh thermodynamics are deeply 
 
 We argue that the answer is quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, gives rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, by the equivalence principle, this impulse is locally indistinguishable in that from the effect of a gravitational field: no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically, via Aichelburg--Sexl (AS) pp-wave solutions, as we explore, they imprint energy and information directly onto horizon geometry, and coarse-graining over the resulting ensemble recovers standard horizon thermodynamics. A unifying structure runs through the relations, and it is worth pausing to discuss the general ideas involved before diving into our explicit example. 
 
-\subsection{Conceptual Roadmap and Subjective Relations}
+\subsection{Conceptual Roadmap}
 In each case in our argument, the relation between two adjacent concepts has the same logical character: every instance of the more abstract concept is grounded in an instance of the more physical one, but not every instance of the more physical concept gives rise to the more abstract one \emph{for a given observer}. The gap in each case is filled by subjectivity. Quantum state reduction is always backed by an observation, it is a Bayesian update on the observer's part, but an observation that carries no new information for that observer produces no state reduction. Equally, every observation is backed by an energy-momentum transfer, but not every such transfer constitutes an observation for you: an interaction involving a different ``observer'' leaves your knowledge unchanged. The Unruh effect suggests the same structure extends to the equivalence principle: an accelerating observer perceives a thermal bath and attributes it to a gravitational field, while an inertial observer sees only vacuum. Whether an acceleration counts as gravity is perspectival in precisely the same sense. In each case the relation is an identification, not a causal link, and the identification is observer-relative.
 
 This stands in sharp contrast to the Di\'osi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity \emph{causes} quantum state reduction as an objective, observer-independent physical process. Figure~\ref{fig:diagram} summarises this contrast. The three solid arrows represent the perspectival grounding relations described above; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
@@ -66,6 +66,8 @@ This stands in sharp contrast to the Di\'osi--Penrose objective collapse program
 To make this concrete, we build on the microstate construction of~\cite{player2025driving}, in which bilocal driving sources generate entangled Rindler excitations that realize individual terms of the Unruh thermal ensemble. The present paper applies and extends that construction. Entangled pairs emitted from a localised source propagate into left and right Rindler wedges; polarisation measurement events produce discrete energy-momentum impulses and correlated classical bits. We show that each such microstate carries a calculable gravitational imprint, modelled by an AS pp-wave solution, and that coarse-graining over the ensemble recovers standard horizon thermodynamics. This construction also provides an operational realization of ER=EPR at the level of individual microstates: entanglement is converted into geometric information, and each measurement event contributes a discrete, calculable increment to horizon entropy.
 
 %This approach both complements and sharpens the thermodynamic gravity programme of Jacobson and Verlinde. Jacobson's derivation of the Einstein equations from horizon thermodynamics and Verlinde's entropic force framework both operate at the level of bulk averages, leaving open the question of what physical process underlies each entropy increment. The present construction supplies that microstate realization: each entropy increment corresponds to a physically mediated measurement event with a calculable energy-momentum transfer. Thermality is emergent rather than intrinsic, arising from coarse-graining over an ensemble of source-driven microstates, each of which admits a definite, non-thermal description in the global Minkowski frame. The thermodynamic results of both programmes are recovered as a consequence of this coarse-graining, rather than assumed as a starting point.
+
+\subsection{Subjectivity}
 
 A closely related perspective is provided by relational and information-theoretic interpretations of quantum theory. Carlo Rovelli’s relational quantum mechanics \cite{rovelli1996relational} and the QBist programme associated with Christopher Fuchs \cite{fuchs2014introduction} both treat the quantum state as observer-dependent, encoding information rather than objective physical reality. In these frameworks, measurement is understood as an update of an observer’s knowledge, not a universal physical collapse. The Unruh effect \cite{unruh1976notes} provides a direct physical analogue of this observer-relativity: particle content and thermality themselves become observer-dependent notions, tied to acceleration. Our construction extends this shared principle across domains, identifying quantum state reduction, thermality, and gravitational effects as different aspects of observer-relative descriptions grounded in underlying physical interactions. This viewpoint also sharpens the conceptual tension highlighted by Eugene Wigner \cite{wigner1995remarks}, where different observers may consistently assign different physical descriptions to the same process, suggesting that the resulting geometric imprints in our framework may likewise be observer-dependent. Finally, the present approach may be viewed as a concrete dynamical realization of Wheeler's 'it from bit' programme~\cite{wheeler2018information}. Where Wheeler's proposal remained largely conceptual, discrete acts of information acquisition giving rise to physical law, we identify the explicit dynamical mechanism: each bit acquired by a physical observer is backed by a measurement-induced energy-momentum transfer, modelled geometrically as an AS pp-wave, whose gravitational imprint incrementally builds spacetime structure. The bit does not merely describe the geometry; it produces it.
 
@@ -316,7 +318,7 @@ common causal ancestor of Wright and Lester (see Figure~\ref{paz}).
 \centering
 \includegraphics[scale=0.75]{paz.png}
 \captionsetup{width=0.7\textwidth}
-\caption{A source in the past, Paz~(P), emits an entangled photon pair that accelerates Wright~(R) into the right Rindler wedge and Lester~(L) into the left Rindler wedge. The two null directions of propagation define the $x^+$ and $x^-$ axes of the double-null
+\caption{A source in the past, Paz~(P), emits an entangled photon pair that accelerates Wright~(R) into the right Rindler wedge and Lester~(L) into the left Rindler wedge. The two null directions of propagation define the $z^+$ and $z^-$ axes of the double-null
 coordinate system.}
 \label{paz}
 \end{figure}
@@ -338,17 +340,17 @@ Paz emits an entangled pair of spin-1 massless photons with momenta $\pm k$ and 
 
 The emission event naturally defines two null directions: the right-moving photon has
 wave-vector $k^\mu_R$ and the left-moving photon has wave-vector $k^\mu_L = -k^\mu_R$. These
-two null directions are precisely the $x^+$ and $x^-$ axes of double-null coordinates
+two null directions are precisely the $z^+$ and $z^-$ axes of double-null coordinates
 \begin{equation}
-    x^\pm = \frac{1}{\sqrt{2}}(t \pm z),
+    z^\pm = \frac{1}{\sqrt{2}}(t \pm z),
 \end{equation}
-with transverse coordinates $\mathbf{x}_\perp = (x^1, x^2)$. Working in this frame we impose
+with transverse coordinates $\mathbf{z}_\perp = (z^1, z^2)$. Working in this frame we impose
 the symmetric double-null gauge condition
 \begin{equation}
-    A_+(x) = 0, \qquad A_-(x) = 0,
+    A_+(z) = 0, \qquad A_-(z) = 0,
 \label{eq:doublenull}
 \end{equation}
-so that the gauge field is supported entirely on the transverse components $\mathbf{A}_\perp = (A^1, A^2)$. This gauge respects the $\mathbb{Z}_2$ symmetry that swaps the two wedges $(x^+ \leftrightarrow x^-)$ simultaneously with $(R \leftrightarrow L)$, and therefore treats both observers symmetrically by construction. The residual gauge freedom is fixed by requiring $\partial_i A^i = 0$ in the transverse plane, leaving precisely the two physical helicity degrees of freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$.
+so that the gauge field is supported entirely on the transverse components $\mathbf{A}_\perp = (A^1, A^2)$. This gauge respects the $\mathbb{Z}_2$ symmetry that swaps the two wedges $(z^+ \leftrightarrow z^-)$ simultaneously with $(R \leftrightarrow L)$, and therefore treats both observers symmetrically by construction. The residual gauge freedom is fixed by requiring $\partial_i A^i = 0$ in the transverse plane, leaving precisely the two physical helicity degrees of freedom $\epsilon^i_{(\lambda)}$ with $\lambda = \pm 1$.
 
 The lack of manifest four-dimensional covariance in equation \eqref{eq:doublenull} is a consequence of aligning the gauge with the pair of physical null directions selected by the source, rather than an arbitrary choice. The full Lorentz group is broken to the little group preserving the pair $\{k^\mu_R, k^\mu_L\}$, which is the two-dimensional Euclidean group $ISO(2)$ acting on the transverse plane. This is precisely the little group of massless particles, and the two helicity eigenstates $\lambda = \pm 1$ are its irreducible representations. All physical results are independent of the gauge choice.
 
@@ -423,14 +425,14 @@ In the transverse plane, the electromagnetic field in double-null gauge decompos
 two independent scalar-like sectors labelled by helicity $\lambda = \pm 1$. For each sector,
 the right-wedge field expands as
 \begin{equation}
-    A^i_\lambda(x) = \int_0^\infty \frac{d\Omega}{2\pi}\,
+    A^i_\lambda(z) = \int_0^\infty \frac{d\Omega}{2\pi}\,
         \frac{1}{\sqrt{2\Omega}}\,\epsilon^i_{(\lambda)}
         \left[
-            b^R_{\Omega,\lambda}\, u^R_\Omega(x)
-            + b^{R\dagger}_{\Omega,\lambda}\, u^{R*}_\Omega(x)
+            b^R_{\Omega,\lambda}\, u^R_\Omega(z)
+            + b^{R\dagger}_{\Omega,\lambda}\, u^{R*}_\Omega(z)
         \right],
 \end{equation}
-where $u^R_\Omega(x)$ are the right-wedge Rindler modes at Rindler frequency $\Omega$, and
+where $u^R_\Omega(z)$ are the right-wedge Rindler modes at Rindler frequency $\Omega$, and
 $b^R_{\Omega,\lambda}$, $b^{R\dagger}_{\Omega,\lambda}$ are the corresponding annihilation
 and creation operators satisfying
 \begin{equation}
@@ -660,7 +662,7 @@ of each in the minimal case is the reason it is the natural unit
 of the construction, but neither the action nor the bit should be 
 understood as intrinsic properties of the photon in isolation.
 
-\subsection{Penrose's Zig-Zag Mechanism: Why Matter Samples}
+\subsection{Penrose's Zig-Zag Mechanism}
 \label{sec:zigzag}
 
 The matter substrate argument of the preceding subsection established that massive particles
@@ -842,7 +844,7 @@ price of that reversal.
 
 The data processing inequality is therefore the information-theoretic 
 statement of the thermodynamic arrow of time in this framework: 
-absorption and emission are the two directions of irreversible 
+absorption and emission are the two directions of persistent 
 information flow, and free samples are the reversible background 
 against which both are measured. The full quantum channel structure 
 of the Bogoliubov transformation, its classical capacity in the 
@@ -866,13 +868,29 @@ future work.
 % on quantum capacity of Unruh channels for the relevant technical 
 % framework.
 
+\subsection{Horizon Separation}
+
+The horizon enters this picture not as a storage medium but as a boundary condition. It marks
+the surface at which the matter-memory on one side is causally disconnected from the
+matter-memory on the other. Horizon entropy, in this account, is not a property of the
+horizon surface itself but a count of the samples that have been written into the matter on
+each side, bounded by Bremermann from above and by Landauer from below. The holographic
+appearance of this count, proportional to area rather than volume, is a consequence of the
+Unruh--Landauer and Bekenstein relations derived in Section~\ref{sec:heuristics} for a spherically symmetric mass distribution and does not require holography as an independent postulate.
+
+This reframing has a direct consequence for the ER=EPR identification developed in
+Section \ref{sec:erepr} below. The correlated measurement outcomes of Wright and Lester are not encoded in the horizon geometry in the first instance, they are encoded in the matter of their
+respective detectors, each of which has absorbed one photon and increased its Bremermann 
+sampling rate by $\Delta f = \hbar\omega/h$. The geometric correlations between the two wedges, realized as correlated AS pp-wave imprints in Section~\ref{sec:ppwave}, are downstream of this matter-level encoding. The bridge, if it exists, is built from correlated samples, not from the horizon itself.
+
 
 \section{pp-Wave Geometry}
 \label{sec:ppwave}
+WLOG we introduce coordinates for the photon traveling from Paz $(-1,0)$ to Wright $(0,1)$. Let $u = t - z + 1$ and $v = t + z + 1$, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Then $(u,v)$ = $(0,0)$ is Paz's location, $(u,v)$ = $(0,2)$ is Wright's location, and $(u,v)$ = $(0,1)$ is the intersection of the photon with the past right Rinder horizon. The situtation is reversed for the left moving photon, we swap $u$ and $v$ to describe photon moving from Paz to Lester.
 
 \subsection{The AS pp-Wave and Its Effects}
 
-Let $u = t - z$ and $v = t + z$, where the photon propagates along the null plane $u = 0$, $z$ is the longitudinal direction, and $(x,y)$ are transverse coordinates. Test particles at fixed transverse positions $(x,y)$ experience two effects as the shock front crosses $u = 0$:
+Test particles at fixed transverse positions $(x,y)$ experience two effects as the shock front crosses $u = 0$:
 
 \begin{enumerate}
     \item \textbf{Longitudinal shift.} The $v$ coordinate is displaced by
@@ -890,48 +908,43 @@ Let $u = t - z$ and $v = t + z$, where the photon propagates along the null plan
 
 \subsection{The Longitudinal Shift Makes Space}
 
-The longitudinal shift deserves closer attention, because it carries a meaning beyond a mere coordinate displacement. The photon emitted by Paz propagates along the null direction; as it crosses the Rindler horizon, the AS shift displaces the future light cone of every test particle it passes. For the photon traveling into the right wedge, the shift pushes the right wedge's geometry in the $+v$ direction; for the entangled partner traveling into the left wedge, the shift pushes the left wedge in the $-v$ direction. The two wedges are displaced \emph{away from each other} along the longitudinal null direction.
+The longitudinal shift deserves closer attention, because it carries a meaning beyond a mere coordinate displacement. The photon emitted by Paz propagates along the null direction; as it crosses the Rindler horizon, the AS shift displaces the future light cone of every test particle it passes. For the photon traveling into the right wedge, the shift pushes the right wedge's geometry in the $+v$ direction; for the entangled partner traveling into the left wedge, the shift pushes the left wedge in the $-v$ direction. The two wedges are displaced \emph{away from each other} along the longitudinal null direction. See Figure \ref{paz_shift}.
 
-This is not merely a kinematic effect. The transverse plane of the pp-wave is identified with horizon area elements $dA = dx\,dy$, and the longitudinal shift creates a new null interval between the two wedges, a region of spacetime that did not exist, in the sense of being causally accessible, before the photon passed. The bit of spatial information encoded in the left/right measurement outcome, ``who observed $H$?'', refers to precisely this separation. The measurement event does not merely \emph{record} a spatial distinction; through the gravitational backreaction of the photon, it \emph{creates} the spatial separation that the bit describes.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.75]{paz_shift.png}
+\captionsetup{width=0.7\textwidth}
+\caption{The green arrows show the longitudinal shift  that occurs where the photons cross the horizon. Test particles are pushed outwards away from $z=0$ due to the creation of space along the null lines originating from Paz.}
+\label{paz_shift}
+\end{figure}
 
-Put differently: the same physical event, a photon crossing a horizon, simultaneously encodes a classical bit and, via the AS longitudinal shift, generates the spatial structure that bit refers to. Space is not a pre-existing backdrop onto which information is written; it is produced, increment by increment, by the gravitational imprint of each measurement event. This is the microstate-level content of emergent space: each detection event contributes both an entropy increment and a spatial increment, and the two are the same thing described in different languages.
+At the intersection of the shock front $u=0$ with the past right 
+Rindler horizon at $(u,v)=(0,1)$, the transverse $(x,y)$ plane 
+is identified with the horizon area elements $dA = dx\,dy$. The 
+longitudinal shift $\Delta v \propto -\ln r^2$ displaces the 
+horizon outward in the $v$ direction, pushing the right wedge 
+geometry away from the horizon. The entangled partner photon 
+produces a symmetric shift in the $u$ direction at the left 
+Rindler horizon, pushing the left wedge away from its horizon. 
+The two wedges are therefore displaced away from their respective 
+horizons in opposite null directions.
 
-\subsection{Horizon Entropy from Individual Microstates}
+% \subsection{Horizon Entropy from Individual Microstates}
+% 
+% Each detection event contributes a discrete entropy increment via the Bekenstein--Hawking relation derived in Section~\ref{sec:heuristics}:
+% \begin{equation}
+% \Delta H = \frac{\Delta A}{4\ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
+% \end{equation}
+% where $\Delta A$ is the area element imprinted on the horizon by the transverse focusing of the pp-wave. Horizon entropy is therefore not a bulk thermodynamic quantity assigned to the horizon as a whole, but a sum of discrete, calculable contributions from individual measurement-induced interactions. The transverse focusing and the longitudinal shift are two aspects of the same microstate: focusing encodes the entropy increment in the area; the longitudinal shift encodes the spatial increment in the geometry.
+ 
+% \subsection{Coarse-Graining and the Emergence of Thermality}
+% 
+% In a steady-state scenario, Paz continuously emits entangled pairs, and Lester and Wright continuously detect them. Each detection is an AS pp-wave microstate with a definite, non-thermal description in the global Minkowski frame: a specific photon energy, a specific transverse position, a specific longitudinal shift. Coarse-graining over this ensemble recovers the Unruh thermal spectrum at temperature $T = a/2\pi$, consistent with the vacuum decomposition of equation~\eqref{eq:vacuum}. The thermodynamic description of the horizon emerges from this averaging; it is not a feature of the individual microstates.
+% 
+% This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
+ 
 
-Each detection event contributes a discrete entropy increment via the Bekenstein--Hawking relation derived in Section~\ref{sec:heuristics}:
-\begin{equation}
-\Delta H = \frac{\Delta A}{4\ell_P^2}, \qquad \ell_P^2 = \frac{\hbar G}{c^3},
-\end{equation}
-where $\Delta A$ is the area element imprinted on the horizon by the transverse focusing of the pp-wave. Horizon entropy is therefore not a bulk thermodynamic quantity assigned to the horizon as a whole, but a sum of discrete, calculable contributions from individual measurement-induced interactions. The transverse focusing and the longitudinal shift are two aspects of the same microstate: focusing encodes the entropy increment in the area; the longitudinal shift encodes the spatial increment in the geometry.
-
-\subsection{Coarse-Graining and the Emergence of Thermality}
-
-In a steady-state scenario, Paz continuously emits entangled pairs, and Lester and Wright continuously detect them. Each detection is an AS pp-wave microstate with a definite, non-thermal description in the global Minkowski frame: a specific photon energy, a specific transverse position, a specific longitudinal shift. Coarse-graining over this ensemble recovers the Unruh thermal spectrum at temperature $T = a/2\pi$, consistent with the vacuum decomposition of equation~\eqref{eq:vacuum}. The thermodynamic description of the horizon emerges from this averaging; it is not a feature of the individual microstates.
-
-This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
-
-\subsection{Horizon Separation}
-
-The horizon enters this picture not as a storage medium but as a boundary condition. It marks
-the surface at which the matter-memory on one side is causally disconnected from the
-matter-memory on the other. Horizon entropy, in this account, is not a property of the
-horizon surface itself but a count of the samples that have been written into the matter on
-each side, bounded by Bremermann from above and by Landauer from below. The holographic
-appearance of this count, proportional to area rather than volume, is a consequence of the
-Unruh--Landauer and Bekenstein relations derived in Section~\ref{sec:heuristics} and does not
-require holography as an independent postulate.
-
-This reframing has a direct consequence for the ER=EPR identification developed in the
-next subsection. The correlated measurement outcomes of Wright and Lester are not encoded
-in the horizon geometry in the first instance, they are encoded in the matter of their
-respective detectors, each of which has absorbed one photon and accumulated an additional
-sampling rate. The geometric correlations between the two wedges, realized
-as correlated AS pp-wave
-imprints in Section~\ref{sec:ppwave}, are downstream of this matter-level encoding. The
-bridge, if it exists, is built from correlated samples, not from the horizon itself.
-
-
-\section{Entanglement as Spatial Information: ER=EPR at the Microstate Level}
+\section{Entanglement as Spatial Information: ER=EPR}
 \label{sec:erepr}
 
 Each measurement produces a polarisation outcome\footnote{We are analyzing the case where Lester and Wright both use the $H$/ $V$ basis.}, $H$ or $V$, at each wedge, perfectly
@@ -941,7 +954,7 @@ Lester (left wedge) or Wright (right wedge). This is a \emph{spatial bit}, a bit
 encodes not a polarisation state but a location in space.
 
 Each measurement event has exactly two
-irreducible constituents: one quantum of action $\hbar$ written irreversibly into the
+irreducible constituents: one quantum of action $\hbar$ written persistently into the
 detector's matter-memory as a series of samples, and one bit of polarisation registered as a classical
 outcome. The entanglement between Wright and Lester is consumed in producing these two
 records, an increase in sampling rate and one bit at each wedge. What remains
@@ -956,20 +969,25 @@ opposite helicities by design.
 The information is carried by the matter of the detectors, not by the horizon. As
 established in Section~\ref{sec:substrate}, the horizon is a boundary that makes the
 left/right distinction sharp; it is the matter on each side that accumulates the samples and
-holds the classical record. Wright's detector has absorbed one photon, increased its sampling rate, and registered helicity $+1$. Lester's detector has absorbed one photon, increased its sampling rate, and registered helicity $-1$. The two records are perfectly complementary by the anticorrelated structure of the bilocal source, and their complementarity is encoded in matter before it
+holds the classical record. Wright's detector has absorbed one photon, increased its sampling rate, and registered helicity $\pm 1$. Lester's detector has absorbed one photon, increased its sampling rate, and registered helicity $\mp 1$. The two records are perfectly complementary by the anticorrelated structure of the bilocal source, and their complementarity is encoded in matter before it
 is reflected in geometry.
 
-This reframing sharpens the ER=EPR identification. The two wedges are connected not by
-the horizon as an abstract geometric object but by the physical correlations between the
-energy-momentum impulses deposited in the matter on each side. In the AS pp-wave picture
-developed in Section~\ref{sec:ppwave}, each such impulse produces a measurable longitudinal
-shift and transverse focusing of the horizon geometry. The correlated pair of impulses ---
-one in each wedge, anticorrelated in helicity, produces correlated geometric deformations
-on the two sides of the horizon, and it is \emph{this} geometric correlation, downstream of
-the matter-level encoding, that constitutes the Einstein--Rosen bridge at the level of a
-single microstate.
 
-The spatial bit, the answer to ``who observed $H$?'', is therefore not merely a
+This reframing allows us to realize the ER=EPR identification 
+concretely. As established in Section~\ref{sec:ppwave}, the 
+longitudinal shift of the AS pp-wave creates a new null interval 
+between the two wedges; a region of spacetime that did not exist, 
+in the sense of being causally accessible, before the photon passed. 
+The bit of spatial information encoded in the left/right measurement 
+outcome, ``who observed $H$?'', refers to precisely this separation: 
+the measurement event does not merely \emph{record} a spatial 
+distinction, it \emph{creates} the spatial separation that the bit 
+describes. The two wedges are therefore connected not by the horizon 
+as an abstract geometric object but by the physical correlations 
+between the energy-momentum impulses deposited in the matter on 
+each side.
+
+The spatial bit is therefore not merely a
 record of which side the photon landed on. It is a label for which of the two correlated
 geometric deformations was realized, and the two labels together reconstruct the bridge.
 This is an operational realization of ER=EPR at the level of individual microstates: the
@@ -985,6 +1003,8 @@ physically instantiated in the pair of correlated samples whose geometric imprin
 % of the Unruh effect in 2+1 dimensions and their relation to anyonic statistics.
 
 Each measurement event in the bilocal construction involves a photon transferring energy and momentum to an accelerated detector. We now model the gravitational imprint of this transfer by identifying each photon with an Aichelburg--Sexl (AS) pp-wave solution in general relativity~\cite{aichelburg1971gravitational}. The AS geometry is an exact solution describing the gravitational field of an ultrarelativistic point mass, and provides the natural geometric language for a single-photon microstate.
+
+
 
 %------------------------------------------------------
 \section{Microstates and Emergent Geometry}
