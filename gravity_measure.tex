@@ -11,17 +11,7 @@
 % Without this the framework is a compelling programme rather than
 % a derived theory of gravity. This is the most important TODO.
 
-% 🔴 TODO B — Carlip connection
-% If each AS pp-wave imprint corresponds to a specific 
-% diffeomorphism at the horizon boundary, there is a direct map 
-% from individual measurement events to the Virasoro algebra that 
-% Carlip uses to derive black hole entropy. This would close a 
-% significant gap in Carlip's programme, which identifies the 
-% symmetry but not the physical process that excites it. Should 
-% be investigated as a potential central result rather than 
-% deferred to future work.
-
-% TODO B2 Carnot cycle?
+% TODO B - Carnot cycle?
 
 % 🔴 TODO C — The zig-zag identification
 % The structural identity between the bilocal construction and the
@@ -42,15 +32,6 @@
 % distinct contributions needs to be made precise. The 
 % cosmological constant problem may connect to the mismatch 
 % between the two.
-
-% 🔴 TODO E — Equivalence principle arrow and observer-relativity
-% The diagram in Section 1 treats the equivalence principle 
-% arrow as perspectival in the same sense as the Bayesian update 
-% arrow. This needs more careful justification: the equivalence 
-% principle has a local geometric character that is harder to make
-% fully observer-relative. A precise account of what "for a given
-% observer" means for a Rindler observer with no definite global 
-% trajectory is needed to make the diagram's claim rigorous.
 
 % 🔴 TODO F — Gravitational memory and record erasure
 % Each absorption sample leaves an AS pp-wave imprint — a 
@@ -171,9 +152,6 @@ configurations in string theory, establishing that black hole entropy
 has a microscopic origin, but the microstates are defined 
 algebraically in a high-energy string framework far removed from 
 the operational measurement picture developed here. Carlip~\cite{carlip1999} 
-% NOTE: Check Carlip cite, his horizon entropy from Virasoro 
-% algebra paper, approximately 1999--2000.
-% TODO 1A: You mention offhandedly that AS pp-wave imprints "may" realize Carlip's Virasoro boundary excitations and defer it to future work. But this could be a central result rather than a footnote. If each measurement event corresponds to a specific diffeomorphism at the horizon boundary, you have a direct map from operational events to the algebraic structure that generates the entropy. That would close a significant gap in Carlip's programme, which identifies the symmetry but not the physical process that excites it. (this could be a result)
 derived black hole entropy from the Virasoro algebra of 
 diffeomorphisms at the horizon boundary, identifying microstates 
 with boundary excitations; our AS pp-wave imprints may provide a 
@@ -240,7 +218,16 @@ appears to be new.
 % TODO 6A [Section map paragraph todo]
 
 \subsection{Conceptual Roadmap}
-Our conceptual argument is a relation between adjacent concepts that have the same logical character: every instance of the more abstract concept is grounded in an instance of the more physical one, but not every instance of the more physical concept gives rise to the more abstract one \emph{for a given observer}. The gap in each case is filled by subjectivity. Quantum state reduction is always backed by an observation, it is a Bayesian update on the observer's part, but an observation that carries no new information for that observer produces no state reduction. Equally, every observation is backed by an energy-momentum transfer, but not every such transfer constitutes an observation for you: an interaction involving a different ``observer'' leaves your knowledge unchanged. The Unruh effect suggests the same structure extends to the equivalence principle: an accelerating observer perceives a thermal bath and attributes it to a gravitational field, while an inertial observer sees only vacuum. Whether an acceleration counts as gravity is perspectival in precisely the same sense. In each case the relation is an identification, not a causal link, and the identification is observer-relative.
+Our conceptual argument is a relation between adjacent concepts that have the same logical character: every instance of the more abstract concept is grounded in an instance of the more physical one, but not every instance of the more physical concept gives rise to the more abstract one \emph{for a given observer}. The gap in each case is filled by subjectivity. Quantum state reduction is always backed by an observation, it is a Bayesian update on the observer's part, but an observation that carries no new information for that observer produces no state reduction. Equally, every observation is backed by an energy-momentum transfer, but not every such transfer constitutes an observation for you: an interaction involving a different ``observer'' leaves your knowledge unchanged. The Unruh effect suggests the same structure extends to the equivalence principle: an accelerating observer perceives a thermal bath and attributes it to a gravitational field, while an inertial observer sees only vacuum. Whether an acceleration counts as gravity is perspectival in an 
+analogous but distinct sense: not epistemic, as with Bayesian 
+update, nor operational, as with energy--momentum transfer, but 
+\emph{geometric}, underdetermined by any local measurement 
+rather than by the observer's knowledge or participation. For a 
+Rindler observer, the perceived gravitational field just is the 
+Unruh thermal bath, which has no observer-independent meaning. In 
+each case the relation is an identification rather than a causal 
+link, and the identification is local and observer-relative, though 
+the sense of observer-relativity differs across the three arrows.
 
 This stands in sharp contrast to the Di\'osi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity \emph{causes} quantum state reduction as an objective, observer-independent physical process. Figure~\ref{fig:diagram} summarises this contrast. The three solid arrows represent the perspectival grounding relations described above; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
 
@@ -509,9 +496,6 @@ $\ln 2$ nats, and these are paired by the construction independently
 of $a$. The Landauer bound then operates as a consistency condition on 
 the ensemble: the minimum energy cost per bit acquired, summed over the 
 rate of acquisition, equals the power required to sustain the acceleration.
-
-% TODO 1C: This seems to solve 1B (the ln(2) issue), but we should be careful to check the paper to see if we are ever claming this landuaer saturation. Also check with TODO 2B
-
 
 %------------------------------------------------------
 \subsection{Polarisation Bogoliubov Transformation}
@@ -1071,6 +1055,22 @@ corresponding entropy increment
          = \frac{2\pi\,\Delta E}{\hbar\omega/\hbar}
          = 2\pi,
 \end{equation}
+
+% TODO 1E: This S should be H and the constant might be messed up see 2E
+
+% TODO 2E: The entropy increment $\Delta S = 2\pi$ is in natural 
+% units and reflects the Rindler/modular Hamiltonian normalization 
+% convention, in which the modular Hamiltonian is $2\pi$ times the 
+% boost generator. This is consistent with one Planck-area patch per 
+% detection event but is not the same as one bit ($\ln 2$ nats) per 
+% photon. A sentence in the main text should make this normalization 
+% explicit to preempt a referee who reads the "one bit per photon" 
+% thread from Section~\ref{sec:microstates} and expects $\Delta S = 
+% \ln 2$. The two quantities live at different levels: $\ln 2$ is 
+% the information content of the helicity outcome, $2\pi$ is the 
+% geometric entropy increment in Rindler units. These are consistent 
+% but not equal and the paper should say so.
+
 in natural units, consistent with one Planck-area patch per 
 detection event. This derivation uses only the null energy 
 condition and energy conservation on the horizon; it does not 
@@ -1187,14 +1187,14 @@ opposite handedness, and whether this constitutes a topological
 invariant of the transverse geometry is an open question we 
 leave for future work.
 
-% TODO 3D: Check whether the anticorrelated helicity structure adds anything to the emergent bridge geometry
+% TODO 3E: Check whether the anticorrelated helicity structure adds anything to the emergent bridge geometry
 % identification beyond what the scalar case provides. Helicity is a topological charge
 % in 2+1 dimensions (the transverse plane); it is possible that the opposite helicities
 % on the two sides contribute a topological twist to the bridge geometry. This would be
 % a new result if it can be made precise. Relevant starting point: topological aspects
 % of the Unruh effect in 2+1 dimensions and their relation to anyonic statistics.
 
-% TODO 4D: Connect the matter action S accumulated sample-by-sample 
+% TODO 4E: Connect the matter action S accumulated sample-by-sample 
 % to the Einstein-Hilbert action S_EH. The natural conjecture is that 
 % S_EH emerges as the coarse-grained geometric response to accumulated 
 % matter samples, with each AS pp-wave contributing a distributional 
