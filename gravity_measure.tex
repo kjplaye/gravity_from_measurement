@@ -1117,72 +1117,71 @@ In a steady-state scenario, $\mathcal{P}$ continuously emits entangled pairs, an
 
 This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
 
-\subsection{The Microstate Action and the Gravitational Boundary Term}
+\subsection{Action and the Gravitational Boundary}
+\label{sec:microstate_action}
 
-The microstate action $S_{\text{micro}} = \hbar\omega$, identified 
-with the electromagnetic stress-energy integrated over the null 
-plane, has a precise relationship to the gravitational boundary 
-action. On a stationary Rindler horizon the unperturbed expansion 
-of the null generators vanishes, $\theta = 0$, so the 
-Gibbons--Hawking--York boundary term~\cite{gibbons1977action} 
-is sourced entirely by the AS pp-wave perturbations:
+Each absorption sample deposits one quantum of action $\hbar$ into 
+the detector's matter-memory. The total action accumulated across 
+all measurement events is therefore
+%
+\begin{equation}
+S_{\text{matter}} = \sum_i \hbar\omega_i,
+\end{equation}
+%
+where the sum is over all absorption samples, each contributing 
+energy $\hbar\omega_i$ to the detector mass. This is the 
+matter action counted sample by sample: one quantum of action 
+per event, one event per emitted pair.
+
+The same events have a geometric description. By 
+eq.~\eqref{eq:deltaA_result}, each absorption sample contributes 
+a horizon area increment $\Delta A_i = 8\pi G\hbar\omega_i$, so 
+the total area increment summed over all events is
+%
+\begin{equation}
+\sum_i \Delta A_i = 8\pi G \sum_i \hbar\omega_i = 8\pi G\, 
+S_{\text{matter}}.
+\end{equation}
+%
+This geometric sum has a precise identification in the 
+gravitational action. On a stationary Rindler horizon the 
+unperturbed expansion of the null generators vanishes, $\theta = 
+0$, so the Gibbons--Hawking--York boundary 
+term~\cite{gibbons1977action} is sourced entirely by the AS 
+pp-wave perturbations:
 %
 \begin{equation}
 S_{GHY}\big|_{\mathcal{H}} 
 = \frac{c^4}{8\pi G}\int_{\mathcal{H}} \theta\, d^2x_\perp\, du 
 = \frac{c^4}{8\pi G}\sum_i \Delta A_i 
-= \frac{c^4}{8\pi G}\sum_i 8\pi G\hbar\omega_i 
-= \sum_i \hbar\omega_i 
-= \sum_i S_{\text{micro},i}.
+= \frac{c^4}{8\pi G} \cdot 8\pi G\sum_i \hbar\omega_i 
+= \sum_i \hbar\omega_i
+= S_{\text{matter}}.
 \label{eq:GHY_micro}
 \end{equation}
 %
-The gravitational boundary action and the matter microstate action 
-are therefore two accountings of the same underlying measurement 
-events: one geometric, one operational. This identifies the GHY 
-boundary term as the natural gravitational counterpart of the 
-matter action at the microstate level, and is consistent with 
-programmes of Jacobson~\cite{jacobson1995thermodynamics} and 
-Padmanabhan~\cite{padmanabhan2010thermodynamical} arguing that 
-the boundary term rather than the bulk Einstein--Hilbert action 
-is the fundamental gravitational degree of freedom. The present 
-construction realises that claim at the level of individual 
-microstates, with each boundary contribution identified with a 
-specific quantum measurement event.
+The matter action and the gravitational boundary action are 
+therefore equal, event by event, on the stationary Rindler 
+horizon. This is not a bulk result: the bulk Einstein--Hilbert 
+action vanishes on-shell, and it is the boundary term that 
+carries the physical content. The microstate construction 
+identifies what that boundary content is: each contribution to 
+$S_{GHY}$ corresponds to one quantum of action deposited into 
+matter-memory by one measurement event.
 
-The equality~\eqref{eq:GHY_micro} admits an independent derivation 
-from the matter substrate perspective of 
-Section~\ref{sec:substrate}, which provides additional intuition. 
-Each absorption sample deposits one quantum of action $\hbar$ into 
-the detector's matter-memory and increments the detector mass by 
-$\Delta m = \hbar\omega/c^2$. By the Schwarzschild relation 
-$r_s = 2Gm/c^2$, this mass increment shifts the horizon radius by
-%
-\begin{equation}
-\Delta r_s = \frac{2G\hbar\omega}{c^4},
-\end{equation}
-%
-and the corresponding horizon area increment is
-%
-\begin{equation}
-\Delta A = 8\pi r_s\,\Delta r_s = 8\pi G\hbar\omega,
-\end{equation}
-%
-in precise agreement with eq.~\eqref{eq:deltaA_result}, now 
-derived entirely from the matter sample picture rather than from 
-the Raychaudhuri equation. The two derivations approach the same 
-result from opposite directions: the geometric derivation proceeds 
-top-down, from the AS pp-wave stress-energy through the null 
-congruence to the area increment; the matter derivation proceeds 
-bottom-up, from the individual sample through the mass increment 
-to the same area. Their agreement is not a coincidence but a 
-consistency condition on the framework: the geometric and 
-operational descriptions are two accountings of the same 
-microstate event, and $\Delta A = 8\pi G\hbar\omega$ is the 
-relation that connects them. Summing over all absorption samples 
-then gives eq.~\eqref{eq:GHY_micro} directly, with each 
-$\hbar\omega$ contribution to $S_{GHY}$ corresponding to one 
-quantum of action deposited into matter-memory.
+This result is consistent with and extends programmes of 
+Jacobson~\cite{jacobson1995thermodynamics} and 
+Padmanabhan~\cite{padmanabhan2010thermodynamical}, which argue 
+that the gravitational boundary term rather than the bulk 
+Einstein--Hilbert action is the fundamental gravitational degree 
+of freedom. Those programmes establish this at the level of 
+thermodynamic averages. The present construction realises the 
+same identification at the level of individual microstates, with 
+each boundary contribution sourced by a specific quantum 
+measurement event rather than a bulk average. The standard 
+result emerges from summing over the ensemble; the microstate 
+picture supplies what the thermodynamic programmes leave open: 
+the physical process underlying each boundary contribution.
 
 \section{Entanglement as Spatial Information}
 \label{sec:erepr}
