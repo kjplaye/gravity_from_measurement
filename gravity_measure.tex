@@ -108,7 +108,7 @@ Two landmark results establish that gravity and Unurh thermodynamics are deeply 
 
 We argue that the answer is quantum measurement. Each act of information acquisition by a physical observer constitutes a discrete microstate event, and the collective backreaction of such events, together with the causal correlations they induce, gives rise to gravitational effects. The argument proceeds in three steps. First, any observation is mediated by a physical interaction: information transfer necessarily involves an exchange of energy and momentum between the observed system and the detector, a discrete impulse. Second, by the equivalence principle, this impulse is locally indistinguishable in that from the effect of a gravitational field: no local measurement can distinguish the recoil associated with a quantum measurement event from acceleration in a gravitational potential. Third, when such impulses are modelled geometrically, via Aichelburg--Sexl (AS) pp-wave solutions, as we explore, they imprint energy and information directly onto horizon geometry, and coarse-graining over the resulting ensemble recovers standard horizon thermodynamics. 
 
-\subsection{Relation to recent existing Literature}
+\subsection{Relation to Existing Literature}
 The idea that spacetime geometry is connected to quantum information 
 has been developed along several distinct lines, none of which supplies 
 the microstate-level operational picture we develop here. Jacobson's 
@@ -195,6 +195,8 @@ our classical spatial record, the anticorrelated helicity bits
 registered by right and left wedges, realizes the interior 
 reconstruction map at the single-microstate level, but we leave 
 this comparison for future work.
+
+Recent work has explored the possibility of heat engines operating via the Unruh effect, where uniform acceleration plays the role of an effective temperature for quantum systems. In particular, a series of works have developed Unruh quantum Otto engines \cite{arias2018unruh}, in which a localized detector (typically modeled as a qubit or multilevel system) undergoes segments of differing proper acceleration, thereby coupling to field modes at different Unruh temperatures and enabling work extraction. These models establish that relativistic motion alone can supply the thermal resources necessary for cyclic operation, and they have been extended to include fermionic and scalar fields, degeneracy effects, entanglement-assisted working media, and the presence of reflecting boundaries. While these constructions provide concrete realizations of relativistic quantum heat engines, they are typically formulated in terms of detector-based Otto cycles; in contrast, the present setup, Section \ref{sec:carnot}, instead emphasizes a spacetime-based partition into Rindler wedges and an explicitly information-theoretic (Landauer) interpretation of entropy flow, yielding a complementary perspective more directly analogous to a Carnot cycle.
 
 What distinguishes the present construction from all of these 
 approaches is the combination of three features that do not appear 
@@ -1553,7 +1555,83 @@ future work.
 
 This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
 
+\section{Carnot Cycle from Unruh--Landauer}
+\label{sec:carnot}
 
+We consider in this section the case where $\mathcal{L}$ and $\mathcal{R}$ are moving mirrors being accelerated with an outward thrust from our past bilocal source $\mathcal{P}$, see Figure \ref{carnot}. We complete our bilocal microstate absorption example by reflecting and emitting the photons off of the mirrors. This reflects the energy back to the origin in the future $\mathcal{L}$ in a reversible way. The mirrors are ideal, in the sense that they do not retain a persistent copy of the information that they temporarily store, forget, and emit. It is this irreversibility that allows us to construct a example of a Carnot cycle at the level of microstates. The working system is the photon–mirror interaction degree of freedom; the Rindler wedge defines the thermal reservoirs, and the mirror trajectory defines the work parameter.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.75]{carnot.png}
+\captionsetup{width=0.7\textwidth}
+\caption{Carnot Cycle: Past ($\mathcal{P}$) bilocal source emits entangled pair with one leg hitting a moving mirror in the right wedge ($\mathcal{R}$). Reflection focuses to a future sink ($\mathcal{F}$). A similar balancing situation exists in the left wedge.}
+\label{carnot}
+\end{figure}
+
+Consider the point of view of the right Rindler observer $\mathcal{R}$ who sees the event horizon as a thermal object. The past and future light cones, are treated as a hot reservoir, the environment. The right wedge is a cold reservoir with respect to the Landauer temperature. We can separate into steps and narrate the situation:
+
+\begin{itemize} 
+\item {\bf Isothermal Expansion:} The bilocal source prepares an entangled photon pair in the basis that $\mathcal{R}$ measures in ($H_+/H_-$ see section \ref{sec:erepr}). In this basis, the Shannon entropy of the Rindler outcome distribution increases from 0 to 1 bit, reflecting the transition from a deterministic prior state to a maximally uncertain marginal induced by the bilocal entanglement structure, notionally ``drawing some heat from the environment $\mathcal{P}$''.
+\item {\bf Adiabatic Expansion:} This corresponds to the crossing over the past Rindler horizon from hot to cold, the absorption of the photon by the mirror.
+\item {\bf Isothermal Compression:} This corresponds to controlled erasure of the detector’s stored bit during the re-emission of the photon by the mirror. An energy on the order of $k_B T$ is absorbed by the cold reservoir. 
+\item {\bf Adiabatic Compression:} This corresponds to the crossing over the future Rindler horizon from cold to hot, the absorption of the future sink $\mathcal{F}$ and reseting of the state to an eigenstate of $H_+$ or $H_-$, zero bits of Shannon entropy. 
+\end{itemize}
+
+
+\subsection{Shannon Entropy}
+
+The entropy variation in the isothermal legs should be understood as Shannon entropy associated with measurement outcomes in a fixed operational basis, rather than the von Neumann entropy of the global quantum state, which remains pure throughout. From an information-theoretic perspective aligned with Copenhagen interpretation and QBism, the quantum state encodes an observer’s knowledge rather than an objective microstate, and thermodynamic entropy should therefore be identified with the classical uncertainty in measurement outcomes. In this sense, Shannon entropy provides the operationally relevant notion entering Landauer's principle, resolving the apparent tension between unitary evolution (which preserves von Neumann entropy) and thermodynamic irreversibility (which is manifest at the level of classical information processing).
+
+No decoherence assumption is required; Shannon entropy here is defined over the classical outcome distribution induced by a fixed measurement basis (the Rindler detector algebra), independent of the unitary evolution of the global state.
+
+
+\subsection{Volume as Dynamic Range}
+
+We refine the notion of volume introduced in Section~\ref{sec:substrate} by distinguishing the full Hilbert space
+$\mathcal{H}_L \otimes \mathcal{H}_R \simeq \mathbb{C}^4$
+from the \emph{operationally accessible reversible sector}.
+
+The relevant thermodynamic variable is not the total dimension of the state space, but the dimension of the subspace that remains coherently accessible under the bilocal projection structure induced by the source. We therefore define the effective volume as
+the logarithmic size of the reversible sector,
+\begin{equation}
+V_{\text{eff}} \equiv \log_2 \dim\!\left(\mathcal{H}_{\text{rev}}\right),
+\end{equation}
+where $\mathcal{H}_{\text{rev}} \subseteq \mathcal{H}_L \otimes \mathcal{H}_R$
+denotes the entanglement-accessible subspace prior to irreversible projection into matter-memory.
+
+In the hot (entanglement-generating) regime, both left and right wedge degrees of freedom remain jointly accessible, so that $\dim(\mathcal{H}_{\text{rev}})=2$ qubits. During measurement-induced compression, part of this reversible sector is transferred into an irreversible classical record in the detector, reducing the accessible dimension to a single effective qubit. Subsequent reset and re-entanglement restore the full reversible sector.
+
+In this sense, the thermodynamic ``volume'' is identified with the size of the reversible entanglement channel between $\mathcal{H}_L$ and $\mathcal{H}_R$, rather than with the total Hilbert space itself. Expansion corresponds to an increase in reversible entanglement accessibility, while compression corresponds to its partial conversion into matter-memory.
+
+\subsection{Pressure as Projection Rate}
+
+Pressure in this construction is a single dynamical control parameter governing the rate at which entanglement-linked degrees of freedom in $\mathcal{H}_{L/R}$ are projected into irreversible matter-memory. The Carnot cycle corresponds to a controlled modulation of this projection process: slow during entanglement build-up, and maximal during controlled erasure associated with photon emission. In this sense, pressure plays an analogous role to the measurement strength in continuous quantum measurement theory, setting the effective rate at which entangled Rindler-access degrees of freedom are converted into classical memory within the detector.
+
+\subsection{Summary}
+
+\begin{equation}
+\begin{array}{|c|c|c|c|c|}
+\hline
+\textbf{Step} & \textbf{Temp} & \textbf{Entropy} & \textbf{Volume} & \textbf{Pressure} \\
+\hline
+\text{Iso. Expansion} & \text{hot} & 0 \rightarrow 1\ \text{bits} & 1 \rightarrow 2\ \text{qubits} & \text{low?} \\
+\text{Adiabatic Exp.} & \text{hot}\rightarrow\text{cold} & 1\ \text{bit} & 2\ \text{qubits} & \text{medium?} \\
+\text{Iso. Compression} & \text{cold} & 1 \rightarrow 0\ \text{bits} & 2\rightarrow 1\ \text{qubits} & \text{high?} \\
+\text{Adiabatic Comp.} & \text{cold}\rightarrow\text{hot} & 0 \ \text{bits} &  1 \text{qubits} & \text{low?} \\
+\hline
+\end{array}
+\end{equation}
+
+\subsection{Hydrostatic Equilibrium and Efficiency and Work}
+
+% TODO 2F: Conjecture - we are in equilibrium when landauer's bound is saturated?
+%          We need something like this to actually connect it in.
+
+% TODO 3F: Conjecture - hot > cold iff the unruh-landauer condition holds.
+
+% TODO 4F: The work being done is actually what accelerates the observer.
+
+% TODO 5F: Is this significantly related to Kruskal-Szekeres coordinate system
 
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
