@@ -1558,7 +1558,7 @@ This completes the microstate programme. Each entropy increment in the Bekenstei
 \section{Carnot Cycle from Unruh--Landauer}
 \label{sec:carnot}
 
-We consider in this section the case where $\mathcal{L}$ and $\mathcal{R}$ are moving mirrors being accelerated with an outward thrust from our past bilocal source $\mathcal{P}$, see Figure \ref{carnot}. We complete our bilocal microstate absorption example by reflecting and emitting the photons off of the mirrors. This reflects the energy back to the origin in the future $\mathcal{L}$ in a reversible way. The mirrors are ideal, in the sense that they do not retain a persistent copy of the information that they temporarily store, forget, and emit. It is this irreversibility that allows us to construct a example of a Carnot cycle at the level of microstates. The working system is the photon–mirror interaction degree of freedom; the Rindler wedge defines the thermal reservoirs, and the mirror trajectory defines the work parameter.
+We consider in this section the case where $\mathcal{L}$ and $\mathcal{R}$ are moving mirrors being accelerated with an outward thrust from our past bilocal source $\mathcal{P}$ emission, see Figure \ref{carnot}. We complete our bilocal microstate absorption example by reflecting and emitting the photons off of the mirrors. This reflects the energy back to the origin in the future $\mathcal{F}$, $(t,z) = (1,0)$, in a reversible way. The mirrors are ideal, in the sense that they do not retain a persistent copy of the information that they temporarily store, forget, and emit. It is this irreversibility that allows us to construct a example of a Carnot cycle at the level of microstates. The working system is the photon–mirror interaction degree of freedom; the Rindler wedge defines the thermal reservoirs, and the mirror trajectory defines the work parameter.
 
 \begin{figure}[h]
 \centering
@@ -1568,7 +1568,16 @@ We consider in this section the case where $\mathcal{L}$ and $\mathcal{R}$ are m
 \label{carnot}
 \end{figure}
 
-Consider the point of view of the right Rindler observer $\mathcal{R}$ who sees the event horizon as a thermal object. The past and future light cones, are treated as a hot reservoir, the environment. The right wedge is a cold reservoir with respect to the Landauer temperature. We can separate into steps and narrate the situation:
+Consider the point of view of the right Rindler observer $\mathcal{R}$ who sees the event horizon as a thermal object.
+The Rindler horizon plays the role of the hot reservoir at 
+the Unruh temperature $T_H = \hbar a/2\pi k_B c$, consistent 
+with the standard identification of the horizon as a thermal 
+object. The Rindler wedge interior, where the mirror operates, 
+is taken as the cold reservoir at temperature $T_C$. The 
+identification of $T_C$ with the Landauer erasure temperature 
+of the mirror is an ansatz of the present construction; its 
+precise value determines the Carnot efficiency $\eta = 1 - T_C/T_H$.
+
 
 \begin{itemize} 
 \item {\bf Isothermal Expansion:} The bilocal source prepares an entangled photon pair in the basis that $\mathcal{R}$ measures in ($H_+/H_-$ see section \ref{sec:erepr}). In this basis, the Shannon entropy of the Rindler outcome distribution increases from 0 to 1 bit, reflecting the transition from a deterministic prior state to a maximally uncertain marginal induced by the bilocal entanglement structure, notionally ``drawing some heat from the environment $\mathcal{P}$''.
@@ -1584,54 +1593,217 @@ The entropy variation in the isothermal legs should be understood as Shannon ent
 
 No decoherence assumption is required; Shannon entropy here is defined over the classical outcome distribution induced by a fixed measurement basis (the Rindler detector algebra), independent of the unitary evolution of the global state.
 
+\subsection{Work and Efficiency}
+
+The thermodynamic state space of the cycle is parameterised 
+by temperature $T$ and Shannon entropy $H$. The two 
+isothermal legs operate at $T_H$ and $T_C$ respectively, 
+and the entropy change per cycle is exactly one bit:
+%
+\begin{equation}
+\Delta H = \ln 2 \quad \text{(one binary helicity outcome)},
+\end{equation}
+%
+so the work extracted per cycle is the area of the rectangle 
+in $T$-$H$ space:
+%
+\begin{equation}
+W = (T_H - T_C)\,\Delta H = (T_H - T_C)\ln 2.
+\label{eq:carnot_work}
+\end{equation}
+%
+The work done on the mirror by absorbing one photon of energy 
+$\hbar\omega$ is the radiation pressure impulse $\Delta p = 
+\hbar\omega/c$, which is responsible for the mirror's 
+acceleration into the Rindler wedge. This identifies the hot 
+reservoir temperature via
+%
+\begin{equation}
+k_BT_H = \hbar\omega,
+\label{eq:TH}
+\end{equation}
+%
+the energy of one photon sets the Unruh temperature of the 
+horizon. The Carnot efficiency bound $W \leq T_H\Delta H$ 
+then gives
+%
+\begin{equation}
+W \leq \hbar\omega\ln 2 = \frac{\hbar a \ln 2}{2\pi c},
+\label{eq:carnot_bound}
+\end{equation}
+%
+where in the last step we used $k_BT_H = \hbar a/2\pi k_Bc$ 
+from the Unruh temperature. This is precisely the 
+Unruh--Landauer bound~\eqref{eq:UL} at $\Delta H = \ln 2$:
+%
+\begin{equation}
+\boxed{W \leq \frac{\hbar a}{2\pi c}\Delta H 
+\iff \Delta E \geq \frac{\hbar a}{2\pi c}\Delta H.}
+\label{eq:carnot_UL}
+\end{equation}
+%
+The Carnot efficiency bound for this cycle and the 
+Unruh--Landauer bound are therefore the same inequality, 
+approached from opposite directions: the Carnot bound is a 
+statement about the maximum work extractable from the thermal 
+gradient between the horizon and the wedge interior, while 
+the Unruh--Landauer bound is a statement about the minimum 
+energy cost of acquiring one bit at that horizon. Their 
+equivalence identifies the Rindler horizon as a Carnot engine 
+operating at the Unruh temperature, with quantum measurement 
+as the working substance and the classical bit as the 
+thermodynamic output.
+
+
+The cold reservoir temperature $T_C$ is the Landauer 
+temperature associated with isolating the mirror from 
+its local re-emission environment, while $T_H$ is the 
+Landauer temperature associated with isolating the entire 
+Rindler wedge from the global Minkowski vacuum. The two 
+temperatures correspond to two levels of coarse-graining: 
+$T_H$ traces out the opposite wedge at the Rindler horizon, 
+while $T_C$ traces out only the mirror's local photon field 
+at the scale of the mirror interaction. The temperature 
+gradient $T_H > T_C$ is therefore a gradient between 
+two scales of isolation, and the Carnot efficiency 
+$\eta = 1 - T_C/T_H$ measures how much of the global 
+thermal gradient is captured by the local mirror 
+interaction. In the limit $T_C \to 0$ the mirror's 
+local environment is fully decoupled and the cycle 
+extracts maximum work; in the limit $T_C \to T_H$ 
+the two scales of isolation coincide and the cycle 
+is in hydrostatic equilibrium with no net work extracted.
+
+
+The efficiency $\eta = 1 - T_C/T_H$ is 
+maximised in the limit $T_C \to 0$, which corresponds to 
+perfect erasure at zero thermodynamic cost --- the ideal 
+mirror limit. Any residual $T_C > 0$ reflects irreversibility 
+in the mirror's erasure process, consistent with Landauer's 
+principle applied to the re-emission step.
 
 \subsection{Volume as Dynamic Range}
 
-We refine the notion of volume introduced in Section~\ref{sec:substrate} by distinguishing the full Hilbert space
-$\mathcal{H}_L \otimes \mathcal{H}_R \simeq \mathbb{C}^4$
-from the \emph{operationally accessible reversible sector}.
+The thermodynamic volume is identified with the active 
+Hilbert space at each stage of the cycle. During the 
+expansion legs both wedges are jointly accessible and the 
+active space is $\mathcal{H}_L \otimes \mathcal{H}_R$ with 
+dynamic range 2 bits; during the compression legs only the 
+right wedge remains active and the dynamic range reduces to 
+1 bit, reflecting the transfer of the left wedge degree of 
+freedom into irreversible matter-memory.
 
-The relevant thermodynamic variable is not the total dimension of the state space, but the dimension of the subspace that remains coherently accessible under the bilocal projection structure induced by the source. We therefore define the effective volume as
-the logarithmic size of the reversible sector,
-\begin{equation}
-V_{\text{eff}} \equiv \log_2 \dim\!\left(\mathcal{H}_{\text{rev}}\right),
-\end{equation}
-where $\mathcal{H}_{\text{rev}} \subseteq \mathcal{H}_L \otimes \mathcal{H}_R$
-denotes the entanglement-accessible subspace prior to irreversible projection into matter-memory.
+\subsection{Pressure as Landauer Cost per Bit}
 
-In the hot (entanglement-generating) regime, both left and right wedge degrees of freedom remain jointly accessible, so that $\dim(\mathcal{H}_{\text{rev}})=2$ qubits. During measurement-induced compression, part of this reversible sector is transferred into an irreversible classical record in the detector, reducing the accessible dimension to a single effective qubit. Subsequent reset and re-entanglement restore the full reversible sector.
-
-In this sense, the thermodynamic ``volume'' is identified with the size of the reversible entanglement channel between $\mathcal{H}_L$ and $\mathcal{H}_R$, rather than with the total Hilbert space itself. Expansion corresponds to an increase in reversible entanglement accessibility, while compression corresponds to its partial conversion into matter-memory.
-
-\subsection{Pressure as Projection Rate}
-
-Pressure in this construction is a single dynamical control parameter governing the rate at which entanglement-linked degrees of freedom in $\mathcal{H}_{L/R}$ are projected into irreversible matter-memory. The Carnot cycle corresponds to a controlled modulation of this projection process: slow during entanglement build-up, and maximal during controlled erasure associated with photon emission. In this sense, pressure plays an analogous role to the measurement strength in continuous quantum measurement theory, setting the effective rate at which entangled Rindler-access degrees of freedom are converted into classical memory within the detector.
+The thermodynamic pressure is the Landauer cost per bit 
+at the current temperature, $P = k_BT\ln 2$. It is high 
+at $T_H$ during expansion, driving the transfer of 
+entanglement from matter-memory into the joint Hilbert 
+space, and low at $T_C$ during compression, accepting 
+the reverse transfer at reduced cost.
 
 \subsection{Summary}
 
 \begin{equation}
 \begin{array}{|c|c|c|c|c|}
 \hline
-\textbf{Step} & \textbf{Temp} & \textbf{Entropy} & \textbf{Volume} & \textbf{Pressure} \\
+\textbf{Step} & \textbf{Temperature} & \textbf{Entropy} 
+& \textbf{Volume} & \textbf{Pressure} \\
 \hline
-\text{Iso. Expansion} & \text{hot} & 0 \rightarrow 1\ \text{bits} & 1 \rightarrow 2\ \text{qubits} & \text{low?} \\
-\text{Adiabatic Exp.} & \text{hot}\rightarrow\text{cold} & 1\ \text{bit} & 2\ \text{qubits} & \text{medium?} \\
-\text{Iso. Compression} & \text{cold} & 1 \rightarrow 0\ \text{bits} & 2\rightarrow 1\ \text{qubits} & \text{high?} \\
-\text{Adiabatic Comp.} & \text{cold}\rightarrow\text{hot} & 0 \ \text{bits} &  1 \text{qubits} & \text{low?} \\
+\text{Isothermal Expansion} & T_H & 0 \rightarrow 1\ 
+\text{bit} & \mathcal{H}_L \otimes \mathcal{H}_R\ 
+(2\ \text{bits}) & k_BT_H \\
+\text{Adiabatic Expansion} & T_H \rightarrow T_C & 
+1\ \text{bit} & \mathcal{H}_L \otimes \mathcal{H}_R\ 
+(2\ \text{bits}) & k_BT_C \\
+\text{Isothermal Compression} & T_C & 1 \rightarrow 0\ 
+\text{bits} & \mathcal{H}_R\ (1\ \text{bit}) & 
+k_BT_C \\
+\text{Adiabatic Compression} & T_C \rightarrow T_H & 
+0\ \text{bits} & \mathcal{H}_R\ (1\ \text{bit}) & 
+k_BT_C \\
 \hline
 \end{array}
 \end{equation}
 
-\subsection{Hydrostatic Equilibrium and Efficiency and Work}
 
-% TODO 2F: Conjecture - we are in equilibrium when landauer's bound is saturated?
-%          We need something like this to actually connect it in.
+\subsection{Hydrostatic Equilibrium}
 
-% TODO 3F: Conjecture - hot > cold iff the unruh-landauer condition holds.
+Hydrostatic equilibrium corresponds to the condition 
+$P_H = P_C$, i.e.\ $T_H = T_C$: the Landauer cost per 
+bit is equal at both reservoirs and no net work is 
+extracted. The cycle runs but the pressure gradient 
+vanishes, information flows in both directions equally, 
+and no classical bit is irreversibly written into 
+matter-memory. This is the mirror cycle in its fully 
+reversible limit: no AS pp-wave is sourced and no 
+geometric imprint accumulates.
 
-% TODO 4F: The work being done is actually what accelerates the observer.
+Departing from hydrostatic equilibrium by lowering $T_C$ 
+relative to $T_H$ creates a pressure gradient 
+$\Delta P = (T_H - T_C)\ln 2$ that drives the cycle. 
+The work extracted per cycle is
+%
+\begin{equation}
+W = \Delta P \cdot \Delta V 
+  = (k_BT_H - k_BT_C)\ln 2 \cdot 1\ \text{bit},
+\end{equation}
+%
+and the Carnot efficiency is
+%
+\begin{equation}
+\eta = 1 - \frac{T_C}{T_H} = 1 - \frac{P_C}{P_H}.
+\end{equation}
+%
+In the limit $T_C \to 0$ the efficiency approaches unity 
+and the work approaches its maximum value:
+%
+\begin{equation}
+W_{\max} = k_BT_H\ln 2 = \frac{\hbar a\ln 2}{2\pi c},
+\label{eq:Wmax}
+\end{equation}
+%
+which is precisely the Unruh--Landauer bound~\eqref{eq:UL} 
+at $\Delta H = \ln 2$. Maximum Carnot efficiency and 
+saturation of the Unruh--Landauer bound are therefore the 
+same condition: the cycle extracts maximum work exactly 
+when the information acquisition cost is minimised to its 
+thermodynamic limit. 
 
-% TODO 5F: Is this significantly related to Kruskal-Szekeres coordinate system
+Hydrostatic equilibrium is therefore not merely an analogy 
+but the precise condition under which the Unruh--Landauer 
+bound transitions from a strict inequality to an equality. 
+The pressure gradient $\Delta P = (T_H - T_C)\ln 2$ is the 
+thermodynamic potential that drives information acquisition, 
+geometric imprinting, and the sourcing of AS pp-waves. 
+In equilibrium none of these occur; out of equilibrium 
+they occur at a rate proportional to $\Delta P$, with the 
+Unruh--Landauer bound setting the maximum rate consistent 
+with the second law.
+
+The Carnot cycle argument is purely information-theoretic: 
+the gravitational constant $G$ does not appear. Gravity 
+enters through the equivalence principle identification of 
+the photon-induced acceleration $a$ with the gravitational 
+surface acceleration at the mirror's Schwarzschild radius 
+$r_s = 2Gm_d/c^2$, following Section~\ref{sec:heuristics}. 
+Substituting $\kappa = c^4/4Gm_d$ for $a$ in the maximum 
+work~\eqref{eq:Wmax} gives
+%
+\begin{equation}
+W_{\max} = \frac{\hbar\kappa\ln 2}{2\pi c} 
+         = \frac{\hbar c^3\ln 2}{8\pi Gm_d},
+\end{equation}
+%
+which depends on $G$ and the mirror mass $m_d$. The 
+thermodynamic cycle is therefore gravitationally grounded 
+by the mirror mass: the Schwarzschild radius of the mirror 
+sets the horizon scale, the surface gravity sets the Unruh 
+temperature, and the Carnot efficiency bound recovers the 
+Unruh--Landauer relation with $G$ restored. The mirror mass 
+is the bridge between the information-theoretic cycle and 
+the gravitational heuristics of Section~\ref{sec:heuristics}.
+
 
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
