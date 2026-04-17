@@ -1824,6 +1824,326 @@ Unruh--Landauer relation with $G$ restored. The mirror mass
 is the bridge between the information-theoretic cycle and 
 the gravitational heuristics of Section~\ref{sec:heuristics}.
 
+\section{Effective Field Theory Considerations}
+\label{sec:eft}
+
+% DUKE COMMENTS: 
+% - The two frames are E_sys = R (right wedge) and 
+%   E_env = R+L (full Minkowski). Not the QFT scattering 
+%   intuition.
+% - Z_2 connection needs to link to spatial bit and a 
+%   conservation law — needs expansion.
+% - Need more on S-matrix / partition function Z connection.
+% - Connect QFT thermodynamics to our thermo lingo.
+% - Complementarity principle — flesh out known research 
+%   connection.
+% - T_C/T_H ratio — possibly connects to energy ratio or 
+%   its square.
+% - Section is speculative — stub TODOs throughout.
+
+The bilocal construction naturally defines two energy 
+scales. The right wedge $\mathcal{R}$ alone constitutes 
+the \emph{system}, with energy $E_{\text{sys}}$, while 
+the full Minkowski space $\mathcal{R} \cup \mathcal{L}$ 
+constitutes the \emph{environment}, with energy 
+$E_{\text{env}} = E_{\text{sys}} + E_{\mathcal{L}}$. 
+The Rindler horizon is the boundary between these two 
+descriptions: it is the surface at which the system's 
+EFT description and the full Minkowski UV description 
+become incompatible. The left wedge $\mathcal{L}$ is 
+precisely the degrees of freedom that the system has 
+integrated out.
+
+% TODO EFT1: Make the energy scale identification precise.
+% E_sys is the energy of the right wedge detector mass 
+% m_R, setting the UV cutoff \hbar/E_sys = \hbar/m_Rc^2 
+% = the Compton wavelength of the detector. E_env is the 
+% total Minkowski energy m_R + m_L, which can probe 
+% sub-Compton structure inaccessible to R alone. The 
+% ratio E_sys/E_env = m_R/(m_R+m_L) is the natural 
+% small parameter of the EFT expansion. Need to verify 
+% this is consistent with the bilocal mode profiles 
+% f_L and f_R in eq.~\eqref{eq:bilocal_vec}.
+
+\subsection{The Partition Function and the S-Matrix}
+
+The thermal partition function of the right wedge at 
+the Unruh temperature $T_H = \hbar a/2\pi k_Bc$ is
+
+\begin{equation}
+Z = \mathrm{Tr}_{\mathcal{H}_R}\, e^{-H_R/k_BT_H},
+\end{equation}
+where $H_R$ is the right Rindler Hamiltonian and the 
+trace is over the right wedge Hilbert space $\mathcal{H}_R$ 
+alone. This is obtained from the full Minkowski vacuum by 
+tracing out $\mathcal{H}_L$ --- the left wedge degrees of 
+freedom are integrated out, leaving a thermal density 
+matrix for $\mathcal{H}_R$. The partition function $Z$ 
+is therefore the generating functional for the EFT of 
+the right wedge: its logarithm $\ln Z$ generates the 
+connected correlation functions of the system, and its 
+variation with respect to the Hamiltonian generates the 
+thermodynamic quantities.
+
+The S-matrix of the full bilocal construction connects 
+the past state at $\mathcal{P}$ to the future state at 
+$\mathcal{F}$:
+
+\begin{equation}
+S = \langle \mathcal{F} | \mathcal{P} \rangle 
+  = \mathrm{Tr}\, e^{-iHt/\hbar},
+\end{equation}
+which in Euclidean signature becomes the partition 
+function $Z = \mathrm{Tr}\, e^{-H\tau/\hbar}$ with 
+$\tau = it$. The Wick rotation connecting the S-matrix 
+to the partition function is therefore the connection 
+between the real-time bilocal construction and its 
+thermodynamic description: the Carnot cycle of 
+Section~\ref{sec:carnot} is the thermodynamic avatar 
+of the S-matrix element connecting $\mathcal{P}$ to 
+$\mathcal{F}$.
+
+% TODO EFT2: Make the S-matrix / partition function 
+% connection precise. The Unruh effect is already known 
+% to connect the Minkowski S-matrix to the Rindler 
+% partition function via the Bogoliubov transformation 
+% --- this is the standard result. What is new here is 
+% that the bilocal construction selects individual 
+% microstate contributions to Z rather than the full 
+% thermal trace. Each microstate~\eqref{eq:microstate_vec} 
+% contributes one term $\tanh^{2n}\theta_\Omega$ to Z. 
+% The Carnot cycle is the thermodynamic description of 
+% one such term. Need to make this precise and connect 
+% to the TFD identification of eq.~\eqref{eq:vacuum_vec}.
+
+% TODO EFT3: Connect the thermodynamic lingo of 
+% Section~\ref{sec:carnot} to QFT thermodynamics. 
+% Specifically:
+% - Temperature T_H = Unruh temperature = inverse 
+%   periodicity of the Euclidean Green's function
+% - Entropy S = ln Z + beta * <H> = von Neumann entropy 
+%   of the reduced density matrix of H_R
+% - Work W = change in free energy F = -k_BT ln Z
+% - Pressure P = k_BT ln 2 = Landauer cost per bit
+% These identifications would make the Carnot cycle 
+% thermodynamics a direct consequence of the QFT 
+% partition function rather than an analogy.
+
+\subsection{Horizon Complementarity}
+
+The identification of $E_{\text{sys}}$ with the right 
+wedge and $E_{\text{env}}$ with the full Minkowski space 
+is precisely the structure of Susskind and Thorlacius's 
+horizon complementarity~\cite{susskind1993stretched}. 
+Complementarity states that the description of physics 
+by an observer outside the horizon (the right wedge EFT) 
+and the description by an infalling observer (the full 
+Minkowski description) are both valid but cannot be 
+simultaneously verified by any single observer. The 
+horizon is the surface at which the two descriptions 
+become incompatible --- not because either is wrong, 
+but because verifying both would require superluminal 
+communication.
+
+In the bilocal construction this is realised operationally: 
+$\mathcal{R}$ has access to $\mathcal{H}_R$ alone and 
+sees a thermal state at $T_H$; the full Minkowski observer 
+has access to $\mathcal{H}_L \otimes \mathcal{H}_R$ and 
+sees a pure entangled state. The spatial bit --- the 
+answer to ``who observed $H_+$?'' --- is the classical 
+record that is visible to $\mathcal{R}$ but whose 
+quantum origin in the entangled pair is only visible 
+to the full Minkowski observer. Complementarity is 
+therefore not merely a philosophical principle but an 
+operational consequence of the bilocal construction: 
+the two descriptions are the EFT and UV descriptions 
+of the same microstate, separated by the horizon.
+
+% TODO EFT4: Connect to known complementarity research.
+% Susskind-Thorlacius-Uglum (1993) is the primary 
+% reference. Hayden-Preskill (2007) on black hole 
+% information recovery is relevant --- their "decoding 
+% circuit" is analogous to the full Minkowski observer 
+% reconstructing the spatial bit from both wedges. 
+% Almheiri-Marolf-Polchinski-Sully (AMPS, 2013) firewall 
+% argument is the tension between complementarity and 
+% unitarity --- our construction may have something to 
+% say about this since the mirror cycle is unitary and 
+% the absorption cycle is not. Need to determine whether 
+% the Carnot cycle picture resolves or sharpens the 
+% firewall paradox.
+
+\subsection{The Temperature Ratio and Energy Scales}
+
+The Carnot efficiency $\eta = 1 - T_C/T_H$ measures 
+how much of the global thermal gradient is captured by 
+the local mirror interaction. The two temperatures are:
+
+\begin{equation}
+T_H = \frac{\hbar a}{2\pi k_B c} 
+\quad \text{(full Minkowski / horizon scale)}
+\end{equation}
+
+\begin{equation}
+T_C = \frac{\hbar a_{\text{mirror}}}{2\pi k_B c}
+\quad \text{(right wedge / mirror scale)}
+\end{equation}
+so the efficiency is
+
+\begin{equation}
+\eta = 1 - \frac{T_C}{T_H} = 1 - \frac{a_{\text{mirror}}}{a}.
+\end{equation}
+The ratio $T_C/T_H = a_{\text{mirror}}/a$ is the ratio 
+of the mirror's local surface gravity to the global 
+Rindler acceleration. In terms of energy scales:
+
+\begin{equation}
+\frac{T_C}{T_H} = \frac{E_{\text{sys}}}{E_{\text{env}}} 
+= \frac{m_\mathcal{R}}{m_\mathcal{R} + m_\mathcal{L}},
+\label{eq:temp_ratio}
+\end{equation}
+so that the efficiency is
+% TODO: Looks like we should s/a/kappa/g and define it
+
+\begin{equation}
+\eta = \frac{m_\mathcal{L}}{m_\mathcal{R} + m_\mathcal{L}},
+\end{equation}
+the fraction of the total mass residing in the left 
+wedge --- the degrees of freedom that have been 
+integrated out from the system's EFT description. 
+Maximum efficiency $\eta \to 1$ corresponds to 
+$m_\mathcal{L} \gg m_\mathcal{R}$ --- the environment 
+is much heavier than the system, the standard limit 
+in which an EFT is valid. Minimum efficiency $\eta 
+\to 0$ corresponds to $m_\mathcal{L} \to 0$ --- no 
+environment, no thermal gradient, no work extracted.
+
+% TODO EFT5: Check whether T_C/T_H connects to the 
+% squared energy ratio (E_sys/E_env)^2 rather than 
+% the linear ratio. The Z_2 torsion / kg^2 observation 
+% suggests that the gravitational interaction, involving 
+% two masses, may enter as a squared ratio. If 
+% T_C/T_H = (E_sys/E_env)^2 then the efficiency is
+% eta = 1 - (m_R/(m_R+m_L))^2
+% which would connect to the gravitational interaction 
+% energy Gm_Rm_L/r^2 involving both masses. Need to 
+% check which identification is more consistent with 
+% the Schwarzschild radius derivation of Section 2.
+
+\subsection{The \texorpdfstring{$\mathbb{Z}_2$}{Z2} 
+Symmetry and the Spatial Bit}
+
+The Smith normal form of the Planck unit matrix has 
+the form $(1,1,2)$, indicating $\mathbb{Z}_2$ torsion 
+in the quotient lattice $\mathbb{Z}^3/\Lambda$. This 
+algebraic $\mathbb{Z}_2$ is the source of the square 
+roots in Planck unit descriptions --- the Planck length 
+$\ell_P = \sqrt{\hbar G/c^3}$ requires a square root 
+precisely because the unit lattice has index 2. In the 
+symmetric matrix form
+
+\begin{equation}
+\begin{pmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \\ 1 & 0 & 1 
+\end{pmatrix} 
+\begin{pmatrix} \log(\text{kg}) \\ \log(\text{m}) \\ 
+\log(\text{s}) \end{pmatrix} = 0,
+\end{equation}
+each row corresponds to one generator: $c$ (space-time), 
+$c^2/\hbar$ (mass-time, Compton frequency), and $G/c^2$ 
+(mass-space, Schwarzschild radius). The $\mathbb{Z}_2$ 
+torsion arises because $G$ involves $\text{kg}^{-1}$ 
+while $\hbar$ involves $\text{kg}^1$: their product 
+$\hbar G$ is mass-neutral, requiring a square root to 
+recover a length.
+
+The bilocal construction has its own $\mathbb{Z}_2$ --- 
+the wedge-swap symmetry $\mathcal{H}_L \leftrightarrow 
+\mathcal{H}_R$ that exchanges left and right wedges 
+simultaneously with $\lambda \leftrightarrow -\lambda$. 
+The spatial bit is the classical record of which 
+$\mathbb{Z}_2$ sector the measurement fell into: 
+$H_+$ in the right wedge or $H_-$ in the left. 
+
+% TODO EFT6: Connect the algebraic Z_2 torsion to the 
+% physical Z_2 wedge-swap symmetry via a conservation 
+% law. The natural candidate is angular momentum 
+% conservation at the emission vertex: the total 
+% helicity of the pair is zero (L+R = +1 + (-1) = 0), 
+% which is a Z_2 conservation law in the sense that 
+% the parity of the helicity sum is conserved. The 
+% kg^2 observation suggests this connects to the 
+% gravitational interaction involving two masses --- 
+% the Z_2 is the discrete remnant of the continuous 
+% SO(2) rotational symmetry broken to Z_2 by the 
+% bilocal source geometry. Need to make this precise 
+% and connect to the Smith form calculation.
+
+% TODO EFT7: The Planck length as geometric mean of 
+% the two mass scales.
+% \ell_P = \sqrt{\hbar G / c^3} 
+%        = \sqrt{(\hbar/mc) \cdot (Gm/c^2)}
+%        = \sqrt{\lambda_C \cdot r_s}
+% is the geometric mean of the Compton wavelength 
+% \lambda_C = \hbar/mc and the Schwarzschild radius 
+% r_s = Gm/c^2. This is the geometric mean of the 
+% system scale and the gravitational scale --- exactly 
+% the two scales defined by E_sys and E_env. The Z_2 
+% torsion is the algebraic expression of the fact that 
+% neither scale alone is fundamental; only their 
+% geometric mean is. Connect this to the EFT picture: 
+% the Planck scale is where the EFT breaks down, i.e. 
+% where lambda_C = r_s, i.e. where the system scale 
+% and gravitational scale coincide.
+
+% TODO EFT8: The squared ratio conjecture.
+% If T_C/T_H = (E_sys/E_env)^2 then the Z_2 torsion 
+% appears as a squaring in the temperature ratio, 
+% connecting the algebraic Z_2 of the Smith form to 
+% the physical Z_2 of the wedge-swap symmetry via the 
+% efficiency formula eta = 1 - (E_sys/E_env)^2. 
+% This would make the Carnot efficiency a direct 
+% measure of the Z_2 torsion, and the Planck scale 
+% the point of maximum efficiency eta = 1 - 
+% (lambda_C/r_s) = 1 - 1 = 0 at the Planck mass 
+% where lambda_C = r_s. Need to check consistency 
+% with Section 2 derivations.
+
+\subsection{Summary}
+
+The bilocal construction defines a natural EFT 
+structure: the right wedge is the system at energy 
+scale $E_{\text{sys}}$, the full Minkowski space is 
+the environment at $E_{\text{env}}$, and the Rindler 
+horizon is the EFT cutoff surface. The partition 
+function of the right wedge is the thermal trace 
+obtained by integrating out the left wedge degrees 
+of freedom, and the S-matrix connecting $\mathcal{P}$ 
+to $\mathcal{F}$ is its Minkowski counterpart. The 
+Carnot cycle of Section~\ref{sec:carnot} is the 
+thermodynamic description of this EFT structure, 
+with $T_C/T_H = E_{\text{sys}}/E_{\text{env}}$ 
+measuring the ratio of system to environment energy 
+scales. The $\mathbb{Z}_2$ torsion of the Planck 
+unit lattice is the algebraic expression of the 
+two-mass, two-scale structure of the construction, 
+with the Planck length as the geometric mean of 
+the Compton and Schwarzschild scales. Whether the 
+temperature ratio connects to the squared energy 
+ratio $(E_{\text{sys}}/E_{\text{env}})^2$ via the 
+gravitational two-mass interaction, and whether 
+the $\mathbb{Z}_2$ torsion connects to the wedge-swap 
+symmetry via a conservation law, are the primary 
+open questions of this section.
+
+% Bib entries needed:
+% susskind1993stretched - Susskind, Thorlacius, Uglum 
+%   "The Stretched Horizon and Black Hole 
+%   Complementarity" PRD 1993
+% hayden2007black - Hayden, Preskill "Black holes as 
+%   mirrors" JHEP 2007
+% amps2013 - Almheiri, Marolf, Polchinski, Sully 
+%   "Black Holes: Complementarity or Firewalls?" 
+%   JHEP 2013
 
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
