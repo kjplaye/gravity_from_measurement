@@ -240,7 +240,28 @@ each case the relation is an identification rather than a causal
 link, and the identification is local and observer-relative, though 
 the sense of observer-relativity differs across the three arrows.
 
-This stands in sharp contrast to the Di\'osi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity \emph{causes} quantum state reduction as an objective, observer-independent physical process. Figure~\ref{fig:diagram} summarises this contrast. The three solid arrows represent the perspectival grounding relations described above; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
+This stands in sharp contrast to the Di\'osi--Penrose objective collapse programme~\cite{penrose1996gravity, diosi1987universal}, which postulates that gravity \emph{causes} quantum state reduction as an objective, observer-independent physical process. The ratio $\alpha = E_\hbar / E_G$, where $E_\hbar = mc^2$ is 
+the Compton energy and $E_G = Gm^2/\Delta s$ is the 
+gravitational self-energy, appears in the Diosi--Penrose 
+objective reduction framework as the inverse of the 
+characteristic collapse timescale: $\tau \sim \hbar/E_G = 
+\alpha \cdot \hbar/E_\hbar$~\cite{penrose1996gravity, 
+diosi1987universal}. In that programme, $E_G$ is the 
+physical agent that drives objective, observer-independent 
+collapse --- the dashed arrow of Figure~\ref{fig:diagram}. 
+The present framework uses the same ratio but inverts its 
+causal role: $\alpha$ appears in Section~\ref{sec:eft} as 
+a dimensionless measure of a system's position relative to 
+the horizon scale, reinterpreted thermodynamically as the 
+Carnot efficiency parameter, with no objective collapse 
+postulated. The same mathematical object carries opposite 
+physical meaning in the two programmes, and the contrast 
+is precisely the one encoded in Figure~\ref{fig:diagram}.
+
+
+
+
+Figure~\ref{fig:diagram} summarises this contrast. The three solid arrows represent the perspectival grounding relations described above; the single dashed arrow represents the Di\'osi--Penrose causal postulate. It is the only relation in the diagram claimed to be objective and observer-independent, and it is the only one we do not adopt.
 
 \begin{figure}[h]
 \centering
@@ -1349,232 +1370,9 @@ future work.
 % in the programme.
 
 
-
-% \section{From AS Imprints to the Einstein--Hilbert Action}
-% \label{sec:EH}
-% 
-% The preceding sections established that each measurement event 
-% produces a discrete AS pp-wave imprint on the horizon, contributing 
-% a calculable area increment $\Delta A = 8\pi G \hbar\omega$ and an 
-% entropy increment $\Delta S = \Delta A / 4\ell_P^2$. We now ask 
-% whether the ensemble of such imprints, in the continuum limit, is 
-% consistent with the Einstein--Hilbert action as the governing 
-% variational principle of the emergent geometry.
-% 
-% \subsection{The Metric Perturbation from a Single AS Imprint}
-% 
-% Each AS pp-wave sourced by a photon of energy $\hbar\omega$ 
-% propagating along $u = 0$ contributes a metric perturbation of the 
-% form
-% \begin{equation}
-%     h_{uu}(u, \mathbf{x}_\perp) 
-%     = 16\pi G \hbar\omega\; \delta(u)\; \Phi(\mathbf{x}_\perp),
-%     \label{eq:AS_metric}
-% \end{equation}
-% where $\Phi(\mathbf{x}_\perp) = -\ln|\mathbf{x}_\perp|^2 / 4\pi$ 
-% is the two-dimensional Coulomb potential sourced by a unit charge 
-% at the origin, satisfying $\nabla^2_\perp \Phi = \delta^{(2)}(\mathbf{x}_\perp)$. 
-% This is an exact solution of the vacuum Einstein equations away 
-% from the source worldline~\cite{aichelburg1971gravitational}. The 
-% delta function in $u$ localizes the imprint to the null surface 
-% of the photon's passage, and the Coulomb profile encodes the 
-% transverse focusing of the congruence.
-% 
-% \subsection{Continuum Limit}
-% 
-% Consider a steady-state ensemble of measurement events with 
-% number density $n(u, \mathbf{x}_\perp)$ per unit null time per 
-% unit transverse area, each contributing energy $\hbar\omega$. The 
-% total metric perturbation is
-% \begin{equation}
-%     \bar{h}_{uu}(u, \mathbf{x}_\perp) 
-%     = 16\pi G \hbar\omega \int 
-%         n(u', \mathbf{x}'_\perp)\; 
-%         \delta(u - u')\; 
-%         \Phi(\mathbf{x}_\perp - \mathbf{x}'_\perp)\; 
-%         du'\, d^2x'_\perp.
-% \end{equation}
-% In the continuum limit, where the event density $n$ is slowly 
-% varying on the scale of $c/\omega$, this convolution reduces to
-% \begin{equation}
-%     \bar{h}_{uu}(u, \mathbf{x}_\perp) 
-%     \approx 16\pi G\, T_{uu}^{\mathrm{eff}}(u, \mathbf{x}_\perp),
-%     \label{eq:hbar_uu}
-% \end{equation}
-% where $T_{uu}^{\mathrm{eff}} = \hbar\omega\, n$ is the effective 
-% null energy flux of the ensemble. This is precisely the linearised 
-% Einstein equation sourced by $T_{uu}^{\mathrm{eff}}$, confirming 
-% that the ensemble of AS imprints is consistent with the Einstein 
-% equations at linear order.
-% 
-% \subsection{Connection to the Einstein--Hilbert Action}
-% 
-% The linearised result~\eqref{eq:hbar_uu} suggests a deeper 
-% connection. In Jacobson's derivation~\cite{jacobson1995thermodynamics}, 
-% the Einstein equations emerge as the condition that the 
-% thermodynamic identity $\delta Q = T\, dS$ holds for every local 
-% Rindler horizon. In our construction, each AS imprint contributes 
-% a term
-% \begin{equation}
-%     \delta S_{\mathrm{EH}}^{(i)} 
-%     = \frac{1}{16\pi G} \int R\, \sqrt{-g}\; d^4x
-%     \bigg|_{\mathrm{single\;imprint}}
-%     \sim \frac{\Delta A}{4\ell_P^2} = \Delta S,
-% \end{equation}
-% consistent with the Bekenstein--Hawking entropy increment per 
-% microstate. The natural conjecture is that the Einstein--Hilbert 
-% action is the generating functional for the ensemble of AS 
-% imprints: its variation with respect to the metric reproduces 
-% the Einstein equations, whose solutions are the coarse-grained 
-% aggregate of discrete pp-wave contributions.
-% 
-% Making this precise requires showing that the distributional 
-% contributions~\eqref{eq:AS_metric}, summed over the full 
-% ensemble with the weights $\tanh^{2n}\theta_\Omega$ of the 
-% Minkowski vacuum decomposition, reproduce the Einstein--Hilbert 
-% variational principle in the continuum limit. This is equivalent 
-% to showing that Jacobson's thermodynamic argument holds 
-% microstate by microstate rather than only in the bulk average, 
-% which is the central open problem of the framework. We conjecture 
-% that this holds and leave its proof for future work, noting that 
-% the linear-order consistency established in~\eqref{eq:hbar_uu} 
-% is a necessary condition that is already satisfied.
-% 
-% \subsection{Implications}
-% 
-% If the conjecture holds, the Einstein--Hilbert action acquires a 
-% microstate interpretation: it is the coarse-grained geometric 
-% encoding of the cumulative action of irreversible measurement 
-% events, with each term in the path integral corresponding to a 
-% specific history of AS imprints. The path integral over metrics 
-% becomes a sum over measurement histories, weighted by the 
-% thermodynamic cost of each irreversible sample. Spacetime 
-% geometry is then not a background on which quantum fields 
-% propagate, but the aggregate record of the information 
-% acquisition events that constitute physical observation.
-% 
-% This reframes the quantization of gravity as a question about 
-% the statistical mechanics of measurement events rather than 
-% about the quantization of the metric itself. The discrete 
-% structure is already present at the level of individual 
-% microstates; the smooth geometry of general relativity emerges 
-% in the same way that thermodynamics emerges from statistical 
-% mechanics, as a coarse-grained description that discards 
-% microstate identity in favour of bulk averages.
- 
-% \section{The Bilocal Landauer Cycle}
-% \label{sec:landauer_cycle}
-% 
-% The bilocal construction of Section~\ref{sec:microstates} describes 
-% a single emission event: a source $\mathcal{P}$ in the past produces 
-% an entangled pair, which propagates into the left and right Rindler 
-% wedges. We now close this into a thermodynamic cycle by introducing 
-% a future absorber $\mathcal{F}$ symmetric to $\mathcal{P}$, and 
-% replacing the absorbing detectors $\mathcal{R}$ and $\mathcal{L}$ 
-% with reflecting mirrors. The result is a quantum analogue of the 
-% Carnot cycle, with $\mathcal{P}$ as the entropy source, $\mathcal{F}$ 
-% as the entropy sink, and the mirrors as the working substance. The 
-% cycle is summarised in Figure~\ref{fig:landauer_cycle}.
-% 
-% \subsection{Setup and Stages}
-% 
-% Four observers are placed symmetrically: $\mathcal{P}$ at $(-1,0)$, 
-% $\mathcal{R}$ at $(0,1)$, $\mathcal{L}$ at $(0,-1)$, and 
-% $\mathcal{F}$ at $(1,0)$, the future analogue of $\mathcal{P}$. 
-% $\mathcal{R}$ and $\mathcal{L}$ are now mirrors: they reflect 
-% incident photons without writing a permanent classical bit into 
-% matter-memory. The cycle proceeds in four stages.
-% 
-% \paragraph{Stage A $\to$ B: Emission and past horizon shift.}
-% $\mathcal{P}$ emits an entangled photon pair with anticorrelated 
-% helicities. Each photon crosses the past Rindler horizon of its 
-% respective wedge, producing an AS pp-wave longitudinal shift that 
-% displaces the two wedges \emph{away} from each other in opposite 
-% null directions. Space is created: a new null interval opens between 
-% the wedges. At this stage the state is globally entangled, the von 
-% Neumann entropy of the pair is nonzero, and the Shannon entropy of 
-% any classical record is zero — no bit has been written.
-% 
-% \paragraph{Stage B $\to$ C: Reflection at the mirrors.}
-% The photons reach $\mathcal{R}$ and $\mathcal{L}$ and are reflected. 
-% This is a reversible unitary operation: the helicity is exchanged 
-% under reflection, the entanglement is preserved, and no Landauer 
-% cost is incurred. No AS imprint is produced at the mirrors, because 
-% no irreversible absorption sample occurs. The global state remains 
-% pure and the Shannon entropy of any classical record remains zero. 
-% This is the B$\to$C step of the quantum Landauer cycle: reversible 
-% correlation without entropy export.
-% 
-% \paragraph{Stage C $\to$ D: Propagation and future horizon shift.}
-% The reflected photons propagate toward $\mathcal{F}$, crossing the 
-% future Rindler horizons of their respective wedges. The AS pp-wave 
-% longitudinal shift now acts in the \emph{opposite} null direction, 
-% displacing the two wedges \emph{toward} each other. The space 
-% created in Stage A$\to$B is removed: the null interval contracts 
-% symmetrically.
-% 
-% \paragraph{Stage D $\to$ A: Absorption at $\mathcal{F}$ and cycle 
-% closure.}
-% $\mathcal{F}$ absorbs both photons. This is the irreversible step: 
-% one quantum of action $\hbar$ is deposited into $\mathcal{F}$'s 
-% matter-memory per photon, one classical bit is written, and the 
-% Landauer cost $\Delta E \geq k_B T \ln 2$ is paid. The entropy 
-% exported at $\mathcal{F}$ closes the cycle, playing the role of the 
-% cold reservoir in the classical Carnot analogy. Interference between 
-% the two photons at $\mathcal{F}$ is possible if and only if no bit 
-% was written at the mirrors: the presence or absence of interference 
-% at $\mathcal{F}$ is the operational test distinguishing the 
-% reversible mirror cycle from an irreversible absorber cycle.
-% 
-% \subsection{Steady State and the Gravitational Restoring Force}
-% 
-% In a single cycle, Stage A$\to$B creates a null separation between 
-% the wedges and Stage C$\to$D removes it. For the cycle to close 
-% exactly in steady state, the net geometric effect must vanish: the 
-% space created by the past horizon shifts must equal the space removed 
-% by the future horizon shifts. In the symmetric mirror construction 
-% this is guaranteed by the $\mathbb{Z}_2$ symmetry of the source: 
-% the past and future AS shifts are equal and opposite by construction.
-% 
-% However, the mirrors themselves are massive, and their separation 
-% generates a gravitational attraction between them. This attraction 
-% is the restoring force that maintains the steady-state geometry: 
-% without it, repeated emission cycles would drive the wedges apart 
-% indefinitely. The gravitational attraction between $\mathcal{R}$ 
-% and $\mathcal{L}$ is therefore not incidental but necessary for the 
-% cycle to be thermodynamically closed. At equilibrium, the 
-% outward null displacement from each emission event is balanced by 
-% the inward gravitational pull, yielding a stable separation 
-% $r \sim r_s$, the Schwarzschild radius of the mirror mass, 
-% consistent with the heuristic argument of 
-% Section~\ref{sec:heuristics}.
-% 
-% \subsection{Shannon versus von Neumann Entropy}
-% 
-% The cycle makes precise the distinction between von Neumann and 
-% Shannon entropy in the bilocal construction. The von Neumann entropy 
-% of the entangled pair is nonzero throughout Stages A through C: 
-% entanglement is a property of the global state and is preserved by 
-% the unitary mirror reflection. The Shannon entropy of any classical 
-% record is zero throughout these stages: no bit has been written into 
-% any matter-memory. At Stage D, absorption at $\mathcal{F}$ converts 
-% von Neumann entropy into Shannon entropy irreversibly. The Landauer 
-% cost is the thermodynamic price of this conversion.
-% 
-% The AS pp-wave imprint is the geometric witness of this conversion: 
-% it is produced at $\mathcal{F}$ when the bit is written, and not at 
-% $\mathcal{R}$ or $\mathcal{L}$ where the reflection is reversible. 
-% Space is created and removed symmetrically by the mirror cycle; the 
-% net geometric increment per cycle is zero. A net geometric increment 
-% accumulates only when a mirror is replaced by an absorber, that is, 
-% only when irreversible Shannon entropy is produced. Spacetime 
-% geometry grows exactly as fast as classical information is 
-% irreversibly written into matter.
- 
-% TODO: For this to work we need to actually build more conceptual and physical arguments, it is too weak as written, it need to connect more strongly to the information theory esspecially section 4.
-
 This completes the microstate programme. Each entropy increment in the Bekenstein--Hawking area law corresponds to a single AS pp-wave interaction. Each pp-wave interaction corresponds to a single measurement event in the bilocal construction. Each measurement event both encodes a spatial bit and generates the spatial separation that bit refers to. The gravitational, thermodynamic, information-theoretic, and geometric descriptions of the horizon are unified at the level of individual microstates, and thermality, entropy, and space itself emerge together from the coarse-grained aggregate of these events.
 
+% Section 7
 \section{Carnot Cycle from Unruh--Landauer}
 \label{sec:carnot}
 
@@ -1824,6 +1622,7 @@ Unruh--Landauer relation with $G$ restored. The mirror mass
 is the bridge between the information-theoretic cycle and 
 the gravitational heuristics of Section~\ref{sec:heuristics}.
 
+% Section 8
 \section{Effective Field Theory Considerations}
 \label{sec:eft}
 
@@ -1985,15 +1784,15 @@ T_H = \frac{\hbar a}{2\pi k_B c}
 \end{equation}
 
 \begin{equation}
-T_C = \frac{\hbar a_{\text{mirror}}}{2\pi k_B c}
+T_C = \frac{\hbar \kappa}{2\pi k_B c}
 \quad \text{(right wedge / mirror scale)}
 \end{equation}
 so the efficiency is
 
 \begin{equation}
-\eta = 1 - \frac{T_C}{T_H} = 1 - \frac{a_{\text{mirror}}}{a}.
+\eta = 1 - \frac{T_C}{T_H} = 1 - \frac{\kappa}{a}.
 \end{equation}
-The ratio $T_C/T_H = a_{\text{mirror}}/a$ is the ratio 
+The ratio $T_C/T_H = \kappa/a$ is the ratio 
 of the mirror's local surface gravity to the global 
 Rindler acceleration. In terms of energy scales:
 
@@ -2017,6 +1816,82 @@ is much heavier than the system, the standard limit
 in which an EFT is valid. Minimum efficiency $\eta 
 \to 0$ corresponds to $m_\mathcal{L} \to 0$ --- no 
 environment, no thermal gradient, no work extracted.
+
+It is natural to introduce the dimensionless ratio
+%
+\begin{equation}
+    \alpha = \frac{E_\hbar}{E_G} = \frac{mc^2}{Gm^2/\Delta s}
+           = \frac{c^2 \Delta s}{Gm},
+    \label{eq:alpha}
+\end{equation}
+%
+where $E_\hbar = mc^2$ is the Compton energy of the system 
+and $E_G = Gm^2/\Delta s$ is its gravitational self-energy 
+at scale $\Delta s$. In terms of $\alpha$, the temperature 
+ratio is $T_C/T_H = 1/\alpha$ and the Carnot efficiency is
+%
+\begin{equation}
+    \eta = 1 - \frac{1}{\alpha},
+\end{equation}
+%
+so that $\alpha = 1$ is simultaneously three equivalent 
+conditions: the horizon condition $v_e = c$, the Planck 
+scale condition $\lambda_C = r_s$ (where the Compton 
+wavelength equals the Schwarzschild radius), and the 
+condition $\eta = 0$ of hydrostatic equilibrium with no 
+net work extracted. Below the horizon ($\alpha < 1$) the 
+system is gravitationally dominated; above it 
+($\alpha > 1$) the quantum scale dominates. The Planck 
+mass is the unique mass for which $\alpha = 1$ at the 
+scale $\Delta s = \ell_P$, identifying the Planck scale 
+as the fixed point of the EFT flow between the quantum 
+and gravitational descriptions.
+
+The following are equivalent:
+%
+\begin{enumerate}
+    \item $\kappa < a$ \quad (mirror surface gravity less 
+    than global Rindler acceleration)
+    \item $E_{\text{sys}} < E_{\text{env}}$ \quad 
+    (system energy less than environment energy)
+    \item $\eta > 0$ \quad (Carnot cycle extracts 
+    positive work)
+    \item $\alpha > 1$ \quad (quantum scale dominates 
+    over gravitational scale)
+    \item The EFT description of the right wedge is valid.
+    \item The mirror is a proper subsystem of its 
+    environment.
+\end{enumerate}
+%
+The boundary case where all inequalities become equalities,
+$\kappa = a$, $E_{\text{sys}} = E_{\text{env}}$, $\eta = 0$, 
+$\alpha = 1$, is the horizon condition: the system's 
+gravitational scale coincides with the global Rindler 
+scale, the EFT breaks down, and no net work is extracted. 
+The construction is self-consistent precisely in the regime 
+where these inequalities hold, and breaks down exactly at 
+the horizon --- which is not a failure of the framework 
+but its natural boundary condition.
+
+% TODO EFT-ALPHA: The Diósi--Penrose collapse time 
+% $\tau \sim \hbar/E_G$ and the Carnot efficiency 
+% parameter $\alpha = E_\hbar/E_G$ of the present 
+% framework are built from the same ratio of energy 
+% scales, with $\tau = \hbar/E_G = (\hbar/E_\hbar) 
+% \cdot (1/\alpha) = \tau_C / \alpha$ where 
+% $\tau_C = \hbar/mc^2$ is the Compton time. The 
+% Diosi--Penrose programme assigns $E_G$ the role of 
+% physical agent driving objective collapse (the dashed 
+% arrow of Figure~\ref{fig:diagram}); the present 
+% framework assigns the same ratio the role of 
+% thermodynamic efficiency with no objective collapse. 
+% Whether this constitutes a precise duality between 
+% the two programmes --- same mathematical structure, 
+% opposite causal arrows --- and whether the 
+% Diosi--Penrose collapse time has an interpretation 
+% in the present framework as a thermodynamic 
+% relaxation time, warrants careful investigation.
+
 
 % TODO EFT5: Check whether T_C/T_H connects to the 
 % squared energy ratio (E_sys/E_env)^2 rather than 
@@ -2145,6 +2020,7 @@ open questions of this section.
 %   "Black Holes: Complementarity or Firewalls?" 
 %   JHEP 2013
 
+% Section 9
 \section{Appendix: Consistency of the Double-Null Gauge Condition}
 \label{gauge_consistency}
 % Verification that double-null gauge does not over-constrain physical degrees of freedom
@@ -2284,6 +2160,123 @@ The gauge is therefore internally consistent and does not over-constrain the phy
 degrees of freedom. The $\mathbb{Z}_2$ wedge-swap symmetry is preserved throughout: 
 conditions on $A_+$ and $A_-$ are imposed symmetrically, and neither null direction 
 is privileged over the other.
+
+% Section 10
+\section{Conclusion}
+
+We have proposed that quantum measurement is the physical process 
+underlying each discrete entropy increment in the thermodynamic 
+theory of gravity. Beginning from the single observer-relative 
+relation between information acquisition, energy transfer, and 
+acceleration, the Unruh--Landauer relation~\eqref{eq:UL}, 
+and using only Newton's laws and the equivalence principle, we 
+recovered the Schwarzschild radius, surface gravity, and 
+Bekenstein--Hawking area law as consequences of the physical cost 
+of observation. The saturation of this bound at one bit identifies 
+the horizon distance as the natural length scale of a single-bit 
+measurement event, with the Rindler horizon as the unique surface 
+at which the Landauer bound is geometrically realized.
+
+We grounded these heuristics in a concrete bilocal microstate 
+construction, extending the scalar construction 
+of~\cite{player2025driving} to the electromagnetic field. A 
+source $\mathcal{P}$ in the causal past emits an entangled photon 
+pair into the left and right Rindler wedges, where observers 
+$\mathcal{L}$ and $\mathcal{R}$ each register one helicity 
+outcome and acquire one classical bit. Each photon carries 
+exactly one quantum of action $\hbar$ and one binary helicity 
+outcome, and the anticorrelated helicity structure is conserved 
+through the Bogoliubov transformation, so the thermal ensemble 
+retains its helicity structure at every level of the 
+construction. Thermality is not a primitive but an emergent 
+property of the coarse-grained ensemble of individually 
+non-thermal microstates.
+
+The central geometric result is that each absorption event 
+imprints a discrete, calculable increment on the horizon area:
+\begin{equation}
+\Delta A = 8\pi G\,\hbar\omega,
+\end{equation}
+derived bottom-up from the matter sample picture and
+the Raychaudhuri equation, applied to the AS 
+pp-wave stress-energy matching \cite{jacobson1995thermodynamics}. The AS longitudinal shift is a 
+supertranslation at the Rindler horizon in the sense of 
+Hawking, Perry, and Strominger~\cite{hawking2016soft}, and 
+each measurement event excites one mode of the 
+$\mathrm{BMS}_3$ algebra whose central charge Carlip 
+uses to derive the Bekenstein--Hawking 
+entropy~\cite{carlip2018bms}. The physical process that 
+Carlip's programme leaves unspecified, the process that 
+excites the boundary symmetry modes, is quantum 
+measurement.
+
+The matter action and the gravitational boundary action are 
+two accountings of the same microstate events:
+\begin{equation}
+S_{GHY}\big|_{\mathcal{H}} = \sum_i \hbar\omega_i 
+= S_{\text{matter}},
+\end{equation}
+identifying the Gibbons--Hawking--York boundary 
+term~\cite{gibbons1977action} as the natural gravitational 
+counterpart of the matter action at the microstate level, 
+and realizing at the level of individual microstates the 
+claim of Jacobson~\cite{jacobson1995thermodynamics} and 
+Padmanabhan~\cite{padmanabhan2010thermodynamical} that the 
+boundary term is the fundamental gravitational degree of 
+freedom.
+
+Entanglement is converted into geometry event by event. The 
+EPR side of the construction is the entangled photon pair 
+emitted by $\mathcal{P}$; the ER side is the pair of 
+correlated AS longitudinal shifts in opposite null 
+directions, which together constitute a geometric bridge 
+between the two wedges. The spatial bit, the answer to 
+``who observed $H_+$?'', is the classical record of which 
+side of the bridge each measurement occurred on. Matter is 
+the substrate in which this record persists: the horizon is 
+a boundary that makes the left/right distinction sharp, but 
+it is the matter on each side that accumulates the samples 
+and holds the classical record. The bridge is built from 
+matter, sample by sample.
+
+Several directions remain open. The Carnot cycle extension,
+in which $\mathcal{R}$ and $\mathcal{L}$ reflect as 
+mirrors to a future point $\mathcal{F}$, closing a 
+thermodynamic cycle, offers a natural framework for 
+connecting the mirror and absorption cases: the mirror 
+branch is adiabatic, sources no AS pp-wave, and allows 
+interference at $\mathcal{F}$; the absorption branch is 
+isothermal, sources the pp-wave, and produces a persistent 
+classical record. Gravitational imprinting is precisely 
+what breaks the cycle. Whether the Carnot efficiency of 
+this cycle connects to the central charge of the 
+$\mathrm{BMS}_3$ algebra is an open question. The 
+structural identification between the bilocal construction 
+and the Penrose--Dirac zig-zag mechanism suggests a 
+connection to the origin of mass in the standard model, 
+with the Higgs condensate playing the role of $\mathcal{P}$ 
+for all massive particles simultaneously. Whether varying 
+the microstate boundary action $S_{GHY} = \sum_i 
+\hbar\omega_i$ over the ensemble of measurement events 
+reproduces the Einstein equations as a stationarity 
+condition, deriving GR from the microstate action 
+directly, is the primary open problem for future work.
+
+% Section 11
+\section{Acknowledgements}
+
+I am also grateful to Claude for helpful discussions, 
+noting with some irony that each such exchange constitutes, 
+in the framework of this paper, a sequence of measurement 
+events whose Landauer cost was paid by the data centers 
+hosting them.
+
+\bibliographystyle{ieeetr}
+\bibliography{bibliography}
+
+\end{document}
+
+
 
 % \section{Appendix: Emergent Spacetime from Samples and Correlations}
 % \label{sec:emergent_spacetime}
@@ -2548,115 +2541,230 @@ is privileged over the other.
 % content of the region, and the balance between quantum and gravitational 
 % energy scales are simultaneously achieved.
 
-\section{Conclusion}
 
-We have proposed that quantum measurement is the physical process 
-underlying each discrete entropy increment in the thermodynamic 
-theory of gravity. Beginning from the single observer-relative 
-relation between information acquisition, energy transfer, and 
-acceleration, the Unruh--Landauer relation~\eqref{eq:UL}, 
-and using only Newton's laws and the equivalence principle, we 
-recovered the Schwarzschild radius, surface gravity, and 
-Bekenstein--Hawking area law as consequences of the physical cost 
-of observation. The saturation of this bound at one bit identifies 
-the horizon distance as the natural length scale of a single-bit 
-measurement event, with the Rindler horizon as the unique surface 
-at which the Landauer bound is geometrically realized.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We grounded these heuristics in a concrete bilocal microstate 
-construction, extending the scalar construction 
-of~\cite{player2025driving} to the electromagnetic field. A 
-source $\mathcal{P}$ in the causal past emits an entangled photon 
-pair into the left and right Rindler wedges, where observers 
-$\mathcal{L}$ and $\mathcal{R}$ each register one helicity 
-outcome and acquire one classical bit. Each photon carries 
-exactly one quantum of action $\hbar$ and one binary helicity 
-outcome, and the anticorrelated helicity structure is conserved 
-through the Bogoliubov transformation, so the thermal ensemble 
-retains its helicity structure at every level of the 
-construction. Thermality is not a primitive but an emergent 
-property of the coarse-grained ensemble of individually 
-non-thermal microstates.
 
-The central geometric result is that each absorption event 
-imprints a discrete, calculable increment on the horizon area:
-\begin{equation}
-\Delta A = 8\pi G\,\hbar\omega,
-\end{equation}
-derived bottom-up from the matter sample picture and
-the Raychaudhuri equation, applied to the AS 
-pp-wave stress-energy matching \cite{jacobson1995thermodynamics}. The AS longitudinal shift is a 
-supertranslation at the Rindler horizon in the sense of 
-Hawking, Perry, and Strominger~\cite{hawking2016soft}, and 
-each measurement event excites one mode of the 
-$\mathrm{BMS}_3$ algebra whose central charge Carlip 
-uses to derive the Bekenstein--Hawking 
-entropy~\cite{carlip2018bms}. The physical process that 
-Carlip's programme leaves unspecified, the process that 
-excites the boundary symmetry modes, is quantum 
-measurement.
+% \section{From AS Imprints to the Einstein--Hilbert Action}
+% \label{sec:EH}
+% 
+% The preceding sections established that each measurement event 
+% produces a discrete AS pp-wave imprint on the horizon, contributing 
+% a calculable area increment $\Delta A = 8\pi G \hbar\omega$ and an 
+% entropy increment $\Delta S = \Delta A / 4\ell_P^2$. We now ask 
+% whether the ensemble of such imprints, in the continuum limit, is 
+% consistent with the Einstein--Hilbert action as the governing 
+% variational principle of the emergent geometry.
+% 
+% \subsection{The Metric Perturbation from a Single AS Imprint}
+% 
+% Each AS pp-wave sourced by a photon of energy $\hbar\omega$ 
+% propagating along $u = 0$ contributes a metric perturbation of the 
+% form
+% \begin{equation}
+%     h_{uu}(u, \mathbf{x}_\perp) 
+%     = 16\pi G \hbar\omega\; \delta(u)\; \Phi(\mathbf{x}_\perp),
+%     \label{eq:AS_metric}
+% \end{equation}
+% where $\Phi(\mathbf{x}_\perp) = -\ln|\mathbf{x}_\perp|^2 / 4\pi$ 
+% is the two-dimensional Coulomb potential sourced by a unit charge 
+% at the origin, satisfying $\nabla^2_\perp \Phi = \delta^{(2)}(\mathbf{x}_\perp)$. 
+% This is an exact solution of the vacuum Einstein equations away 
+% from the source worldline~\cite{aichelburg1971gravitational}. The 
+% delta function in $u$ localizes the imprint to the null surface 
+% of the photon's passage, and the Coulomb profile encodes the 
+% transverse focusing of the congruence.
+% 
+% \subsection{Continuum Limit}
+% 
+% Consider a steady-state ensemble of measurement events with 
+% number density $n(u, \mathbf{x}_\perp)$ per unit null time per 
+% unit transverse area, each contributing energy $\hbar\omega$. The 
+% total metric perturbation is
+% \begin{equation}
+%     \bar{h}_{uu}(u, \mathbf{x}_\perp) 
+%     = 16\pi G \hbar\omega \int 
+%         n(u', \mathbf{x}'_\perp)\; 
+%         \delta(u - u')\; 
+%         \Phi(\mathbf{x}_\perp - \mathbf{x}'_\perp)\; 
+%         du'\, d^2x'_\perp.
+% \end{equation}
+% In the continuum limit, where the event density $n$ is slowly 
+% varying on the scale of $c/\omega$, this convolution reduces to
+% \begin{equation}
+%     \bar{h}_{uu}(u, \mathbf{x}_\perp) 
+%     \approx 16\pi G\, T_{uu}^{\mathrm{eff}}(u, \mathbf{x}_\perp),
+%     \label{eq:hbar_uu}
+% \end{equation}
+% where $T_{uu}^{\mathrm{eff}} = \hbar\omega\, n$ is the effective 
+% null energy flux of the ensemble. This is precisely the linearised 
+% Einstein equation sourced by $T_{uu}^{\mathrm{eff}}$, confirming 
+% that the ensemble of AS imprints is consistent with the Einstein 
+% equations at linear order.
+% 
+% \subsection{Connection to the Einstein--Hilbert Action}
+% 
+% The linearised result~\eqref{eq:hbar_uu} suggests a deeper 
+% connection. In Jacobson's derivation~\cite{jacobson1995thermodynamics}, 
+% the Einstein equations emerge as the condition that the 
+% thermodynamic identity $\delta Q = T\, dS$ holds for every local 
+% Rindler horizon. In our construction, each AS imprint contributes 
+% a term
+% \begin{equation}
+%     \delta S_{\mathrm{EH}}^{(i)} 
+%     = \frac{1}{16\pi G} \int R\, \sqrt{-g}\; d^4x
+%     \bigg|_{\mathrm{single\;imprint}}
+%     \sim \frac{\Delta A}{4\ell_P^2} = \Delta S,
+% \end{equation}
+% consistent with the Bekenstein--Hawking entropy increment per 
+% microstate. The natural conjecture is that the Einstein--Hilbert 
+% action is the generating functional for the ensemble of AS 
+% imprints: its variation with respect to the metric reproduces 
+% the Einstein equations, whose solutions are the coarse-grained 
+% aggregate of discrete pp-wave contributions.
+% 
+% Making this precise requires showing that the distributional 
+% contributions~\eqref{eq:AS_metric}, summed over the full 
+% ensemble with the weights $\tanh^{2n}\theta_\Omega$ of the 
+% Minkowski vacuum decomposition, reproduce the Einstein--Hilbert 
+% variational principle in the continuum limit. This is equivalent 
+% to showing that Jacobson's thermodynamic argument holds 
+% microstate by microstate rather than only in the bulk average, 
+% which is the central open problem of the framework. We conjecture 
+% that this holds and leave its proof for future work, noting that 
+% the linear-order consistency established in~\eqref{eq:hbar_uu} 
+% is a necessary condition that is already satisfied.
+% 
+% \subsection{Implications}
+% 
+% If the conjecture holds, the Einstein--Hilbert action acquires a 
+% microstate interpretation: it is the coarse-grained geometric 
+% encoding of the cumulative action of irreversible measurement 
+% events, with each term in the path integral corresponding to a 
+% specific history of AS imprints. The path integral over metrics 
+% becomes a sum over measurement histories, weighted by the 
+% thermodynamic cost of each irreversible sample. Spacetime 
+% geometry is then not a background on which quantum fields 
+% propagate, but the aggregate record of the information 
+% acquisition events that constitute physical observation.
+% 
+% This reframes the quantization of gravity as a question about 
+% the statistical mechanics of measurement events rather than 
+% about the quantization of the metric itself. The discrete 
+% structure is already present at the level of individual 
+% microstates; the smooth geometry of general relativity emerges 
+% in the same way that thermodynamics emerges from statistical 
+% mechanics, as a coarse-grained description that discards 
+% microstate identity in favour of bulk averages.
+ 
+% \section{The Bilocal Landauer Cycle}
+% \label{sec:landauer_cycle}
+% 
+% The bilocal construction of Section~\ref{sec:microstates} describes 
+% a single emission event: a source $\mathcal{P}$ in the past produces 
+% an entangled pair, which propagates into the left and right Rindler 
+% wedges. We now close this into a thermodynamic cycle by introducing 
+% a future absorber $\mathcal{F}$ symmetric to $\mathcal{P}$, and 
+% replacing the absorbing detectors $\mathcal{R}$ and $\mathcal{L}$ 
+% with reflecting mirrors. The result is a quantum analogue of the 
+% Carnot cycle, with $\mathcal{P}$ as the entropy source, $\mathcal{F}$ 
+% as the entropy sink, and the mirrors as the working substance. The 
+% cycle is summarised in Figure~\ref{fig:landauer_cycle}.
+% 
+% \subsection{Setup and Stages}
+% 
+% Four observers are placed symmetrically: $\mathcal{P}$ at $(-1,0)$, 
+% $\mathcal{R}$ at $(0,1)$, $\mathcal{L}$ at $(0,-1)$, and 
+% $\mathcal{F}$ at $(1,0)$, the future analogue of $\mathcal{P}$. 
+% $\mathcal{R}$ and $\mathcal{L}$ are now mirrors: they reflect 
+% incident photons without writing a permanent classical bit into 
+% matter-memory. The cycle proceeds in four stages.
+% 
+% \paragraph{Stage A $\to$ B: Emission and past horizon shift.}
+% $\mathcal{P}$ emits an entangled photon pair with anticorrelated 
+% helicities. Each photon crosses the past Rindler horizon of its 
+% respective wedge, producing an AS pp-wave longitudinal shift that 
+% displaces the two wedges \emph{away} from each other in opposite 
+% null directions. Space is created: a new null interval opens between 
+% the wedges. At this stage the state is globally entangled, the von 
+% Neumann entropy of the pair is nonzero, and the Shannon entropy of 
+% any classical record is zero — no bit has been written.
+% 
+% \paragraph{Stage B $\to$ C: Reflection at the mirrors.}
+% The photons reach $\mathcal{R}$ and $\mathcal{L}$ and are reflected. 
+% This is a reversible unitary operation: the helicity is exchanged 
+% under reflection, the entanglement is preserved, and no Landauer 
+% cost is incurred. No AS imprint is produced at the mirrors, because 
+% no irreversible absorption sample occurs. The global state remains 
+% pure and the Shannon entropy of any classical record remains zero. 
+% This is the B$\to$C step of the quantum Landauer cycle: reversible 
+% correlation without entropy export.
+% 
+% \paragraph{Stage C $\to$ D: Propagation and future horizon shift.}
+% The reflected photons propagate toward $\mathcal{F}$, crossing the 
+% future Rindler horizons of their respective wedges. The AS pp-wave 
+% longitudinal shift now acts in the \emph{opposite} null direction, 
+% displacing the two wedges \emph{toward} each other. The space 
+% created in Stage A$\to$B is removed: the null interval contracts 
+% symmetrically.
+% 
+% \paragraph{Stage D $\to$ A: Absorption at $\mathcal{F}$ and cycle 
+% closure.}
+% $\mathcal{F}$ absorbs both photons. This is the irreversible step: 
+% one quantum of action $\hbar$ is deposited into $\mathcal{F}$'s 
+% matter-memory per photon, one classical bit is written, and the 
+% Landauer cost $\Delta E \geq k_B T \ln 2$ is paid. The entropy 
+% exported at $\mathcal{F}$ closes the cycle, playing the role of the 
+% cold reservoir in the classical Carnot analogy. Interference between 
+% the two photons at $\mathcal{F}$ is possible if and only if no bit 
+% was written at the mirrors: the presence or absence of interference 
+% at $\mathcal{F}$ is the operational test distinguishing the 
+% reversible mirror cycle from an irreversible absorber cycle.
+% 
+% \subsection{Steady State and the Gravitational Restoring Force}
+% 
+% In a single cycle, Stage A$\to$B creates a null separation between 
+% the wedges and Stage C$\to$D removes it. For the cycle to close 
+% exactly in steady state, the net geometric effect must vanish: the 
+% space created by the past horizon shifts must equal the space removed 
+% by the future horizon shifts. In the symmetric mirror construction 
+% this is guaranteed by the $\mathbb{Z}_2$ symmetry of the source: 
+% the past and future AS shifts are equal and opposite by construction.
+% 
+% However, the mirrors themselves are massive, and their separation 
+% generates a gravitational attraction between them. This attraction 
+% is the restoring force that maintains the steady-state geometry: 
+% without it, repeated emission cycles would drive the wedges apart 
+% indefinitely. The gravitational attraction between $\mathcal{R}$ 
+% and $\mathcal{L}$ is therefore not incidental but necessary for the 
+% cycle to be thermodynamically closed. At equilibrium, the 
+% outward null displacement from each emission event is balanced by 
+% the inward gravitational pull, yielding a stable separation 
+% $r \sim r_s$, the Schwarzschild radius of the mirror mass, 
+% consistent with the heuristic argument of 
+% Section~\ref{sec:heuristics}.
+% 
+% \subsection{Shannon versus von Neumann Entropy}
+% 
+% The cycle makes precise the distinction between von Neumann and 
+% Shannon entropy in the bilocal construction. The von Neumann entropy 
+% of the entangled pair is nonzero throughout Stages A through C: 
+% entanglement is a property of the global state and is preserved by 
+% the unitary mirror reflection. The Shannon entropy of any classical 
+% record is zero throughout these stages: no bit has been written into 
+% any matter-memory. At Stage D, absorption at $\mathcal{F}$ converts 
+% von Neumann entropy into Shannon entropy irreversibly. The Landauer 
+% cost is the thermodynamic price of this conversion.
+% 
+% The AS pp-wave imprint is the geometric witness of this conversion: 
+% it is produced at $\mathcal{F}$ when the bit is written, and not at 
+% $\mathcal{R}$ or $\mathcal{L}$ where the reflection is reversible. 
+% Space is created and removed symmetrically by the mirror cycle; the 
+% net geometric increment per cycle is zero. A net geometric increment 
+% accumulates only when a mirror is replaced by an absorber, that is, 
+% only when irreversible Shannon entropy is produced. Spacetime 
+% geometry grows exactly as fast as classical information is 
+% irreversibly written into matter.
+ 
+% TODO: For this to work we need to actually build more conceptual and physical arguments, it is too weak as written, it need to connect more strongly to the information theory esspecially section 4.
 
-The matter action and the gravitational boundary action are 
-two accountings of the same microstate events:
-\begin{equation}
-S_{GHY}\big|_{\mathcal{H}} = \sum_i \hbar\omega_i 
-= S_{\text{matter}},
-\end{equation}
-identifying the Gibbons--Hawking--York boundary 
-term~\cite{gibbons1977action} as the natural gravitational 
-counterpart of the matter action at the microstate level, 
-and realizing at the level of individual microstates the 
-claim of Jacobson~\cite{jacobson1995thermodynamics} and 
-Padmanabhan~\cite{padmanabhan2010thermodynamical} that the 
-boundary term is the fundamental gravitational degree of 
-freedom.
-
-Entanglement is converted into geometry event by event. The 
-EPR side of the construction is the entangled photon pair 
-emitted by $\mathcal{P}$; the ER side is the pair of 
-correlated AS longitudinal shifts in opposite null 
-directions, which together constitute a geometric bridge 
-between the two wedges. The spatial bit, the answer to 
-``who observed $H_+$?'', is the classical record of which 
-side of the bridge each measurement occurred on. Matter is 
-the substrate in which this record persists: the horizon is 
-a boundary that makes the left/right distinction sharp, but 
-it is the matter on each side that accumulates the samples 
-and holds the classical record. The bridge is built from 
-matter, sample by sample.
-
-Several directions remain open. The Carnot cycle extension,
-in which $\mathcal{R}$ and $\mathcal{L}$ reflect as 
-mirrors to a future point $\mathcal{F}$, closing a 
-thermodynamic cycle, offers a natural framework for 
-connecting the mirror and absorption cases: the mirror 
-branch is adiabatic, sources no AS pp-wave, and allows 
-interference at $\mathcal{F}$; the absorption branch is 
-isothermal, sources the pp-wave, and produces a persistent 
-classical record. Gravitational imprinting is precisely 
-what breaks the cycle. Whether the Carnot efficiency of 
-this cycle connects to the central charge of the 
-$\mathrm{BMS}_3$ algebra is an open question. The 
-structural identification between the bilocal construction 
-and the Penrose--Dirac zig-zag mechanism suggests a 
-connection to the origin of mass in the standard model, 
-with the Higgs condensate playing the role of $\mathcal{P}$ 
-for all massive particles simultaneously. Whether varying 
-the microstate boundary action $S_{GHY} = \sum_i 
-\hbar\omega_i$ over the ensemble of measurement events 
-reproduces the Einstein equations as a stationarity 
-condition, deriving GR from the microstate action 
-directly, is the primary open problem for future work.
-
-\section{Acknowledgements}
-
-I am also grateful to Claude for helpful discussions, 
-noting with some irony that each such exchange constitutes, 
-in the framework of this paper, a sequence of measurement 
-events whose Landauer cost was paid by the data centers 
-hosting them.
-
-\bibliographystyle{ieeetr}
-\bibliography{bibliography}
-
-\end{document}
